@@ -34,6 +34,12 @@ namespace BusinessLayer.Concrete
             return result;
         }
 
+        public List<User> GetCompaniesPersonel(int id)
+        {
+            var result = _user.GetCompaniesPersonel(id);
+            return result;
+        }
+
         public List<User> list()
         {
             var result = _user.list();

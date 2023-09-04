@@ -22,7 +22,7 @@ namespace EntityLayer.Concrete
         public DateTime birthDate { get; set; }
         public DateTime enrolledDate { get; set; }
         public DateTime exitDate { get; set; }
-        public float price { get; set; }
+        public double price { get; set; }
         public bool status { get; set; }
     }
 }

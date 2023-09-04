@@ -66,7 +66,7 @@ namespace DataAccesLayer.Repository
             {
                 command.CommandType = System.Data.CommandType.Text;
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM User WHERE ID = @UserID";
+                command.CommandText = @"SELECT * FROM [dbo].[User] WHERE ID = @UserID";
                 command.Parameters.AddWithValue("@UserID", id);
 
                 connection.Open();
@@ -88,8 +88,9 @@ namespace DataAccesLayer.Repository
                     user.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
                     user.birthDate = reader.GetDateTime(reader.GetOrdinal("birthDate"));
                     user.enrolledDate = reader.GetDateTime(reader.GetOrdinal("enrolledDate"));
-                    user.exitDate = reader.GetDateTime(reader.GetOrdinal("exitDate"));
-                    user.price = reader.GetInt32(reader.GetOrdinal("price"));
+                  
+                 
+                    user.price = reader.GetDouble(reader.GetOrdinal("price"));
                     user.status = reader.GetBoolean(reader.GetOrdinal("status"));
 
                 }
@@ -100,8 +101,52 @@ namespace DataAccesLayer.Repository
 
             return user;
         }
-        #endregion
 
+
+        #endregion
+        public List<User> GetCompaniesPersonel(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<User> User = new List<User>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from [dbo].[User] where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var user = new User();
+                user.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                user.roleID = reader.GetInt32(reader.GetOrdinal("roleID"));
+                user.name = reader.GetString(reader.GetOrdinal("name"));
+                user.surname = reader.GetString(reader.GetOrdinal("surname"));
+                user.imageUrl = reader.GetString(reader.GetOrdinal("imageUrl"));
+                user.genderID = reader.GetString(reader.GetOrdinal("genderID"));
+                user.phoneNumber = reader.GetString(reader.GetOrdinal("phoneNumber"));
+                user.eMail = reader.GetString(reader.GetOrdinal("eMail"));
+                user.civilised = reader.GetBoolean(reader.GetOrdinal("civilised"));
+                user.address = reader.GetString(reader.GetOrdinal("address"));
+                user.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                user.birthDate = reader.GetDateTime(reader.GetOrdinal("birthDate"));
+                user.enrolledDate = reader.GetDateTime(reader.GetOrdinal("enrolledDate"));
+        
+                user.price = reader.GetDouble(reader.GetOrdinal("price"));
+                user.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                User.Add(user);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return User;
+        }
         #region LİSTELE
         public List<User> list()
         {

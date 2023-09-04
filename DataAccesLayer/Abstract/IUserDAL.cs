@@ -10,6 +10,7 @@ namespace DataAccesLayer.Abstract
     public interface IUserDAL
     {
         List<User> list();
+        List<User> GetCompaniesPersonel(int id);
         void add(User t);
         void delete(User t);
         void update(User t);

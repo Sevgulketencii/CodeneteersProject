@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EntityLayer.Concrete
+﻿namespace EntityLayer.Concrete
 {
-	public class Companies
-	{
+    public class Companies
+    {
         public int ID { get; set; }
         public string name { get; set; }
         public string description { get; set; }

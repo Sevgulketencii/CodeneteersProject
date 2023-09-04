@@ -1,3 +1,4 @@
+
 namespace CodeneteersProject
 {
     internal static class Program

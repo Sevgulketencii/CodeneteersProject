@@ -1,4 +1,3 @@
-using CodeNETeersProject;
 
 namespace CodeneteersProject
 {
@@ -13,7 +12,7 @@ namespace CodeneteersProject
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new DashboardForm());
+            Application.Run(new Form1());
         }
     }
 }

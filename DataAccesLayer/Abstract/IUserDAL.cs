@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataAccesLayer.Abstract
 {
     public interface IUserDAL
-    {
+    { 
         List<User> list();
         List<User> GetCompaniesPersonel(int id);
         void add(User t);

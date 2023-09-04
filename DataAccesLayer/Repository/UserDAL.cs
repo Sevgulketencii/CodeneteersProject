@@ -148,7 +148,7 @@ namespace DataAccesLayer.Repository
             return User;
         }
         #region LİSTELE
-        public List<User> list()
+        public List<User> list() 
         {
             var connection = new DbConnectionHelper().Connection;
 

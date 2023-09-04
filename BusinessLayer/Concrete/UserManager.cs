@@ -18,7 +18,7 @@ namespace BusinessLayer.Concrete
             _user = user;
         }
 
-        public void add(User t)
+        public void add(User t) 
         {
             _user.add(t);
         }

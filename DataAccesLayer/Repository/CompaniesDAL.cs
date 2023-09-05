@@ -79,12 +79,19 @@ namespace DataAccesLayer.Repository
                     company.description = reader.GetString(reader.GetOrdinal("description"));
                     company.imageUrl = reader.GetString(reader.GetOrdinal("imageUrl"));
                     company.enrolledDate = reader.GetDateTime(reader.GetOrdinal("enrolledDate"));
-                    company.exitDate = reader.GetDateTime(reader.GetOrdinal("exitDate"));
+
+                    company.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                    //eğer firma hala sistemdeyse exitDate null'dır.
+                    if (company.status == false)
+                    { 
+                        company.exitDate = reader.GetDateTime(reader.GetOrdinal("exitDate")); 
+                    }
+                    
                     company.address = reader.GetString(reader.GetOrdinal("address"));
                     company.eMail = reader.GetString(reader.GetOrdinal("eMail"));
                     company.phoneNumber = reader.GetString(reader.GetOrdinal("phoneNumber"));
                     company.sector = reader.GetString(reader.GetOrdinal("sector"));
-                    company.status = reader.GetBoolean(reader.GetOrdinal("status"));
                 }
 
                 reader.Close();

@@ -97,6 +97,8 @@
             izinCount = new Label();
             label5 = new Label();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            dilekoneriCount = new Label();
+            label6 = new Label();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             ilanlarCount = new Label();
             label7 = new Label();
@@ -106,8 +108,6 @@
             guna2vProgressBar1 = new Guna.UI2.WinForms.Guna2VProgressBar();
             guna2vProgressBar2 = new Guna.UI2.WinForms.Guna2VProgressBar();
             guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            label6 = new Label();
-            dilekoneriCount = new Label();
             guna2ShadowPanel1.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
             guna2GradientPanel1.SuspendLayout();
@@ -491,7 +491,7 @@
             label3.ForeColor = SystemColors.ButtonFace;
             label3.Location = new Point(374, 52);
             label3.Name = "label3";
-            label3.Size = new Size(97, 20);
+            label3.Size = new Size(78, 16);
             label3.TabIndex = 2;
             label3.Text = "Firma İsmi \r\n";
             // 
@@ -501,7 +501,7 @@
             label4.ForeColor = SystemColors.ButtonFace;
             label4.Location = new Point(47, 52);
             label4.Name = "label4";
-            label4.Size = new Size(108, 20);
+            label4.Size = new Size(87, 16);
             label4.TabIndex = 0;
             label4.Text = "Kullanıcı Adı";
             // 
@@ -511,7 +511,7 @@
             label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(47, 25);
             label2.Name = "label2";
-            label2.Size = new Size(109, 20);
+            label2.Size = new Size(86, 16);
             label2.TabIndex = 0;
             label2.Text = "Hoş geldiniz!\r\n";
             // 
@@ -537,7 +537,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(827, 31);
             label1.Name = "label1";
-            label1.Size = new Size(80, 20);
+            label1.Size = new Size(66, 16);
             label1.TabIndex = 4;
             label1.Text = "Ad Soyad";
             // 
@@ -559,7 +559,7 @@
             izinCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             izinCount.Location = new Point(48, 19);
             izinCount.Name = "izinCount";
-            izinCount.Size = new Size(26, 32);
+            izinCount.Size = new Size(21, 27);
             izinCount.TabIndex = 1;
             izinCount.Text = "1";
             // 
@@ -568,7 +568,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(32, 52);
             label5.Name = "label5";
-            label5.Size = new Size(59, 20);
+            label5.Size = new Size(48, 16);
             label5.TabIndex = 0;
             label5.Text = "İzinler";
             // 
@@ -583,6 +583,25 @@
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2GradientPanel2.Size = new Size(123, 103);
             guna2GradientPanel2.TabIndex = 7;
+            // 
+            // dilekoneriCount
+            // 
+            dilekoneriCount.AutoSize = true;
+            dilekoneriCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dilekoneriCount.Location = new Point(49, 23);
+            dilekoneriCount.Name = "dilekoneriCount";
+            dilekoneriCount.Size = new Size(21, 27);
+            dilekoneriCount.TabIndex = 2;
+            dilekoneriCount.Text = "1";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(4, 55);
+            label6.Name = "label6";
+            label6.Size = new Size(93, 16);
+            label6.TabIndex = 1;
+            label6.Text = "Dilek ve Öneri";
             // 
             // guna2GradientPanel3
             // 
@@ -602,7 +621,7 @@
             ilanlarCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             ilanlarCount.Location = new Point(48, 14);
             ilanlarCount.Name = "ilanlarCount";
-            ilanlarCount.Size = new Size(26, 32);
+            ilanlarCount.Size = new Size(21, 27);
             ilanlarCount.TabIndex = 3;
             ilanlarCount.Text = "1";
             // 
@@ -611,7 +630,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(30, 46);
             label7.Name = "label7";
-            label7.Size = new Size(61, 20);
+            label7.Size = new Size(49, 16);
             label7.TabIndex = 2;
             label7.Text = "İlanlar";
             // 
@@ -633,7 +652,7 @@
             personelCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             personelCount.Location = new Point(49, 14);
             personelCount.Name = "personelCount";
-            personelCount.Size = new Size(26, 32);
+            personelCount.Size = new Size(21, 27);
             personelCount.TabIndex = 4;
             personelCount.Text = "1";
             personelCount.TextAlign = ContentAlignment.TopCenter;
@@ -643,7 +662,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(25, 47);
             label8.Name = "label8";
-            label8.Size = new Size(73, 20);
+            label8.Size = new Size(61, 16);
             label8.TabIndex = 3;
             label8.Text = "Personel";
             label8.TextAlign = ContentAlignment.TopCenter;
@@ -691,28 +710,9 @@
             guna2GradientButton2.Text = "X";
             guna2GradientButton2.Click += guna2GradientButton2_Click;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(4, 55);
-            label6.Name = "label6";
-            label6.Size = new Size(116, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Dilek ve Öneri";
-            // 
-            // dilekoneriCount
-            // 
-            dilekoneriCount.AutoSize = true;
-            dilekoneriCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dilekoneriCount.Location = new Point(49, 23);
-            dilekoneriCount.Name = "dilekoneriCount";
-            dilekoneriCount.Size = new Size(26, 32);
-            dilekoneriCount.TabIndex = 2;
-            dilekoneriCount.Text = "1";
-            // 
             // DashboardForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
             ClientSize = new Size(986, 514);
@@ -732,6 +732,7 @@
             ForeColor = SystemColors.ButtonFace;
             FormBorderStyle = FormBorderStyle.None;
             Name = "DashboardForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DashboardForm";
             Load += DashboardForm_Load_1;
             guna2ShadowPanel1.ResumeLayout(false);

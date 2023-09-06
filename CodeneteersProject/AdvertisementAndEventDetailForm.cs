@@ -30,11 +30,12 @@ namespace CodeneteersProject
         private void AdvertisementAndEventDetailForm_Load(object sender, EventArgs e)
         {
             titleLabel.Text = post.title;
-            var x = post.type == "advertisement" ? wishAndSuggestionTitleLabel.Text = "Duyuru Detayları" : wishAndSuggestionTitleLabel.Text = "Etkinlik Detayları";
+            var postType = post.type;
+            wishAndSuggestionTitleLabel.Text = postType == "advertisement" ? "Duyuru Detayları" : "Etkinlik Detayları";
             messageTextBox.Text = post.body;
             string date = post.createdDate.ToString();
             dateLabel.Text = date.Substring(0, date.Length - 9);
-            var y = post.type == "event" ? applyButton.Visible = true : applyButton.Visible = false;
+            applyButton.Visible = postType =="event"? true : false;
 
         }
 

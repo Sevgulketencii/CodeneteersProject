@@ -658,6 +658,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Margin = new Padding(4, 2, 4, 2);
 			Name = "CompaniesForm";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Form1";
 			Load += Form1_Load;
 			guna2ShadowPanel1.ResumeLayout(false);

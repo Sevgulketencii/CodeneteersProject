@@ -147,8 +147,8 @@ namespace CodeneteersProject
         {
 
             List<Posts> postsList = postsManager.GetCompanyPostList(1);
-            List<Posts> advertisementsList = PickedPosts(postsList, AdvertisementPostType);
-            List<Posts> eventsList = PickedPosts(postsList, EventPostType);
+            List<Posts> advertisementsList = PickedPosts(postsList, "advertisement");
+            List<Posts> eventsList = PickedPosts(postsList, "event");
 
             int yCoordinate = 20;
 
@@ -170,7 +170,7 @@ namespace CodeneteersProject
                 postLoopButton.Location = new Point(30, yCoordinate);
                 postLoopButton.Margin = new Padding(3, 4, 3, 4);
                 postLoopButton.Name = "advertisementButton" + advertisement.ID.ToString();
-                postLoopButton.Size = new Size(310, 46);
+                postLoopButton.Size = new Size(297, 46);
                 postLoopButton.TabIndex = 0;
                 postLoopButton.Text = advertisement.title;
                 postLoopButton.TextAlign = HorizontalAlignment.Left;
@@ -202,7 +202,7 @@ namespace CodeneteersProject
                 postLoopButton.Location = new Point(30, yCoordinate);
                 postLoopButton.Margin = new Padding(3, 4, 3, 4);
                 postLoopButton.Name = "advertisementButton" + events.ID.ToString();
-                postLoopButton.Size = new Size(310, 46);
+                postLoopButton.Size = new Size(297, 46);
                 postLoopButton.TabIndex = 0;
                 postLoopButton.Text = events.title;
                 postLoopButton.TextAlign = HorizontalAlignment.Left;

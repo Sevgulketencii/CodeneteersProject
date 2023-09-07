@@ -23,7 +23,8 @@ namespace CodeneteersProject
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Etkinlik kaydınız başarıyla alınmıştır.");
+            //addApplication.add(post.id, person.id, appDate);
+            MessageBox.Show("Etkinlik kaydınız başarıyla alınmıştır.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //goToDashboard
         }
 
@@ -35,7 +36,7 @@ namespace CodeneteersProject
             messageTextBox.Text = post.body;
             string date = post.createdDate.ToString();
             dateLabel.Text = date.Substring(0, date.Length - 9);
-            applyButton.Visible = postType =="event"? true : false;
+            applyButton.Visible = postType == "event" ? true : false;
 
         }
 

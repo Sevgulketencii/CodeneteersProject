@@ -53,8 +53,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges79 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges80 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges81 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -71,6 +69,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             sideBar = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -90,7 +90,6 @@
             profileButton = new Guna.UI2.WinForms.Guna2Button();
             dashboardIcon = new Guna.UI2.WinForms.Guna2CircleButton();
             dashboardButton = new Guna.UI2.WinForms.Guna2Button();
-            guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             label9 = new Label();
             label8 = new Label();
             personelCount = new Label();
@@ -114,6 +113,7 @@
             guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             label1 = new Label();
+            closeButton = new Guna.UI2.WinForms.Guna2GradientButton();
             sideBar.SuspendLayout();
             guna2GradientPanel4.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
@@ -153,7 +153,7 @@
             sideBar.Controls.Add(dashboardButton);
             sideBar.FillColor = Color.SlateBlue;
             sideBar.ForeColor = SystemColors.AppWorkspace;
-            sideBar.Location = new Point(14, 13);
+            sideBar.Location = new Point(12, 15);
             sideBar.Name = "sideBar";
             sideBar.Radius = 10;
             sideBar.ShadowColor = Color.WhiteSmoke;
@@ -484,27 +484,6 @@
             dashboardButton.TextAlign = HorizontalAlignment.Left;
             dashboardButton.Click += guna2Button1_Click_1;
             // 
-            // guna2GradientButton2
-            // 
-            guna2GradientButton2.BorderRadius = 12;
-            guna2GradientButton2.CustomizableEdges = customizableEdges42;
-            guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray;
-            guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2GradientButton2.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2GradientButton2.FillColor = Color.LightSkyBlue;
-            guna2GradientButton2.FillColor2 = Color.MediumPurple;
-            guna2GradientButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2GradientButton2.ForeColor = Color.White;
-            guna2GradientButton2.Location = new Point(972, 12);
-            guna2GradientButton2.Name = "guna2GradientButton2";
-            guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges43;
-            guna2GradientButton2.Size = new Size(28, 26);
-            guna2GradientButton2.TabIndex = 11;
-            guna2GradientButton2.Text = "X";
-            guna2GradientButton2.Click += guna2GradientButton2_Click;
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -766,16 +745,37 @@
             label1.TabIndex = 4;
             label1.Text = "Ad Soyad";
             // 
+            // closeButton
+            // 
+            closeButton.BorderRadius = 12;
+            closeButton.CustomizableEdges = customizableEdges42;
+            closeButton.DisabledState.BorderColor = Color.DarkGray;
+            closeButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            closeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            closeButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            closeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            closeButton.FillColor2 = Color.Indigo;
+            closeButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            closeButton.ForeColor = Color.White;
+            closeButton.Location = new Point(959, 15);
+            closeButton.Margin = new Padding(3, 4, 3, 4);
+            closeButton.Name = "closeButton";
+            closeButton.ShadowDecoration.CustomizableEdges = customizableEdges43;
+            closeButton.Size = new Size(32, 35);
+            closeButton.TabIndex = 32;
+            closeButton.Text = "X";
+            closeButton.Click += closeButton_Click;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
             ClientSize = new Size(1012, 499);
+            Controls.Add(closeButton);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(guna2GradientButton2);
             Controls.Add(guna2vProgressBar2);
             Controls.Add(guna2vProgressBar1);
             Controls.Add(guna2GradientPanel4);
@@ -791,7 +791,8 @@
             ForeColor = SystemColors.ButtonFace;
             FormBorderStyle = FormBorderStyle.None;
             Name = "DashboardForm";
-            Text = "DashboardForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Dashboard";
             Load += DashboardForm_Load_1;
             sideBar.ResumeLayout(false);
             guna2GradientPanel4.ResumeLayout(false);
@@ -825,7 +826,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton suggestionsIcon;
         private Guna.UI2.WinForms.Guna2Button logOutButton;
         private Guna.UI2.WinForms.Guna2CircleButton logOutIcon;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Label dilekoneriCount;
         private Guna.UI2.WinForms.Guna2CircleButton restIcon;
         private Guna.UI2.WinForms.Guna2Button restButton;
@@ -852,5 +852,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton closeButton;
     }
 }

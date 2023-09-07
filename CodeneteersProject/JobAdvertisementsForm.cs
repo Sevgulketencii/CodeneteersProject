@@ -23,6 +23,9 @@ namespace CodeneteersProject
             Application.Exit();
         }
 
-        
+        private void JobAdvertisementsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

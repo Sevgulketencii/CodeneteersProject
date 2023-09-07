@@ -88,31 +88,65 @@ namespace CodeneteersProject
         public AdvertisementsAndEventsForm()
         {
             InitializeComponent();
-            scrollBar.Value = shdwpanel1.VerticalScroll.Value;
-            scrollBar.Minimum = shdwpanel1.VerticalScroll.Minimum;
-            scrollBar.Maximum = shdwpanel1.VerticalScroll.Maximum;
-            shdwpanel1.ControlAdded += Shdwpanel1_ControlAdded;
+            addScrollBar.Value = addsPanel.VerticalScroll.Value;
+            addScrollBar.Minimum = addsPanel.VerticalScroll.Minimum;
+            addScrollBar.Maximum = addsPanel.VerticalScroll.Maximum;
+            addScrollBar.Scroll += AddScrollBar_Scroll;
+            addScrollBar.Enabled = false;
+
+            eventScrollBar.Value = eventsPanel.VerticalScroll.Value;
+            eventScrollBar.Minimum = eventsPanel.VerticalScroll.Minimum;
+            eventScrollBar.Maximum = eventsPanel.VerticalScroll.Maximum;
+            eventScrollBar.Scroll += EventScrollBar_Scroll;
+            eventScrollBar.Enabled = true;
+
+            addsPanel.ControlAdded += AddsPanel_ControlAdded;
+            addsPanel.ControlRemoved += AddsPanel_ControlRemoved;
+
+
+            eventsPanel.ControlAdded += EventsPanel_ControlAdded;
+            eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
 
         }
 
-        private void Shdwpanel1_ControlAdded(object? sender, ControlEventArgs e)
+
+        private void EventsPanel_ControlRemoved(object? sender, ControlEventArgs e)
         {
+            eventScrollBar.Minimum = eventsPanel.VerticalScroll.Minimum;
 
-            scrollBar.Maximum = shdwpanel1.VerticalScroll.Maximum;
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void AddsPanel_ControlRemoved(object? sender, ControlEventArgs e)
         {
-            Application.Exit();
+            addScrollBar.Minimum = addsPanel.VerticalScroll.Minimum;
         }
 
+        private void EventsPanel_ControlAdded(object? sender, ControlEventArgs e)
+        {
+            eventScrollBar.Minimum = eventsPanel.VerticalScroll.Maximum;
+        }
 
+        private void AddsPanel_ControlAdded(object? sender, ControlEventArgs e)
+        {
+            addScrollBar.Minimum = addsPanel.VerticalScroll.Maximum;
+        }
 
+        private void EventScrollBar_Scroll(object? sender, ScrollEventArgs e)
+        {
+            eventsPanel.VerticalScroll.Value = eventScrollBar.Value;
+
+        }
+
+        private void AddScrollBar_Scroll(object? sender, ScrollEventArgs e)
+        {
+            addsPanel.VerticalScroll.Value = addScrollBar.Value;
+
+        }
 
         private void AdvertisementsForm_Load(object sender, EventArgs e)
         {
 
-            List<Posts> postsList = postsManager.list();
+            List<Posts> postsList = postsManager.GetCompanyPostList(1);
             List<Posts> advertisementsList = PickedPosts(postsList, AdvertisementPostType);
             List<Posts> eventsList = PickedPosts(postsList, EventPostType);
 
@@ -122,7 +156,7 @@ namespace CodeneteersProject
             {
                 postLoopButton = new Guna.UI2.WinForms.Guna2Button();
                 //drawPostButton(postLoopButton ,advertisement.ID, x, advertisement.title, shdwpanel1);
-                shdwpanel1.Controls.Add(postLoopButton);
+                addsPanel.Controls.Add(postLoopButton);
                 postLoopButton.BackColor = Color.Transparent;
                 postLoopButton.BorderColor = SystemColors.ControlDark;
                 postLoopButton.DisabledState.BorderColor = Color.DarkGray;
@@ -144,12 +178,17 @@ namespace CodeneteersProject
                 yCoordinate += 50;
 
             }
+
+            if (!addScrollBar.Enabled)
+                addScrollBar.Enabled = true;
+
             yCoordinate = 20;
+
             foreach (Posts events in eventsList)
             {
                 postLoopButton = new Guna.UI2.WinForms.Guna2Button();
                 //drawPostButton(events.ID, x, events.title, panel2);
-                panel2.Controls.Add(postLoopButton);
+                eventsPanel.Controls.Add(postLoopButton);
                 postLoopButton.BackColor = Color.Transparent;
                 postLoopButton.BorderColor = SystemColors.ControlDark;
                 postLoopButton.DisabledState.BorderColor = Color.DarkGray;
@@ -171,6 +210,8 @@ namespace CodeneteersProject
                 yCoordinate += 50;
 
             }
+            if (!eventScrollBar.Enabled)
+                eventScrollBar.Enabled = true;
         }
 
 
@@ -182,23 +223,14 @@ namespace CodeneteersProject
             GoToDetailPage(post);
         }
 
-        private void scrollBar_Scroll(object sender, ScrollEventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-
-            shdwpanel1.VerticalScroll.Value = scrollBar.Value;
-
+            Application.Exit();
         }
 
-        private void dashboardButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scrollBar_Scroll_1(object sender, ScrollEventArgs e)
+        private void jobAdvertisementsLabel_Click(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }

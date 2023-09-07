@@ -117,7 +117,7 @@
             sendButton.FillColor2 = Color.Indigo;
             sendButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             sendButton.ForeColor = Color.White;
-            sendButton.Location = new Point(438, 509);
+            sendButton.Location = new Point(449, 482);
             sendButton.Margin = new Padding(3, 4, 3, 4);
             sendButton.Name = "sendButton";
             sendButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -141,13 +141,12 @@
             messageTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             messageTextBox.Location = new Point(315, 295);
             messageTextBox.Margin = new Padding(3, 4, 3, 4);
-            messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
             messageTextBox.PasswordChar = '\0';
             messageTextBox.PlaceholderText = "";
             messageTextBox.SelectedText = "";
             messageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            messageTextBox.Size = new Size(472, 174);
+            messageTextBox.Size = new Size(472, 169);
             messageTextBox.TabIndex = 52;
             // 
             // messageLabel
@@ -175,7 +174,7 @@
             issueTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             issueTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             issueTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            issueTextBox.Location = new Point(315, 195);
+            issueTextBox.Location = new Point(315, 194);
             issueTextBox.Margin = new Padding(3, 4, 3, 4);
             issueTextBox.Name = "issueTextBox";
             issueTextBox.PasswordChar = '\0';
@@ -190,7 +189,7 @@
             issueLabel.BackColor = Color.Transparent;
             issueLabel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             issueLabel.ForeColor = SystemColors.ButtonFace;
-            issueLabel.Location = new Point(315, 155);
+            issueLabel.Location = new Point(315, 154);
             issueLabel.Margin = new Padding(3, 4, 3, 4);
             issueLabel.Name = "issueLabel";
             issueLabel.Size = new Size(44, 25);

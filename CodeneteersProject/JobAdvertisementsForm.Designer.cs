@@ -61,27 +61,27 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobAdvertisementsForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobAdvertisementsForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             shadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -110,25 +110,25 @@
             jobAdvertisementsLabel = new Label();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             advertisementPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2CircleButton20 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             advertisementButton1 = new Guna.UI2.WinForms.Guna2Button();
             advertisementPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2CircleButton21 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             advertisementButton2 = new Guna.UI2.WinForms.Guna2Button();
             advertisementPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2CircleButton22 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton11 = new Guna.UI2.WinForms.Guna2CircleButton();
             advertisementButton3 = new Guna.UI2.WinForms.Guna2Button();
             advertisementPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2CircleButton24 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton12 = new Guna.UI2.WinForms.Guna2CircleButton();
             advertisementButton5 = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2CircleButton23 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton13 = new Guna.UI2.WinForms.Guna2CircleButton();
             advertisementButton4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2CircleButton20 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton21 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton22 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton23 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton24 = new Guna.UI2.WinForms.Guna2CircleButton();
             shadowPanel1.SuspendLayout();
             advertisementPanel1.SuspendLayout();
             advertisementPanel2.SuspendLayout();
@@ -677,6 +677,26 @@
             advertisementPanel1.Size = new Size(554, 77);
             advertisementPanel1.TabIndex = 61;
             // 
+            // guna2CircleButton20
+            // 
+            guna2CircleButton20.BackColor = Color.Transparent;
+            guna2CircleButton20.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton20.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton20.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton20.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton20.FillColor = Color.Transparent;
+            guna2CircleButton20.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton20.ForeColor = Color.White;
+            guna2CircleButton20.Image = (Image)resources.GetObject("guna2CircleButton20.Image");
+            guna2CircleButton20.ImageSize = new Size(25, 25);
+            guna2CircleButton20.Location = new Point(14, 7);
+            guna2CircleButton20.Margin = new Padding(3, 4, 3, 4);
+            guna2CircleButton20.Name = "guna2CircleButton20";
+            guna2CircleButton20.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2CircleButton20.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton20.Size = new Size(48, 56);
+            guna2CircleButton20.TabIndex = 27;
+            // 
             // guna2CircleButton2
             // 
             guna2CircleButton2.BackColor = Color.Transparent;
@@ -733,6 +753,26 @@
             advertisementPanel2.ShadowColor = Color.WhiteSmoke;
             advertisementPanel2.Size = new Size(554, 77);
             advertisementPanel2.TabIndex = 62;
+            // 
+            // guna2CircleButton21
+            // 
+            guna2CircleButton21.BackColor = Color.Transparent;
+            guna2CircleButton21.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton21.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton21.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton21.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton21.FillColor = Color.Transparent;
+            guna2CircleButton21.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton21.ForeColor = Color.White;
+            guna2CircleButton21.Image = (Image)resources.GetObject("guna2CircleButton21.Image");
+            guna2CircleButton21.ImageSize = new Size(25, 25);
+            guna2CircleButton21.Location = new Point(14, 9);
+            guna2CircleButton21.Margin = new Padding(3, 4, 3, 4);
+            guna2CircleButton21.Name = "guna2CircleButton21";
+            guna2CircleButton21.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2CircleButton21.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton21.Size = new Size(48, 56);
+            guna2CircleButton21.TabIndex = 28;
             // 
             // guna2CircleButton1
             // 
@@ -791,6 +831,26 @@
             advertisementPanel3.Size = new Size(554, 77);
             advertisementPanel3.TabIndex = 64;
             // 
+            // guna2CircleButton22
+            // 
+            guna2CircleButton22.BackColor = Color.Transparent;
+            guna2CircleButton22.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton22.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton22.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton22.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton22.FillColor = Color.Transparent;
+            guna2CircleButton22.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton22.ForeColor = Color.White;
+            guna2CircleButton22.Image = (Image)resources.GetObject("guna2CircleButton22.Image");
+            guna2CircleButton22.ImageSize = new Size(25, 25);
+            guna2CircleButton22.Location = new Point(14, 9);
+            guna2CircleButton22.Margin = new Padding(3, 4, 3, 4);
+            guna2CircleButton22.Name = "guna2CircleButton22";
+            guna2CircleButton22.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2CircleButton22.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton22.Size = new Size(48, 56);
+            guna2CircleButton22.TabIndex = 29;
+            // 
             // guna2CircleButton11
             // 
             guna2CircleButton11.BackColor = Color.Transparent;
@@ -847,6 +907,26 @@
             advertisementPanel5.ShadowColor = Color.WhiteSmoke;
             advertisementPanel5.Size = new Size(554, 77);
             advertisementPanel5.TabIndex = 67;
+            // 
+            // guna2CircleButton24
+            // 
+            guna2CircleButton24.BackColor = Color.Transparent;
+            guna2CircleButton24.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton24.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton24.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton24.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton24.FillColor = Color.Transparent;
+            guna2CircleButton24.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton24.ForeColor = Color.White;
+            guna2CircleButton24.Image = (Image)resources.GetObject("guna2CircleButton24.Image");
+            guna2CircleButton24.ImageSize = new Size(25, 25);
+            guna2CircleButton24.Location = new Point(18, 12);
+            guna2CircleButton24.Margin = new Padding(3, 4, 3, 4);
+            guna2CircleButton24.Name = "guna2CircleButton24";
+            guna2CircleButton24.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            guna2CircleButton24.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton24.Size = new Size(48, 56);
+            guna2CircleButton24.TabIndex = 31;
             // 
             // guna2CircleButton12
             // 
@@ -905,6 +985,26 @@
             guna2ShadowPanel2.Size = new Size(554, 77);
             guna2ShadowPanel2.TabIndex = 66;
             // 
+            // guna2CircleButton23
+            // 
+            guna2CircleButton23.BackColor = Color.Transparent;
+            guna2CircleButton23.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton23.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton23.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton23.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton23.FillColor = Color.Transparent;
+            guna2CircleButton23.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton23.ForeColor = Color.White;
+            guna2CircleButton23.Image = (Image)resources.GetObject("guna2CircleButton23.Image");
+            guna2CircleButton23.ImageSize = new Size(25, 25);
+            guna2CircleButton23.Location = new Point(18, 7);
+            guna2CircleButton23.Margin = new Padding(3, 4, 3, 4);
+            guna2CircleButton23.Name = "guna2CircleButton23";
+            guna2CircleButton23.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna2CircleButton23.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton23.Size = new Size(48, 56);
+            guna2CircleButton23.TabIndex = 30;
+            // 
             // guna2CircleButton13
             // 
             guna2CircleButton13.BackColor = Color.Transparent;
@@ -946,106 +1046,6 @@
             advertisementButton4.Text = "Uluslararası Finans Uzmanı";
             advertisementButton4.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2CircleButton20
-            // 
-            guna2CircleButton20.BackColor = Color.Transparent;
-            guna2CircleButton20.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton20.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton20.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton20.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton20.FillColor = Color.Transparent;
-            guna2CircleButton20.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton20.ForeColor = Color.White;
-            guna2CircleButton20.Image = (Image)resources.GetObject("guna2CircleButton20.Image");
-            guna2CircleButton20.ImageSize = new Size(25, 25);
-            guna2CircleButton20.Location = new Point(14, 7);
-            guna2CircleButton20.Margin = new Padding(3, 4, 3, 4);
-            guna2CircleButton20.Name = "guna2CircleButton20";
-            guna2CircleButton20.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2CircleButton20.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton20.Size = new Size(48, 56);
-            guna2CircleButton20.TabIndex = 27;
-            // 
-            // guna2CircleButton21
-            // 
-            guna2CircleButton21.BackColor = Color.Transparent;
-            guna2CircleButton21.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton21.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton21.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton21.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton21.FillColor = Color.Transparent;
-            guna2CircleButton21.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton21.ForeColor = Color.White;
-            guna2CircleButton21.Image = (Image)resources.GetObject("guna2CircleButton21.Image");
-            guna2CircleButton21.ImageSize = new Size(25, 25);
-            guna2CircleButton21.Location = new Point(14, 9);
-            guna2CircleButton21.Margin = new Padding(3, 4, 3, 4);
-            guna2CircleButton21.Name = "guna2CircleButton21";
-            guna2CircleButton21.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2CircleButton21.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton21.Size = new Size(48, 56);
-            guna2CircleButton21.TabIndex = 28;
-            // 
-            // guna2CircleButton22
-            // 
-            guna2CircleButton22.BackColor = Color.Transparent;
-            guna2CircleButton22.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton22.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton22.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton22.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton22.FillColor = Color.Transparent;
-            guna2CircleButton22.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton22.ForeColor = Color.White;
-            guna2CircleButton22.Image = (Image)resources.GetObject("guna2CircleButton22.Image");
-            guna2CircleButton22.ImageSize = new Size(25, 25);
-            guna2CircleButton22.Location = new Point(14, 9);
-            guna2CircleButton22.Margin = new Padding(3, 4, 3, 4);
-            guna2CircleButton22.Name = "guna2CircleButton22";
-            guna2CircleButton22.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2CircleButton22.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton22.Size = new Size(48, 56);
-            guna2CircleButton22.TabIndex = 29;
-            // 
-            // guna2CircleButton23
-            // 
-            guna2CircleButton23.BackColor = Color.Transparent;
-            guna2CircleButton23.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton23.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton23.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton23.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton23.FillColor = Color.Transparent;
-            guna2CircleButton23.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton23.ForeColor = Color.White;
-            guna2CircleButton23.Image = (Image)resources.GetObject("guna2CircleButton23.Image");
-            guna2CircleButton23.ImageSize = new Size(25, 25);
-            guna2CircleButton23.Location = new Point(18, 7);
-            guna2CircleButton23.Margin = new Padding(3, 4, 3, 4);
-            guna2CircleButton23.Name = "guna2CircleButton23";
-            guna2CircleButton23.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2CircleButton23.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton23.Size = new Size(48, 56);
-            guna2CircleButton23.TabIndex = 30;
-            // 
-            // guna2CircleButton24
-            // 
-            guna2CircleButton24.BackColor = Color.Transparent;
-            guna2CircleButton24.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton24.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton24.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton24.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton24.FillColor = Color.Transparent;
-            guna2CircleButton24.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton24.ForeColor = Color.White;
-            guna2CircleButton24.Image = (Image)resources.GetObject("guna2CircleButton24.Image");
-            guna2CircleButton24.ImageSize = new Size(25, 25);
-            guna2CircleButton24.Location = new Point(18, 12);
-            guna2CircleButton24.Margin = new Padding(3, 4, 3, 4);
-            guna2CircleButton24.Name = "guna2CircleButton24";
-            guna2CircleButton24.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            guna2CircleButton24.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton24.Size = new Size(48, 56);
-            guna2CircleButton24.TabIndex = 31;
-            // 
             // JobAdvertisementsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1066,6 +1066,7 @@
             Name = "JobAdvertisementsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CompaniesForm";
+            Load += JobAdvertisementsForm_Load;
             shadowPanel1.ResumeLayout(false);
             advertisementPanel1.ResumeLayout(false);
             advertisementPanel2.ResumeLayout(false);

@@ -1,6 +1,4 @@
 
-using CodeNETeersProject;
-
 namespace CodeneteersProject
 {
     internal static class Program

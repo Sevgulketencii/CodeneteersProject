@@ -14,7 +14,7 @@ namespace DataAccesLayer.Repository
     public class SuggestionsDAL : ISuggestionsDAL
     {
         #region EKLEME
-        public void add(Suggestions t)
+        public void add(Suggestion t)
         {
             var connection = new DbConnectionHelper().Connection;
             var command = new SqlCommand();
@@ -36,7 +36,7 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region SİLME
-        public void delete(Suggestions t)
+        public void delete(Suggestion t)
         {
             var connection = new DbConnectionHelper().Connection;
             var command = new SqlCommand();
@@ -48,10 +48,10 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region ID'YEGOREGETİR
-        public Suggestions GetByID(int id)
+        public Suggestion GetByID(int id)
         {
             var connection = new DbConnectionHelper().Connection;
-            Suggestions suggestions = null;
+            Suggestion suggestions = null;
 
             using (SqlCommand command = new SqlCommand())
             {
@@ -65,7 +65,7 @@ namespace DataAccesLayer.Repository
 
                 if (reader.Read())
                 {
-                    suggestions = new Suggestions();
+                    suggestions = new Suggestion();
                     suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
                     suggestions.title = reader.GetString(reader.GetOrdinal("title"));
                     suggestions.description = reader.GetString(reader.GetOrdinal("description"));
@@ -84,11 +84,11 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region LİSTELE
-        public List<Suggestions> list()
+        public List<Suggestion> list()
         {
             var connection = new DbConnectionHelper().Connection;
 
-            List<Suggestions> Suggestions = new List<Suggestions>();
+            List<Suggestion> Suggestions = new List<Suggestion>();
 
 
             SqlCommand command = new SqlCommand();
@@ -101,7 +101,7 @@ namespace DataAccesLayer.Repository
             while (reader.Read())
             {
 
-                var suggestions = new Suggestions();
+                var suggestions = new Suggestion();
                 suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
                 suggestions.title = reader.GetString(reader.GetOrdinal("title"));
                 suggestions.description = reader.GetString(reader.GetOrdinal("description"));
@@ -119,7 +119,7 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region GÜNCELLE
-        public void update(Suggestions t)
+        public void update(Suggestion t)
         {
             var connection = new DbConnectionHelper().Connection;
 

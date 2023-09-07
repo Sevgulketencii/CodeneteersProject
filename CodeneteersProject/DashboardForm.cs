@@ -85,10 +85,10 @@ namespace CodeNETeersProject
         {
 
         }
-         
+
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            var user = userManager.GetByID(1);
+            var user = userManager.GetByID(2);
             label1.Text = user.name + " " + user.surname;
             label4.Text = user.name;
             var companyinfo = companiesManager.GetByID(user.companyID);
@@ -102,6 +102,19 @@ namespace CodeNETeersProject
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2CircleButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
         }
     }
 }

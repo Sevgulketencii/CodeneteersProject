@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿
+using BusinessLayer.Concrete;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
 using System;
@@ -17,7 +18,7 @@ namespace CodeneteersProject
     {
         SuggestionsManager suggestionsManager = new SuggestionsManager(new SuggestionsDAL());
         PermissionsManager permissions = new PermissionsManager(new PermissionsDAL());
-        Suggestion suggestion;
+        Suggestions suggestion;
 
         private void ClearInputs()
         {
@@ -39,15 +40,14 @@ namespace CodeneteersProject
         {
             if (!string.IsNullOrEmpty(issueTextBox.Text) || !string.IsNullOrEmpty(messageTextBox.Text))
             {
-                suggestion = new Suggestion();
+                suggestion = new Suggestions();
                 suggestion.title = issueTextBox.Text;
                 suggestion.description = messageTextBox.Text;
                 suggestion.companyID = 1;
                 suggestion.status = true;
                 suggestionsManager.add(suggestion);
-                MessageBox.Show("Kayıt başarı ile eklendi", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearInputs();
-                //goToDashboard
+                MessageBox.Show("İletiniz başarıyla kaydedilmiştir. İlginiz için teşekkür ederiz.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
             else
@@ -65,9 +65,12 @@ namespace CodeneteersProject
             }
         }
 
+
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

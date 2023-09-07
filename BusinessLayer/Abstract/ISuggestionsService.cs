@@ -9,10 +9,10 @@ namespace BusinessLayer.Abstract
 {
     public interface ISuggestionsService
     {
-        List<Suggestion> list();
-        void add(Suggestion t);
-        void delete(Suggestion t);
-        void update(Suggestion t);
-        Suggestion GetByID(int id);
+        List<Suggestions> list();
+        void add(Suggestions t);
+        void delete(Suggestions t);
+        void update(Suggestions t);
+        Suggestions GetByID(int id);
     }
 }

@@ -45,5 +45,11 @@ namespace BusinessLayer.Concrete
         {
             _jobAdvertisements.update(t);
         }
+
+        public List<JobAdvertisements> GetCompanyJobAdvertisementsList(int id)
+        {
+            var result = _jobAdvertisements.GetCompanyJobAdvertisementsList(id);
+            return result;
+        }
     }
 }

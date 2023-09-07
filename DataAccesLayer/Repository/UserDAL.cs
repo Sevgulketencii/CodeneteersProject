@@ -92,11 +92,6 @@ namespace DataAccesLayer.Repository
                  
                     user.price = reader.GetDouble(reader.GetOrdinal("price"));
                     user.status = reader.GetBoolean(reader.GetOrdinal("status"));
-                    //user status aktif değilse exitDate'i vardır.
-                    if (user.status == false)
-                    {
-                        user.exitDate = reader.GetDateTime(reader.GetOrdinal("exitDate"));
-                    }
 
                 }
 

@@ -188,6 +188,7 @@ namespace DataAccesLayer.Repository
                 post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
                 post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
                 post.status = reader.GetBoolean(reader.GetOrdinal("status"));
+                post.type = reader.GetString(reader.GetOrdinal("type"));
 
                 Posts.Add(post);
             }

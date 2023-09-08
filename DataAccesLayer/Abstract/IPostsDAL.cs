@@ -14,5 +14,6 @@ namespace DataAccesLayer.Abstract
         void delete(Posts t);
         void update(Posts t);
         Posts GetByID(int id);
+        List<Posts> GetCompanyPostList(int id);
     }
 }

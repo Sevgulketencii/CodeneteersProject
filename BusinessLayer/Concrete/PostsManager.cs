@@ -44,5 +44,11 @@ namespace BusinessLayer.Concrete
         {
            _posts.update(t);
         }
+
+        public List<Posts> GetCompanyPostList(int id)
+        {
+           var result = _posts.GetCompanyPostList(id);
+           return result;
+        }
     }
 }

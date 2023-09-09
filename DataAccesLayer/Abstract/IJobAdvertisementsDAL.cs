@@ -15,5 +15,6 @@ namespace DataAccesLayer.Abstract
         void update(JobAdvertisements t);
         JobAdvertisements GetByID(int id);
         List<JobAdvertisements> GetCompanyJobAdvertisementsList(int id);
+     
     }
 }

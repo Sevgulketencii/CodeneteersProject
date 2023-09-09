@@ -34,6 +34,12 @@ namespace BusinessLayer.Concrete
             return result;
         }
 
+        public List<Suggestions> GetUserSuggestionList(int id)
+        {
+            var result = _suggestions.GetUserSuggestionList(id);
+            return result;
+        }
+
         public List<Suggestions> list()
         {
             var result = _suggestions.list();

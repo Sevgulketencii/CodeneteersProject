@@ -53,6 +53,11 @@ namespace DataAccesLayer.Repository
             command.Parameters.AddWithValue("@CompanyID", t.ID);
 
         }
+
+        public Companies GetByCompanyID(int id)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region ID'YEGOREGETIR

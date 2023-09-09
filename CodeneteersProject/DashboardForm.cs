@@ -20,10 +20,9 @@ namespace CodeNETeersProject
         UserManager userManager = new UserManager(new UserDAL());
         PermissionsManager permissions = new PermissionsManager(new PermissionsDAL());
         JobAdvertisementsManager job = new JobAdvertisementsManager(new JobAdvertisementsDAL());
-        SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());
 
-        EntityLayer.Concrete.User appUser;
-
+        RestManager rest = new RestManager(new RestDAL());
+        SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());  
         public DashboardForm()
         {
             InitializeComponent();
@@ -105,7 +104,17 @@ namespace CodeNETeersProject
             izinCount.Text = Convert.ToString(permissions.list().Count());
             ilanlarCount.Text = Convert.ToString(job.list().Count());
             personelCount.Text = Convert.ToString(userManager.GetCompaniesPersonel(user.companyID).Count());
-            dilekoneriCount.Text = Convert.ToString(suggestions.list().Count());
+
+            var sonIlan = job.GetCompanyJobAdvertisementsList(user.companyID).OrderByDescending(x => x.ID).FirstOrDefault();
+            if (sonIlan != null) { sonIlanText.Text = sonIlan.title; }
+
+
+            var sontalep = rest.GetUserRestList(user.ID).OrderByDescending(x => x.ID).FirstOrDefault();
+            if (sontalep != null) { sonIzınTalep.Text = sontalep.startDate.ToShortDateString(); }
+
+            var sondilek = suggestions.GetUserSuggestionList(user.ID).OrderByDescending(x => x.ID).FirstOrDefault();
+            if (sondilek != null) { sonDilekOneri.Text = sondilek.title; }
+
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
@@ -129,6 +138,12 @@ namespace CodeNETeersProject
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+        }
+
+        private void sonIzınTalep_Click(object sender, EventArgs e)
+        {
+
         }
 
        

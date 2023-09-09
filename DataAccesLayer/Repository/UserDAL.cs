@@ -243,8 +243,36 @@ namespace DataAccesLayer.Repository
                 connection.Close();
             }
         }
-        #endregion
 
+		#endregion
 
-    }
+		#region Get Personel With Payroll
+
+		public Payroll GetPersonelWithPayroll(int id)
+		{
+			var connection = new DbConnectionHelper().Connection;
+
+			SqlCommand command = new SqlCommand();
+			command.CommandType = CommandType.Text;
+			command.Connection = connection;
+			command.CommandText = @"select * from [dbo].[Payroll] where userID=@ID";
+			var payroll = new Payroll();
+			command.Parameters.AddWithValue("@ID", id);
+			connection.Open();
+			var reader = command.ExecuteReader();
+			
+
+			
+			while (reader.Read())
+			{
+				payroll.workedDays= reader.GetInt32(reader.GetOrdinal("workedDays"));
+			}
+			reader.Close();
+			connection.Close();
+
+			return payroll;
+		}
+
+		#endregion
+	}
 }

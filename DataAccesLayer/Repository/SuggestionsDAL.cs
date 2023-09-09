@@ -81,8 +81,41 @@ namespace DataAccesLayer.Repository
 
             return suggestions;
         }
-        #endregion
 
+
+        #endregion
+        public List<Suggestions> GetUserSuggestionList(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<Suggestions> Suggestions = new List<Suggestions>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from Suggestions where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var suggestions = new Suggestions();
+                suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                suggestions.title = reader.GetString(reader.GetOrdinal("title"));
+                suggestions.description = reader.GetString(reader.GetOrdinal("description"));
+                suggestions.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                suggestions.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                Suggestions.Add(suggestions);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return Suggestions;
+        }
         #region LİSTELE
         public List<Suggestions> list()
         {

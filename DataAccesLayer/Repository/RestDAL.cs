@@ -84,8 +84,43 @@ namespace DataAccesLayer.Repository
 
             return rest;
         }
-        #endregion
 
+
+        #endregion
+        public List<Rest> GetUserRestList(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<Rest> Rest = new List<Rest>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from Rest where userID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var rest = new Rest();
+                rest.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                rest.userID = reader.GetInt32(reader.GetOrdinal("userID"));
+                rest.startDate = reader.GetDateTime(reader.GetOrdinal("startDate"));
+                rest.endDate = reader.GetDateTime(reader.GetOrdinal("endDate"));
+                rest.day = reader.GetInt32(reader.GetOrdinal("day"));
+                rest.isAccepted = reader.GetBoolean(reader.GetOrdinal("isAccepted"));
+                rest.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                Rest.Add(rest);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return Rest;
+        }
         #region LİSTELE
         public List<Rest> list()
         {

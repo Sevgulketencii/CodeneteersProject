@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
         void delete(Suggestions t);
         void update(Suggestions t);
         Suggestions GetByID(int id);
+        List<Suggestions> GetUserSuggestionList(int id);
     }
 }

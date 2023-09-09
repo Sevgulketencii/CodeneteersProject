@@ -34,6 +34,12 @@ namespace BusinessLayer.Concrete
             return result;
         }
 
+        public List<Rest> GetUserRestList(int id)
+        {
+            var result = _rest.GetUserRestList(id);
+            return result;
+        }
+
         public List<Rest> list()
         {
             var result = _rest.list();

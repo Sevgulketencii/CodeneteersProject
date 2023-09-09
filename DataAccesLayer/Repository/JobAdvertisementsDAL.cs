@@ -83,8 +83,42 @@ namespace DataAccesLayer.Repository
 
             return jobAdvertisements;
         }
-        #endregion
 
+
+        #endregion
+        public List<JobAdvertisements> GetCompanyJoblist(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<JobAdvertisements> jobAdvertisements = new List<JobAdvertisements>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from JobAdvertisements where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                var JobAdvertisements = new JobAdvertisements();
+                JobAdvertisements.ID = reader.GetInt32("ID");
+                JobAdvertisements.title = reader.GetString("title");
+                JobAdvertisements.body = reader.GetString("body");
+                JobAdvertisements.companyID = reader.GetInt32("companyID");
+                JobAdvertisements.createdDate = reader.GetDateTime("createdDate");
+                JobAdvertisements.category = reader.GetString("category");
+                JobAdvertisements.status = reader.GetBoolean("status");
+
+                jobAdvertisements.Add(JobAdvertisements);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return jobAdvertisements;
+        }
         #region LİSTELE
         public List<JobAdvertisements> list()
         {
@@ -152,6 +186,44 @@ namespace DataAccesLayer.Repository
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+        }
+        #endregion
+
+
+        #region ŞİRKETE GÖRE LİSTELE
+        public List<JobAdvertisements> GetCompanyJobAdvertisementsList(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<JobAdvertisements> jobAdvertisements = new List<JobAdvertisements>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from [dbo].[JobAdvertisements] where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var jobAdvertisement = new JobAdvertisements();
+                jobAdvertisement.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                jobAdvertisement.title = reader.GetString(reader.GetOrdinal("title"));
+                jobAdvertisement.body = reader.GetString(reader.GetOrdinal("body"));
+                jobAdvertisement.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                jobAdvertisement.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
+                jobAdvertisement.category = reader.GetString(reader.GetOrdinal("category"));
+                jobAdvertisement.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                jobAdvertisements.Add(jobAdvertisement);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return jobAdvertisements;
         }
         #endregion
     }

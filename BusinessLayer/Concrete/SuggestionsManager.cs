@@ -18,29 +18,35 @@ namespace BusinessLayer.Concrete
             _suggestions = suggestions;
         }
 
-        public void add(Suggestion t)
+        public void add(Suggestions t)
         {
             _suggestions.add(t);
         }
 
-        public void delete(Suggestion t)
+        public void delete(Suggestions t)
         {
             _suggestions.delete(t);
         }
 
-        public Suggestion GetByID(int id)
+        public Suggestions GetByID(int id)
         {
             var result = _suggestions.GetByID(id);
             return result;
         }
 
-        public List<Suggestion> list()
+        public List<Suggestions> GetUserSuggestionList(int id)
+        {
+            var result = _suggestions.GetUserSuggestionList(id);
+            return result;
+        }
+
+        public List<Suggestions> list()
         {
             var result = _suggestions.list();
             return result;
         }
 
-        public void update(Suggestion t)
+        public void update(Suggestions t)
         {
             _suggestions.update(t);
         }

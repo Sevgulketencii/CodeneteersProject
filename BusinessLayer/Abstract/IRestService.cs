@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
         void delete(Rest t);
         void update(Rest t);
         Rest GetByID(int id);
+        List<Rest> GetUserRestList(int id);
     }
 }

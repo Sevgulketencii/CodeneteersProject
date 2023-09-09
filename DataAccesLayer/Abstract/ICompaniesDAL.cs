@@ -14,5 +14,7 @@ namespace DataAccesLayer.Abstract
         void delete(Companies t);
         void update(Companies t);
         Companies GetByID(int id);
+        Companies GetByCompanyID(int id);
+
     }
 }

@@ -40,7 +40,13 @@ namespace BusinessLayer.Concrete
             return result;
         }
 
-        public List<User> list()
+		public Payroll GetPersonelWithPayroll(int id)
+		{
+			var result = _user.GetPersonelWithPayroll(id);
+			return result;
+		}
+
+		public List<User> list()
         {
             var result = _user.list();
             return result;

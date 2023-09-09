@@ -35,6 +35,12 @@ namespace BusinessLayer.Concrete
            return result;
         }
 
+        //public List<JobAdvertisements> GetCompanyJoblist(int id)
+        //{
+        //    var result = _jobAdvertisements.GetCompanyJoblist(id);
+        //    return result;
+        //}
+
         public List<JobAdvertisements> list()
         {
             var result = _jobAdvertisements.list();
@@ -44,6 +50,12 @@ namespace BusinessLayer.Concrete
         public void update(JobAdvertisements t)
         {
             _jobAdvertisements.update(t);
+        }
+
+        public List<JobAdvertisements> GetCompanyJobAdvertisementsList(int id)
+        {
+            var result = _jobAdvertisements.GetCompanyJobAdvertisementsList(id);
+            return result;
         }
     }
 }

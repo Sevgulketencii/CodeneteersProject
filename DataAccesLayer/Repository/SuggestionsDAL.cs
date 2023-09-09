@@ -14,7 +14,7 @@ namespace DataAccesLayer.Repository
     public class SuggestionsDAL : ISuggestionsDAL
     {
         #region EKLEME
-        public void add(Suggestion t)
+        public void add(Suggestions t)
         {
             var connection = new DbConnectionHelper().Connection;
             var command = new SqlCommand();
@@ -36,7 +36,7 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region SİLME
-        public void delete(Suggestion t)
+        public void delete(Suggestions t)
         {
             var connection = new DbConnectionHelper().Connection;
             var command = new SqlCommand();
@@ -48,10 +48,10 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region ID'YEGOREGETİR
-        public Suggestion GetByID(int id)
+        public Suggestions GetByID(int id)
         {
             var connection = new DbConnectionHelper().Connection;
-            Suggestion suggestions = null;
+            Suggestions suggestions = null;
 
             using (SqlCommand command = new SqlCommand())
             {
@@ -65,7 +65,7 @@ namespace DataAccesLayer.Repository
 
                 if (reader.Read())
                 {
-                    suggestions = new Suggestion();
+                    suggestions = new Suggestions();
                     suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
                     suggestions.title = reader.GetString(reader.GetOrdinal("title"));
                     suggestions.description = reader.GetString(reader.GetOrdinal("description"));
@@ -81,14 +81,47 @@ namespace DataAccesLayer.Repository
 
             return suggestions;
         }
-        #endregion
 
-        #region LİSTELE
-        public List<Suggestion> list()
+
+        #endregion
+        public List<Suggestions> GetUserSuggestionList(int id)
         {
             var connection = new DbConnectionHelper().Connection;
 
-            List<Suggestion> Suggestions = new List<Suggestion>();
+            List<Suggestions> Suggestions = new List<Suggestions>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from Suggestions where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var suggestions = new Suggestions();
+                suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                suggestions.title = reader.GetString(reader.GetOrdinal("title"));
+                suggestions.description = reader.GetString(reader.GetOrdinal("description"));
+                suggestions.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                suggestions.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                Suggestions.Add(suggestions);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return Suggestions;
+        }
+        #region LİSTELE
+        public List<Suggestions> list()
+        {
+            var connection = new DbConnectionHelper().Connection;
+
+            List<Suggestions> Suggestions = new List<Suggestions>();
 
 
             SqlCommand command = new SqlCommand();
@@ -101,7 +134,7 @@ namespace DataAccesLayer.Repository
             while (reader.Read())
             {
 
-                var suggestions = new Suggestion();
+                var suggestions = new Suggestions();
                 suggestions.ID = reader.GetInt32(reader.GetOrdinal("ID"));
                 suggestions.title = reader.GetString(reader.GetOrdinal("title"));
                 suggestions.description = reader.GetString(reader.GetOrdinal("description"));
@@ -119,7 +152,7 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region GÜNCELLE
-        public void update(Suggestion t)
+        public void update(Suggestions t)
         {
             var connection = new DbConnectionHelper().Connection;
 

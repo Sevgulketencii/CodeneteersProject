@@ -15,5 +15,6 @@ namespace EntityLayer.Concrete
         public int companyID { get; set; }
         public DateTime createdDate { get; set; }
         public bool status { get; set; }
+        public string type { get; set; }
     }
 }

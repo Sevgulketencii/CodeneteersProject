@@ -77,7 +77,7 @@ namespace CodeneteersProject
 
         private void JobAddScrollBar_Scroll(object? sender, ScrollEventArgs e)
         {
-           jobAddsPanel.VerticalScroll.Value = jobAddScrollBar.Value;
+            jobAddsPanel.VerticalScroll.Value = jobAddScrollBar.Value;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -93,28 +93,31 @@ namespace CodeneteersProject
 
             foreach (JobAdvertisements jobAdvertisement in jobAdvertisementsList)
             {
-                jobAddLoopButton = new Guna.UI2.WinForms.Guna2Button();
-                //drawPostButton(postLoopButton ,advertisement.ID, x, advertisement.title, shdwpanel1);
-                jobAddsPanel.Controls.Add(jobAddLoopButton);
-                jobAddLoopButton.BackColor = Color.Transparent;
-                jobAddLoopButton.BorderColor = SystemColors.ControlDark;
-                jobAddLoopButton.DisabledState.BorderColor = Color.DarkGray;
-                jobAddLoopButton.DisabledState.CustomBorderColor = Color.DarkGray;
-                jobAddLoopButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-                jobAddLoopButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-                jobAddLoopButton.FillColor = Color.Transparent;
-                jobAddLoopButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-                jobAddLoopButton.ForeColor = Color.White;
-                jobAddLoopButton.ImageAlign = HorizontalAlignment.Left;
-                jobAddLoopButton.Location = new Point(30, yCoordinate);
-                jobAddLoopButton.Margin = new Padding(3, 4, 3, 4);
-                jobAddLoopButton.Name = "jobAdvertisementButton" + jobAdvertisement.ID.ToString();
-                jobAddLoopButton.Size = new Size(310, 46);
-                jobAddLoopButton.TabIndex = 0;
-                jobAddLoopButton.Text = jobAdvertisement.title;
-                jobAddLoopButton.TextAlign = HorizontalAlignment.Left;
-                jobAddLoopButton.Click += PostLoopButton_Click;
-                yCoordinate += 50;
+                if (jobAdvertisement.status ==true)
+                {
+                    jobAddLoopButton = new Guna.UI2.WinForms.Guna2Button();
+                    //drawPostButton(postLoopButton ,advertisement.ID, x, advertisement.title, shdwpanel1);
+                    jobAddsPanel.Controls.Add(jobAddLoopButton);
+                    jobAddLoopButton.BackColor = Color.Transparent;
+                    jobAddLoopButton.BorderColor = SystemColors.ControlDark;
+                    jobAddLoopButton.DisabledState.BorderColor = Color.DarkGray;
+                    jobAddLoopButton.DisabledState.CustomBorderColor = Color.DarkGray;
+                    jobAddLoopButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+                    jobAddLoopButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+                    jobAddLoopButton.FillColor = Color.Transparent;
+                    jobAddLoopButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+                    jobAddLoopButton.ForeColor = Color.White;
+                    jobAddLoopButton.ImageAlign = HorizontalAlignment.Left;
+                    jobAddLoopButton.Location = new Point(30, yCoordinate);
+                    jobAddLoopButton.Margin = new Padding(3, 4, 3, 4);
+                    jobAddLoopButton.Name = "jobAdvertisementButton" + jobAdvertisement.ID.ToString();
+                    jobAddLoopButton.Size = new Size(560, 46);
+                    jobAddLoopButton.TabIndex = 0;
+                    jobAddLoopButton.Text = jobAdvertisement.title;
+                    jobAddLoopButton.TextAlign = HorizontalAlignment.Left;
+                    jobAddLoopButton.Click += PostLoopButton_Click;
+                    yCoordinate += 50;
+                }
 
             }
 
@@ -130,6 +133,11 @@ namespace CodeneteersProject
             int postID = GetJobAdvertisementIdFromButtonName(jobAdvertisementButton.Name);
             JobAdvertisements jobAdvertisement = jobAdvertisementsManager.GetByID(postID);
             GoToDetailPage(jobAdvertisement);
+        }
+
+        private void closeButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -22,9 +22,18 @@ namespace CodeNETeersProject
         JobAdvertisementsManager job = new JobAdvertisementsManager(new JobAdvertisementsDAL());
         SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());
 
+        EntityLayer.Concrete.User appUser;
+
         public DashboardForm()
         {
             InitializeComponent();
+        }
+
+        public DashboardForm(EntityLayer.Concrete.User appUser)
+        {
+        
+            InitializeComponent();
+            this.appUser = appUser;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -88,7 +97,7 @@ namespace CodeNETeersProject
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            var user = userManager.GetByID(1);
+            var user = userManager.GetByID(2);
             label1.Text = user.name + " " + user.surname;
             label4.Text = user.name;
             var companyinfo = companiesManager.GetByID(user.companyID);
@@ -119,7 +128,9 @@ namespace CodeNETeersProject
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
+
+       
     }
 }

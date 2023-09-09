@@ -68,7 +68,6 @@ namespace DataAccesLayer.Repository
                     login.userName = reader.GetString(reader.GetOrdinal("userName"));
                     login.password = reader.GetString(reader.GetOrdinal("password"));
                     login.status = reader.GetBoolean(reader.GetOrdinal("status"));
-
                 }
 
                 reader.Close();
@@ -134,7 +133,45 @@ namespace DataAccesLayer.Repository
                 connection.Close();
             }
         }
-            #endregion
+        #endregion
 
+
+        #region AKTİF ŞİRKETTE KULLANICI ADI VE PAROLAYA GÖRE GETİR
+        public Login GetByUserNameAndPasswordActiveCompany(string userName, string password)
+        {
+            var connection = new DbConnectionHelper().Connection;
+            Login login = null;
+
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.CommandType = CommandType.Text;
+                command.Connection = connection;
+                command.CommandText = @"Select l.UserID   from [KolayIK].[dbo].[Login] as l
+                                      left join [KolayIK].[dbo].[User] as u
+                                      on l.UserID = u.ID
+                                      left join [KolayIK].[dbo].[Companies] as c
+                                      on u.companyID  = c.ID
+                                      left join [KolayIK].[dbo].[Roles] as r
+                                      on r.ID = u.roleID
+                                      where l.userName=@userName and l.password=@password and c.status =1 and u.status=1";
+                command.Parameters.AddWithValue("@userName", userName);
+                command.Parameters.AddWithValue("@password", password);
+
+                connection.Open();
+                var reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    login = new Login();
+                    login.userID = reader.GetInt32(reader.GetOrdinal("userID"));
+                }
+
+                reader.Close();
+                connection.Close();
+            }
+            return login;
+        }
+
+        #endregion
     }
 }

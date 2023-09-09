@@ -158,7 +158,7 @@
             wishAndSuggestionTitleLabel.AutoSize = true;
             wishAndSuggestionTitleLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
             wishAndSuggestionTitleLabel.ForeColor = SystemColors.ButtonFace;
-            wishAndSuggestionTitleLabel.Location = new Point(405, 53);
+            wishAndSuggestionTitleLabel.Location = new Point(405, 47);
             wishAndSuggestionTitleLabel.Name = "wishAndSuggestionTitleLabel";
             wishAndSuggestionTitleLabel.Size = new Size(0, 24);
             wishAndSuggestionTitleLabel.TabIndex = 32;
@@ -172,12 +172,12 @@
             guna2ShadowPanel2.Controls.Add(titleLabel);
             guna2ShadowPanel2.FillColor = Color.SlateBlue;
             guna2ShadowPanel2.ForeColor = SystemColors.AppWorkspace;
-            guna2ShadowPanel2.Location = new Point(220, 70);
+            guna2ShadowPanel2.Location = new Point(220, 88);
             guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 10;
             guna2ShadowPanel2.ShadowColor = Color.WhiteSmoke;
-            guna2ShadowPanel2.Size = new Size(525, 321);
+            guna2ShadowPanel2.Size = new Size(525, 303);
             guna2ShadowPanel2.TabIndex = 31;
             // 
             // publishDateLabel

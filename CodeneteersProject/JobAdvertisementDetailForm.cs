@@ -41,5 +41,15 @@ namespace CodeneteersProject
             dateLabel.Text = date.Substring(0, date.Length - 9);
             categoryLabel.Text = JobAdvertisement.category.ToString();
         }
+
+        private void categoryDetailsLabel_Click(object sender, EventArgs e)
+        {
+            //categoriye göre listeleme kodu 
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+            //ilanlar sayfasına git ama bu kez kategoriyle, kategoriye göre gelen listeyi ekle 
+        }
     }
 }

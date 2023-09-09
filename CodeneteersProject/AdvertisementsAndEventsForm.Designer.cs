@@ -121,7 +121,7 @@
             jobAdvertisementsLabel.AutoSize = true;
             jobAdvertisementsLabel.Font = new Font("Georgia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             jobAdvertisementsLabel.ForeColor = SystemColors.ButtonFace;
-            jobAdvertisementsLabel.Location = new Point(471, 35);
+            jobAdvertisementsLabel.Location = new Point(478, 44);
             jobAdvertisementsLabel.Name = "jobAdvertisementsLabel";
             jobAdvertisementsLabel.Size = new Size(238, 29);
             jobAdvertisementsLabel.TabIndex = 32;
@@ -135,7 +135,7 @@
             addsPanel.Controls.Add(guna2vScrollBar2);
             addsPanel.FillColor = Color.SlateBlue;
             addsPanel.ForeColor = SystemColors.AppWorkspace;
-            addsPanel.Location = new Point(220, 118);
+            addsPanel.Location = new Point(220, 100);
             addsPanel.Margin = new Padding(3, 4, 3, 4);
             addsPanel.Name = "addsPanel";
             addsPanel.Radius = 10;
@@ -173,7 +173,7 @@
             eventsPanel.Controls.Add(eventScrollBar);
             eventsPanel.FillColor = Color.SlateBlue;
             eventsPanel.ForeColor = SystemColors.AppWorkspace;
-            eventsPanel.Location = new Point(614, 118);
+            eventsPanel.Location = new Point(614, 100);
             eventsPanel.Margin = new Padding(3, 4, 3, 4);
             eventsPanel.Name = "eventsPanel";
             eventsPanel.Radius = 10;

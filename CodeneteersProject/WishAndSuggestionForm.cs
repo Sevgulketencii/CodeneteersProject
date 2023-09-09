@@ -46,8 +46,9 @@ namespace CodeneteersProject
                 suggestion.companyID = 1;
                 suggestion.status = true;
                 suggestionsManager.add(suggestion);
+                ClearInputs();
                 MessageBox.Show("İletiniz başarıyla kaydedilmiştir. İlginiz için teşekkür ederiz.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                
             }
 
             else

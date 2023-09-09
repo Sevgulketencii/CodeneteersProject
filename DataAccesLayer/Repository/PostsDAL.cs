@@ -20,7 +20,7 @@ namespace DataAccesLayer.Repository
             var command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into Posts values(@roleID,@title,@body,@companyID,@createdDate,@status)";
+            command.CommandText = "insert into Posts values(@roleID,@title,@body,@companyID,@createdDate,@status, @type)";
 
             command.Parameters.AddWithValue("@roleID", t.roleID);
             command.Parameters.AddWithValue("@title", t.title);
@@ -28,6 +28,7 @@ namespace DataAccesLayer.Repository
             command.Parameters.AddWithValue("@companyID", t.companyID);
             command.Parameters.AddWithValue("@createdDate", t.createdDate);
             command.Parameters.AddWithValue("@status", t.status);
+            command.Parameters.AddWithValue("@type", t.type);
 
             connection.Open();
             command.ExecuteNonQuery();
@@ -74,6 +75,7 @@ namespace DataAccesLayer.Repository
                     post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
                     post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
                     post.status = reader.GetBoolean(reader.GetOrdinal("status"));
+                    post.type = reader.GetString(reader.GetOrdinal("type"));
 
 
                 }
@@ -112,6 +114,7 @@ namespace DataAccesLayer.Repository
                 post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
                 post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
                 post.status = reader.GetBoolean(reader.GetOrdinal("status"));
+                post.type = reader.GetString(reader.GetOrdinal("type"));
 
                 Posts.Add(post);
             }
@@ -122,42 +125,7 @@ namespace DataAccesLayer.Repository
             return Posts;
         }
         #endregion
-        #region LİSTELE
-        public List<Posts> GetCompanyPostList(int id)
-        {
-            var connection = new DbConnectionHelper().Connection;
 
-            List<Posts> Posts = new List<Posts>();
-
-
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.Connection = connection;
-            command.CommandText = @"select * from [dbo].[Posts] where companyID=@ID order by ID DESC";
-            command.Parameters.AddWithValue("@ID", id);
-            connection.Open();
-            var reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-
-                var post = new Posts();
-                post.ID = reader.GetInt32(reader.GetOrdinal("ID"));
-                post.roleID = reader.GetInt32(reader.GetOrdinal("roleID"));
-                post.title = reader.GetString(reader.GetOrdinal("title"));
-                post.body = reader.GetString(reader.GetOrdinal("body"));
-                post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
-                post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
-                post.status = reader.GetBoolean(reader.GetOrdinal("status"));
-
-                Posts.Add(post);
-            }
-            reader.Close();
-            connection.Close();
-
-
-            return Posts;
-        }
-        #endregion
         #region GÜNCELLE
         public void update(Posts t)
         {
@@ -175,7 +143,8 @@ namespace DataAccesLayer.Repository
                 body = @Body,
                 companyID = @CompanyID,
                 createdDate = @CreatedDate,
-                status = @Status
+                status = @Status,
+                type = @type
             WHERE ID = @PostsID";
 
                 command.Parameters.AddWithValue("@RoleID", t.roleID);
@@ -185,7 +154,7 @@ namespace DataAccesLayer.Repository
                 command.Parameters.AddWithValue("@CreatedDate", t.createdDate);
                 command.Parameters.AddWithValue("@Status", t.status);
                 command.Parameters.AddWithValue("@PostsID", t.ID);
-
+                command.Parameters.AddWithValue("@type", t.type);
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -193,6 +162,43 @@ namespace DataAccesLayer.Repository
         }
         #endregion
 
+        #region ŞİRKETE GÖRE LİSTELE
+        public List<Posts> GetCompanyPostList(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
 
+            List<Posts> Posts = new List<Posts>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from [dbo].[Posts] where companyID=@ID";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var post = new Posts();
+                post.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                post.roleID = reader.GetInt32(reader.GetOrdinal("roleID"));
+                post.title = reader.GetString(reader.GetOrdinal("title"));
+                post.body = reader.GetString(reader.GetOrdinal("body"));
+                post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
+                post.status = reader.GetBoolean(reader.GetOrdinal("status"));
+                post.type = reader.GetString(reader.GetOrdinal("type"));
+
+                Posts.Add(post);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return Posts;
+        }
     }
+    #endregion
 }
+

@@ -104,5 +104,23 @@ namespace CodeNETeersProject
         {
             Application.Exit();
         }
+
+        private void guna2CircleButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

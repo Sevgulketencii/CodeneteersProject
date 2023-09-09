@@ -20,7 +20,6 @@ namespace CodeNETeersProject
         UserManager userManager = new UserManager(new UserDAL());
         PermissionsManager permissions = new PermissionsManager(new PermissionsDAL());
         JobAdvertisementsManager job = new JobAdvertisementsManager(new JobAdvertisementsDAL());
-        SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());
 
         public DashboardForm()
         {
@@ -85,7 +84,7 @@ namespace CodeNETeersProject
         {
 
         }
-         
+
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             var user = userManager.GetByID(1);
@@ -96,7 +95,9 @@ namespace CodeNETeersProject
             izinCount.Text = Convert.ToString(permissions.list().Count());
             ilanlarCount.Text = Convert.ToString(job.list().Count());
             personelCount.Text = Convert.ToString(userManager.GetCompaniesPersonel(user.companyID).Count());
-            dilekoneriCount.Text = Convert.ToString(suggestions.list().Count());
+            
+            var sonIlan = job.GetCompanyJoblist(user.companyID).OrderByDescending(x => x.ID).FirstOrDefault();
+            sonIlanText.Text = sonIlan.title;
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)

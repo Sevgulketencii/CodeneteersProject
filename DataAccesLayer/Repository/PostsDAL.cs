@@ -122,7 +122,42 @@ namespace DataAccesLayer.Repository
             return Posts;
         }
         #endregion
+        #region LİSTELE
+        public List<Posts> GetCompanyPostList(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
 
+            List<Posts> Posts = new List<Posts>();
+
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"select * from [dbo].[Posts] where companyID=@ID order by ID DESC";
+            command.Parameters.AddWithValue("@ID", id);
+            connection.Open();
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                var post = new Posts();
+                post.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                post.roleID = reader.GetInt32(reader.GetOrdinal("roleID"));
+                post.title = reader.GetString(reader.GetOrdinal("title"));
+                post.body = reader.GetString(reader.GetOrdinal("body"));
+                post.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                post.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
+                post.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                Posts.Add(post);
+            }
+            reader.Close();
+            connection.Close();
+
+
+            return Posts;
+        }
+        #endregion
         #region GÜNCELLE
         public void update(Posts t)
         {
@@ -157,5 +192,7 @@ namespace DataAccesLayer.Repository
             }
         }
         #endregion
+
+
     }
 }

@@ -35,6 +35,12 @@ namespace BusinessLayer.Concrete
            return result;
         }
 
+        public List<JobAdvertisements> GetCompanyJoblist(int id)
+        {
+            var result = _jobAdvertisements.GetCompanyJoblist(id);
+            return result;
+        }
+
         public List<JobAdvertisements> list()
         {
             var result = _jobAdvertisements.list();

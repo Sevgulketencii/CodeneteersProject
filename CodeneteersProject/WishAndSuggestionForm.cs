@@ -19,6 +19,7 @@ namespace CodeneteersProject
         SuggestionsManager suggestionsManager = new SuggestionsManager(new SuggestionsDAL());
         PermissionsManager permissions = new PermissionsManager(new PermissionsDAL());
         Suggestions suggestion;
+        EntityLayer.Concrete.User appUser;
 
         private void ClearInputs()
         {
@@ -26,9 +27,10 @@ namespace CodeneteersProject
             messageTextBox.Text = string.Empty;
         }
 
-        public WishAndSuggestionForm()
+        public WishAndSuggestionForm(User appUser)
         {
             InitializeComponent();
+            this.appUser = appUser;
         }
 
         private void WishAndSuggestionForm_Load(object sender, EventArgs e)

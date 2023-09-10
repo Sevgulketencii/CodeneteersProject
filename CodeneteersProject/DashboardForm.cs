@@ -1,5 +1,6 @@
 ﻿
 using BusinessLayer.Concrete;
+using CodeneteersProject;
 using DataAccesLayer.Repository;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,22 @@ namespace CodeNETeersProject
         PermissionsManager permissions = new PermissionsManager(new PermissionsDAL());
         JobAdvertisementsManager job = new JobAdvertisementsManager(new JobAdvertisementsDAL());
         RestManager rest = new RestManager(new RestDAL());
-        SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());  
+        SuggestionsManager suggestions = new SuggestionsManager(new SuggestionsDAL());
+
+        EntityLayer.Concrete.User appUser;
+        EntityLayer.Concrete.Companies companies;
         public DashboardForm()
         {
             InitializeComponent();
         }
+
+        public DashboardForm(EntityLayer.Concrete.User appUser)
+        {
+            InitializeComponent();
+            this.appUser = appUser;
+        }
+
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -83,16 +95,19 @@ namespace CodeNETeersProject
 
         private void DashboardForm_Load_1(object sender, EventArgs e)
         {
-
+            userNameLabel.Text = appUser.name + " " + appUser.surname;
+            companies = new EntityLayer.Concrete.Companies();
+            companies = companiesManager.GetByID(appUser.companyID);
+            companyLabel.Text = companies.name;
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             var user = userManager.GetByID(1);
             label1.Text = user.name + " " + user.surname;
-            label4.Text = user.name;
+            userNameLabel.Text = user.name;
             var companyinfo = companiesManager.GetByID(user.companyID);
-            label3.Text = companyinfo.name;
+            companyLabel.Text = companyinfo.name;
             izinCount.Text = Convert.ToString(permissions.list().Count());
             ilanlarCount.Text = Convert.ToString(job.list().Count());
             personelCount.Text = Convert.ToString(userManager.GetCompaniesPersonel(user.companyID).Count());
@@ -135,6 +150,18 @@ namespace CodeNETeersProject
         private void sonIzınTalep_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addsAndEventsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jobAdvertisementsButton_Click(object sender, EventArgs e)
+        {
+            JobAdvertisementsForm jobAdvertisementsForm = new JobAdvertisementsForm(appUser);
+            this.Hide();
+            jobAdvertisementsForm.Show();
         }
     }
 }

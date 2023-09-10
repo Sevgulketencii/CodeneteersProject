@@ -11,6 +11,7 @@ namespace CodeneteersProject
         private Guna2Button postLoopButton;
         string EventPostType = "event";
         string AdvertisementPostType = "advertisement";
+        User appUser;
 
         bool scroll = false;
         PostsManager postsManager = new PostsManager(new PostsDAL());
@@ -39,7 +40,7 @@ namespace CodeneteersProject
 
         private void GoToDetailPage(Posts post)
         {
-            AdvertisementAndEventDetailForm advertisementAndEventDetailForm = new AdvertisementAndEventDetailForm(post);
+            AdvertisementAndEventDetailForm advertisementAndEventDetailForm = new AdvertisementAndEventDetailForm(post,appUser);
             this.Hide();
             advertisementAndEventDetailForm.ShowDialog();
 
@@ -85,7 +86,7 @@ namespace CodeneteersProject
 
 
 
-        public AdvertisementsAndEventsForm()
+        public AdvertisementsAndEventsForm(User appUser)
         {
             InitializeComponent();
             addScrollBar.Value = addsPanel.VerticalScroll.Value;
@@ -106,7 +107,7 @@ namespace CodeneteersProject
 
             eventsPanel.ControlAdded += EventsPanel_ControlAdded;
             eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
-
+            this.appUser = appUser;
         }
 
 

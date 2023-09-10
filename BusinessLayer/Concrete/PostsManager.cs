@@ -50,5 +50,11 @@ namespace BusinessLayer.Concrete
            var result = _posts.GetCompanyPostList(id);
            return result;
         }
+        public int CloseOutEventForApplication(int id)
+        {
+            var result = _posts.CloseOutEventForApplication(id);
+            return result;
+        }
+
     }
 }

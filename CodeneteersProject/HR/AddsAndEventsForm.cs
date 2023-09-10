@@ -48,7 +48,7 @@ namespace CodeneteersProject.HR
 
         private void GoToDetailPage(Posts post)
         {
-            AddsAndEventsDetailForm addsAndEventDetailsForm = new AddsAndEventsDetailForm(post);
+            AddsAndEventsDetailForm addsAndEventDetailsForm = new AddsAndEventsDetailForm(post, appUser);
             this.Hide();
             addsAndEventDetailsForm.ShowDialog();
 
@@ -56,7 +56,7 @@ namespace CodeneteersProject.HR
 
         private void GoToNewAddsForm()
         {
-            //NewAddsForm newAddsForm = new NewAddsForm(appUser);
+            //NewAddsForm newAddsForm = new NewAddsForm(User appUser);
             this.Hide();
             //newAddsForm.ShowDialog();
         }
@@ -101,7 +101,7 @@ namespace CodeneteersProject.HR
 
 
 
-        public AddsAndEventsForm()
+        public AddsAndEventsForm(EntityLayer.Concrete.User appUser)
         {
             InitializeComponent();
             addScrollBar.Value = addsPanel.VerticalScroll.Value;
@@ -122,7 +122,7 @@ namespace CodeneteersProject.HR
 
             eventsPanel.ControlAdded += EventsPanel_ControlAdded;
             eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
-
+            this.appUser= appUser;
         }
 
 

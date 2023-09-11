@@ -198,7 +198,23 @@ namespace DataAccesLayer.Repository
 
             return Posts;
         }
+        #endregion
+
+        #region BAŞVURUYA KAPATMA
+        public int CloseOutEventForApplication(int id)
+        {
+            var connection = new DbConnectionHelper().Connection;
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            command.CommandText = @"update Posts set status=false where ID=@postID";
+            command.Parameters.AddWithValue("@postID", id);
+            connection.Open();
+            var result = command.ExecuteNonQuery();
+            connection.Close();
+            return result;
+        }
+        #endregion
     }
-    #endregion
 }
 

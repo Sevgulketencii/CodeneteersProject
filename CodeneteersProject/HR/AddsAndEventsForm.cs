@@ -1,13 +1,21 @@
 ﻿using BusinessLayer.Concrete;
-using Guna.UI2.WinForms;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
+using Guna.UI2.WinForms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace CodeneteersProject
+namespace CodeneteersProject.HR
 {
-    public partial class AdvertisementsAndEventsForm : Form
+    public partial class AddsAndEventsForm : Form
     {
-
         private Guna2Button postLoopButton;
         string EventPostType = "event";
         string AdvertisementPostType = "advertisement";
@@ -40,10 +48,17 @@ namespace CodeneteersProject
 
         private void GoToDetailPage(Posts post)
         {
-            AdvertisementAndEventDetailForm advertisementAndEventDetailForm = new AdvertisementAndEventDetailForm(post,appUser);
+            AddsAndEventsDetailForm addsAndEventDetailsForm = new AddsAndEventsDetailForm(post, appUser);
             this.Hide();
-            advertisementAndEventDetailForm.ShowDialog();
+            addsAndEventDetailsForm.ShowDialog();
 
+        }
+
+        private void GoToNewAddsForm()
+        {
+            //NewAddsForm newAddsForm = new NewAddsForm(User appUser);
+            this.Hide();
+            //newAddsForm.ShowDialog();
         }
 
 
@@ -86,7 +101,7 @@ namespace CodeneteersProject
 
 
 
-        public AdvertisementsAndEventsForm(User appUser)
+        public AddsAndEventsForm(EntityLayer.Concrete.User appUser)
         {
             InitializeComponent();
             addScrollBar.Value = addsPanel.VerticalScroll.Value;
@@ -107,7 +122,7 @@ namespace CodeneteersProject
 
             eventsPanel.ControlAdded += EventsPanel_ControlAdded;
             eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
-            this.appUser = appUser;
+            this.appUser= appUser;
         }
 
 
@@ -144,7 +159,18 @@ namespace CodeneteersProject
 
         }
 
-        private void AdvertisementsForm_Load(object sender, EventArgs e)
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            GoToNewAddsForm();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AddsAndEventsForm_Load(object sender, EventArgs e)
         {
 
             List<Posts> postsList = postsManager.GetCompanyPostList(1);
@@ -155,7 +181,7 @@ namespace CodeneteersProject
 
             foreach (Posts advertisement in advertisementsList)
             {
-                postLoopButton = new Guna.UI2.WinForms.Guna2Button();
+                postLoopButton = new Guna2Button();
                 //drawPostButton(postLoopButton ,advertisement.ID, x, advertisement.title, shdwpanel1);
                 addsPanel.Controls.Add(postLoopButton);
                 postLoopButton.BackColor = Color.Transparent;
@@ -187,7 +213,7 @@ namespace CodeneteersProject
 
             foreach (Posts events in eventsList)
             {
-                postLoopButton = new Guna.UI2.WinForms.Guna2Button();
+                postLoopButton = new Guna2Button();
                 //drawPostButton(events.ID, x, events.title, panel2);
                 eventsPanel.Controls.Add(postLoopButton);
                 postLoopButton.BackColor = Color.Transparent;
@@ -224,14 +250,5 @@ namespace CodeneteersProject
             GoToDetailPage(post);
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void jobAdvertisementsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

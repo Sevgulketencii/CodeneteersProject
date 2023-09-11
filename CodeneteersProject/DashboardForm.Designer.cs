@@ -94,8 +94,8 @@
             guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             label2 = new Label();
-            label4 = new Label();
-            label3 = new Label();
+            userNameLabel = new Label();
+            companyLabel = new Label();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label5 = new Label();
             izinCount = new Label();
@@ -309,6 +309,7 @@
             jobAdvertisementsButton.TabIndex = 8;
             jobAdvertisementsButton.Text = "İlanlar";
             jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
+            jobAdvertisementsButton.Click += jobAdvertisementsButton_Click;
             // 
             // jobAdvertisementsIcon
             // 
@@ -369,6 +370,7 @@
             addsAndEventsButton.TabIndex = 6;
             addsAndEventsButton.Text = "Duyurular";
             addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.Click += addsAndEventsButton_Click;
             // 
             // companyIcon
             // 
@@ -498,7 +500,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(25, 47);
             label8.Name = "label8";
-            label8.Size = new Size(73, 20);
+            label8.Size = new Size(61, 16);
             label8.TabIndex = 3;
             label8.Text = "Personel";
             label8.TextAlign = ContentAlignment.TopCenter;
@@ -509,7 +511,7 @@
             personelCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             personelCount.Location = new Point(49, 14);
             personelCount.Name = "personelCount";
-            personelCount.Size = new Size(26, 32);
+            personelCount.Size = new Size(21, 27);
             personelCount.TabIndex = 4;
             personelCount.Text = "1";
             personelCount.TextAlign = ContentAlignment.TopCenter;
@@ -550,35 +552,35 @@
             label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(47, 25);
             label2.Name = "label2";
-            label2.Size = new Size(109, 20);
+            label2.Size = new Size(86, 16);
             label2.TabIndex = 0;
             label2.Text = "Hoş geldiniz!\r\n";
             // 
-            // label4
+            // userNameLabel
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(47, 52);
-            label4.Name = "label4";
-            label4.Size = new Size(108, 20);
-            label4.TabIndex = 0;
-            label4.Text = "Kullanıcı Adı";
+            userNameLabel.AutoSize = true;
+            userNameLabel.ForeColor = SystemColors.ButtonFace;
+            userNameLabel.Location = new Point(47, 52);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(87, 16);
+            userNameLabel.TabIndex = 0;
+            userNameLabel.Text = "Kullanıcı Adı";
             // 
-            // label3
+            // companyLabel
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(374, 52);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Firma İsmi \r\n";
+            companyLabel.AutoSize = true;
+            companyLabel.ForeColor = SystemColors.ButtonFace;
+            companyLabel.Location = new Point(374, 52);
+            companyLabel.Name = "companyLabel";
+            companyLabel.Size = new Size(78, 16);
+            companyLabel.TabIndex = 2;
+            companyLabel.Text = "Firma İsmi \r\n";
             // 
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(label3);
-            guna2ShadowPanel2.Controls.Add(label4);
+            guna2ShadowPanel2.Controls.Add(companyLabel);
+            guna2ShadowPanel2.Controls.Add(userNameLabel);
             guna2ShadowPanel2.Controls.Add(label2);
             guna2ShadowPanel2.Controls.Add(guna2CircleButton1);
             guna2ShadowPanel2.FillColor = Color.SlateBlue;
@@ -595,7 +597,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(32, 52);
             label5.Name = "label5";
-            label5.Size = new Size(59, 20);
+            label5.Size = new Size(48, 16);
             label5.TabIndex = 0;
             label5.Text = "İzinler";
             // 
@@ -605,7 +607,7 @@
             izinCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             izinCount.Location = new Point(48, 19);
             izinCount.Name = "izinCount";
-            izinCount.Size = new Size(26, 32);
+            izinCount.Size = new Size(21, 27);
             izinCount.TabIndex = 1;
             izinCount.Text = "1";
             // 
@@ -636,7 +638,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(30, 46);
             label7.Name = "label7";
-            label7.Size = new Size(61, 20);
+            label7.Size = new Size(49, 16);
             label7.TabIndex = 2;
             label7.Text = "İlanlar";
             // 
@@ -646,7 +648,7 @@
             ilanlarCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             ilanlarCount.Location = new Point(48, 14);
             ilanlarCount.Name = "ilanlarCount";
-            ilanlarCount.Size = new Size(26, 32);
+            ilanlarCount.Size = new Size(21, 27);
             ilanlarCount.TabIndex = 3;
             ilanlarCount.Text = "1";
             // 
@@ -701,7 +703,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(827, 49);
             label1.Name = "label1";
-            label1.Size = new Size(80, 20);
+            label1.Size = new Size(66, 16);
             label1.TabIndex = 4;
             label1.Text = "Ad Soyad";
             // 
@@ -748,7 +750,7 @@
             sonIlanText.ForeColor = SystemColors.ButtonFace;
             sonIlanText.Location = new Point(116, 26);
             sonIlanText.Name = "sonIlanText";
-            sonIlanText.Size = new Size(11, 15);
+            sonIlanText.Size = new Size(11, 13);
             sonIlanText.TabIndex = 16;
             sonIlanText.Text = "-";
             // 
@@ -759,7 +761,7 @@
             label112.ForeColor = SystemColors.ButtonFace;
             label112.Location = new Point(55, 26);
             label112.Name = "label112";
-            label112.Size = new Size(64, 15);
+            label112.Size = new Size(55, 13);
             label112.TabIndex = 3;
             label112.Text = "Son İlan : ";
             // 
@@ -804,7 +806,7 @@
             sonIzınTalep.ForeColor = SystemColors.ButtonFace;
             sonIzınTalep.Location = new Point(186, 24);
             sonIzınTalep.Name = "sonIzınTalep";
-            sonIzınTalep.Size = new Size(11, 15);
+            sonIzınTalep.Size = new Size(11, 13);
             sonIzınTalep.TabIndex = 17;
             sonIzınTalep.Text = "-";
             sonIzınTalep.Click += sonIzınTalep_Click;
@@ -816,7 +818,7 @@
             label9.ForeColor = SystemColors.ButtonFace;
             label9.Location = new Point(51, 25);
             label9.Name = "label9";
-            label9.Size = new Size(134, 15);
+            label9.Size = new Size(116, 13);
             label9.TabIndex = 16;
             label9.Text = "Son Talep Edilen İzin :";
             // 
@@ -861,7 +863,7 @@
             sonDilekOneri.ForeColor = SystemColors.ButtonFace;
             sonDilekOneri.Location = new Point(177, 22);
             sonDilekOneri.Name = "sonDilekOneri";
-            sonDilekOneri.Size = new Size(11, 15);
+            sonDilekOneri.Size = new Size(11, 13);
             sonDilekOneri.TabIndex = 18;
             sonDilekOneri.Text = "-";
             // 
@@ -872,7 +874,7 @@
             label10.ForeColor = SystemColors.ButtonFace;
             label10.Location = new Point(53, 22);
             label10.Name = "label10";
-            label10.Size = new Size(121, 15);
+            label10.Size = new Size(101, 13);
             label10.TabIndex = 17;
             label10.Text = "Son Dilek ve Öneri :";
             // 
@@ -897,7 +899,7 @@
             // 
             // DashboardForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
             ClientSize = new Size(1012, 499);
@@ -974,8 +976,8 @@
         private Label label5;
         private Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Label label3;
-        private Label label4;
+        private Label companyLabel;
+        private Label userNameLabel;
         private Label label2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;

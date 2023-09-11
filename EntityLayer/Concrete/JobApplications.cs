@@ -14,5 +14,6 @@ namespace EntityLayer.Concrete
         public DateTime createdDate { get; set; }
         public string situation { get; set; }
         public bool status { get; set; }
+        public string position { get; set; }
     }
 }

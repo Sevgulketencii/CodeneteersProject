@@ -15,6 +15,8 @@ namespace DataAccesLayer.Abstract
         void update(Companies t);
         Companies GetByID(int id);
         Companies GetByCompanyID(int id);
+        List<User> GetCompanyPersonals(int id);
 
-    }
+
+	}
 }

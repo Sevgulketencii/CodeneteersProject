@@ -44,5 +44,11 @@ namespace BusinessLayer.Concrete
         {
             _companies.update(t);
         }
+
+        public List<User> GetCompanyPersonals(int id)
+        {
+            var result = _companies.GetCompanyPersonals(id);
+            return result;
+        }
     }
 }

@@ -112,9 +112,6 @@ namespace CodeneteersProject.HR
 			label10 = new Label();
 			ComboxGender = new Guna2ComboBox();
 			NumericBoxSalary = new Guna2NumericUpDown();
-			btnAdd = new Guna2Button();
-			btnUpdate = new Guna2Button();
-			btnDelete = new Guna2Button();
 			maskedTxtPhone = new MaskedTextBox();
 			label11 = new Label();
 			pictureBox1 = new PictureBox();
@@ -128,6 +125,10 @@ namespace CodeneteersProject.HR
 			icons = new ImageList(components);
 			ComboxGetCompany = new Guna2ComboBox();
 			ComboxCompany = new Guna2ComboBox();
+			columnHeaderPhone = new ColumnHeader();
+			sendButton = new Guna2GradientButton();
+			guna2GradientButton1 = new Guna2GradientButton();
+			guna2GradientButton2 = new Guna2GradientButton();
 			sideBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)NumericBoxSalary).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -494,7 +495,7 @@ namespace CodeneteersProject.HR
 			closeButton.FillColor2 = Color.Indigo;
 			closeButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			closeButton.ForeColor = Color.White;
-			closeButton.Location = new Point(1130, 0);
+			closeButton.Location = new Point(1426, 2);
 			closeButton.Margin = new Padding(3, 4, 3, 4);
 			closeButton.Name = "closeButton";
 			closeButton.ShadowDecoration.CustomizableEdges = customizableEdges26;
@@ -516,7 +517,7 @@ namespace CodeneteersProject.HR
 			txtPersonalName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
 			txtPersonalName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			txtPersonalName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-			txtPersonalName.Location = new Point(465, 91);
+			txtPersonalName.Location = new Point(667, 121);
 			txtPersonalName.Name = "txtPersonalName";
 			txtPersonalName.PasswordChar = '\0';
 			txtPersonalName.PlaceholderText = "";
@@ -530,7 +531,7 @@ namespace CodeneteersProject.HR
 			label2.AutoSize = true;
 			label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label2.ForeColor = SystemColors.ButtonFace;
-			label2.Location = new Point(465, 72);
+			label2.Location = new Point(667, 102);
 			label2.Name = "label2";
 			label2.Size = new Size(33, 16);
 			label2.TabIndex = 37;
@@ -541,7 +542,7 @@ namespace CodeneteersProject.HR
 			label1.AutoSize = true;
 			label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label1.ForeColor = SystemColors.ButtonFace;
-			label1.Location = new Point(465, 144);
+			label1.Location = new Point(667, 174);
 			label1.Name = "label1";
 			label1.Size = new Size(56, 16);
 			label1.TabIndex = 38;
@@ -560,7 +561,7 @@ namespace CodeneteersProject.HR
 			txtPersonalSurname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
 			txtPersonalSurname.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			txtPersonalSurname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-			txtPersonalSurname.Location = new Point(465, 163);
+			txtPersonalSurname.Location = new Point(667, 193);
 			txtPersonalSurname.Name = "txtPersonalSurname";
 			txtPersonalSurname.PasswordChar = '\0';
 			txtPersonalSurname.PlaceholderText = "";
@@ -574,7 +575,7 @@ namespace CodeneteersProject.HR
 			label3.AutoSize = true;
 			label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label3.ForeColor = SystemColors.ButtonFace;
-			label3.Location = new Point(465, 218);
+			label3.Location = new Point(667, 248);
 			label3.Name = "label3";
 			label3.Size = new Size(53, 16);
 			label3.TabIndex = 41;
@@ -585,7 +586,7 @@ namespace CodeneteersProject.HR
 			label4.AutoSize = true;
 			label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label4.ForeColor = SystemColors.ButtonFace;
-			label4.Location = new Point(465, 291);
+			label4.Location = new Point(667, 321);
 			label4.Name = "label4";
 			label4.Size = new Size(55, 16);
 			label4.TabIndex = 43;
@@ -604,7 +605,7 @@ namespace CodeneteersProject.HR
 			txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
 			txtEmail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-			txtEmail.Location = new Point(465, 310);
+			txtEmail.Location = new Point(667, 340);
 			txtEmail.Name = "txtEmail";
 			txtEmail.PasswordChar = '\0';
 			txtEmail.PlaceholderText = "";
@@ -618,7 +619,7 @@ namespace CodeneteersProject.HR
 			label5.AutoSize = true;
 			label5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label5.ForeColor = SystemColors.ButtonFace;
-			label5.Location = new Point(465, 353);
+			label5.Location = new Point(667, 383);
 			label5.Name = "label5";
 			label5.Size = new Size(59, 16);
 			label5.TabIndex = 45;
@@ -629,7 +630,7 @@ namespace CodeneteersProject.HR
 			label6.AutoSize = true;
 			label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label6.ForeColor = SystemColors.ButtonFace;
-			label6.Location = new Point(716, 72);
+			label6.Location = new Point(928, 102);
 			label6.Name = "label6";
 			label6.Size = new Size(93, 16);
 			label6.TabIndex = 47;
@@ -640,7 +641,7 @@ namespace CodeneteersProject.HR
 			label7.AutoSize = true;
 			label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label7.ForeColor = SystemColors.ButtonFace;
-			label7.Location = new Point(716, 144);
+			label7.Location = new Point(928, 174);
 			label7.Name = "label7";
 			label7.Size = new Size(73, 16);
 			label7.TabIndex = 49;
@@ -651,7 +652,7 @@ namespace CodeneteersProject.HR
 			label8.AutoSize = true;
 			label8.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label8.ForeColor = SystemColors.ButtonFace;
-			label8.Location = new Point(716, 218);
+			label8.Location = new Point(928, 248);
 			label8.Name = "label8";
 			label8.Size = new Size(130, 16);
 			label8.TabIndex = 51;
@@ -662,7 +663,7 @@ namespace CodeneteersProject.HR
 			label9.AutoSize = true;
 			label9.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label9.ForeColor = SystemColors.ButtonFace;
-			label9.Location = new Point(716, 352);
+			label9.Location = new Point(928, 382);
 			label9.Name = "label9";
 			label9.Size = new Size(97, 16);
 			label9.TabIndex = 53;
@@ -673,7 +674,7 @@ namespace CodeneteersProject.HR
 			label10.AutoSize = true;
 			label10.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label10.ForeColor = SystemColors.ButtonFace;
-			label10.Location = new Point(716, 291);
+			label10.Location = new Point(928, 321);
 			label10.Name = "label10";
 			label10.Size = new Size(77, 16);
 			label10.TabIndex = 55;
@@ -690,7 +691,7 @@ namespace CodeneteersProject.HR
 			ComboxGender.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			ComboxGender.ForeColor = Color.FromArgb(68, 88, 112);
 			ComboxGender.ItemHeight = 30;
-			ComboxGender.Location = new Point(465, 378);
+			ComboxGender.Location = new Point(667, 408);
 			ComboxGender.Name = "ComboxGender";
 			ComboxGender.ShadowDecoration.CustomizableEdges = customizableEdges34;
 			ComboxGender.Size = new Size(193, 36);
@@ -701,66 +702,15 @@ namespace CodeneteersProject.HR
 			NumericBoxSalary.BackColor = Color.Transparent;
 			NumericBoxSalary.CustomizableEdges = customizableEdges35;
 			NumericBoxSalary.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			NumericBoxSalary.Location = new Point(716, 378);
+			NumericBoxSalary.Location = new Point(928, 408);
 			NumericBoxSalary.Name = "NumericBoxSalary";
 			NumericBoxSalary.ShadowDecoration.CustomizableEdges = customizableEdges36;
 			NumericBoxSalary.Size = new Size(200, 36);
 			NumericBoxSalary.TabIndex = 57;
 			// 
-			// btnAdd
-			// 
-			btnAdd.CustomizableEdges = customizableEdges37;
-			btnAdd.DisabledState.BorderColor = Color.DarkGray;
-			btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
-			btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-			btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-			btnAdd.FillColor = Color.Green;
-			btnAdd.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			btnAdd.ForeColor = Color.White;
-			btnAdd.Location = new Point(936, 96);
-			btnAdd.Name = "btnAdd";
-			btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges38;
-			btnAdd.Size = new Size(217, 69);
-			btnAdd.TabIndex = 58;
-			btnAdd.Text = "Ekle";
-			// 
-			// btnUpdate
-			// 
-			btnUpdate.CustomizableEdges = customizableEdges39;
-			btnUpdate.DisabledState.BorderColor = Color.DarkGray;
-			btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
-			btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-			btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-			btnUpdate.FillColor = Color.DodgerBlue;
-			btnUpdate.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			btnUpdate.ForeColor = Color.White;
-			btnUpdate.Location = new Point(936, 218);
-			btnUpdate.Name = "btnUpdate";
-			btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges40;
-			btnUpdate.Size = new Size(217, 75);
-			btnUpdate.TabIndex = 59;
-			btnUpdate.Text = "Güncelle";
-			// 
-			// btnDelete
-			// 
-			btnDelete.CustomizableEdges = customizableEdges41;
-			btnDelete.DisabledState.BorderColor = Color.DarkGray;
-			btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
-			btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-			btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-			btnDelete.FillColor = Color.FromArgb(192, 64, 0);
-			btnDelete.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			btnDelete.ForeColor = Color.White;
-			btnDelete.Location = new Point(936, 339);
-			btnDelete.Name = "btnDelete";
-			btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges42;
-			btnDelete.Size = new Size(217, 75);
-			btnDelete.TabIndex = 60;
-			btnDelete.Text = "Çıkış Ver";
-			// 
 			// maskedTxtPhone
 			// 
-			maskedTxtPhone.Location = new Point(465, 237);
+			maskedTxtPhone.Location = new Point(667, 267);
 			maskedTxtPhone.Mask = "(999) 000-0000";
 			maskedTxtPhone.Name = "maskedTxtPhone";
 			maskedTxtPhone.Size = new Size(193, 22);
@@ -771,7 +721,7 @@ namespace CodeneteersProject.HR
 			label11.AutoSize = true;
 			label11.Font = new Font("Georgia", 18F, FontStyle.Bold, GraphicsUnit.Point);
 			label11.ForeColor = SystemColors.ButtonFace;
-			label11.Location = new Point(522, 29);
+			label11.Location = new Point(690, 24);
 			label11.Name = "label11";
 			label11.Size = new Size(331, 29);
 			label11.TabIndex = 65;
@@ -780,7 +730,7 @@ namespace CodeneteersProject.HR
 			// pictureBox1
 			// 
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(467, 20);
+			pictureBox1.Location = new Point(635, 15);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(58, 38);
 			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -789,21 +739,21 @@ namespace CodeneteersProject.HR
 			// 
 			// DatepickerBirthdate
 			// 
-			DatepickerBirthdate.Location = new Point(716, 96);
+			DatepickerBirthdate.Location = new Point(928, 126);
 			DatepickerBirthdate.Name = "DatepickerBirthdate";
 			DatepickerBirthdate.Size = new Size(200, 22);
 			DatepickerBirthdate.TabIndex = 67;
 			// 
 			// DatePickerEnrolledDate
 			// 
-			DatePickerEnrolledDate.Location = new Point(716, 242);
+			DatePickerEnrolledDate.Location = new Point(928, 272);
 			DatePickerEnrolledDate.Name = "DatePickerEnrolledDate";
 			DatePickerEnrolledDate.Size = new Size(200, 22);
 			DatePickerEnrolledDate.TabIndex = 68;
 			// 
 			// DatePickerExitdate
 			// 
-			DatePickerExitdate.Location = new Point(716, 315);
+			DatePickerExitdate.Location = new Point(928, 345);
 			DatePickerExitdate.Name = "DatePickerExitdate";
 			DatePickerExitdate.Size = new Size(200, 22);
 			DatePickerExitdate.TabIndex = 69;
@@ -811,14 +761,14 @@ namespace CodeneteersProject.HR
 			// listViewPersonals
 			// 
 			listViewPersonals.CheckBoxes = true;
-			listViewPersonals.Columns.AddRange(new ColumnHeader[] { columnHeaderPersonalNo, columnHeaderName, columnHeaderSurname });
+			listViewPersonals.Columns.AddRange(new ColumnHeader[] { columnHeaderPersonalNo, columnHeaderName, columnHeaderSurname, columnHeaderPhone });
 			listViewPersonals.FullRowSelect = true;
 			listViewPersonals.GridLines = true;
 			listViewPersonals.LargeImageList = icons;
-			listViewPersonals.Location = new Point(200, 125);
+			listViewPersonals.Location = new Point(221, 164);
 			listViewPersonals.MultiSelect = false;
 			listViewPersonals.Name = "listViewPersonals";
-			listViewPersonals.Size = new Size(259, 289);
+			listViewPersonals.Size = new Size(349, 289);
 			listViewPersonals.SmallImageList = icons;
 			listViewPersonals.Sorting = SortOrder.Ascending;
 			listViewPersonals.TabIndex = 70;
@@ -852,7 +802,7 @@ namespace CodeneteersProject.HR
 			// ComboxGetCompany
 			// 
 			ComboxGetCompany.BackColor = Color.Transparent;
-			ComboxGetCompany.CustomizableEdges = customizableEdges43;
+			ComboxGetCompany.CustomizableEdges = customizableEdges37;
 			ComboxGetCompany.DrawMode = DrawMode.OwnerDrawFixed;
 			ComboxGetCompany.DropDownStyle = ComboBoxStyle.DropDownList;
 			ComboxGetCompany.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -860,16 +810,16 @@ namespace CodeneteersProject.HR
 			ComboxGetCompany.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			ComboxGetCompany.ForeColor = Color.FromArgb(68, 88, 112);
 			ComboxGetCompany.ItemHeight = 30;
-			ComboxGetCompany.Location = new Point(200, 82);
+			ComboxGetCompany.Location = new Point(221, 121);
 			ComboxGetCompany.Name = "ComboxGetCompany";
-			ComboxGetCompany.ShadowDecoration.CustomizableEdges = customizableEdges44;
-			ComboxGetCompany.Size = new Size(259, 36);
+			ComboxGetCompany.ShadowDecoration.CustomizableEdges = customizableEdges38;
+			ComboxGetCompany.Size = new Size(349, 36);
 			ComboxGetCompany.TabIndex = 71;
 			// 
 			// ComboxCompany
 			// 
 			ComboxCompany.BackColor = Color.Transparent;
-			ComboxCompany.CustomizableEdges = customizableEdges45;
+			ComboxCompany.CustomizableEdges = customizableEdges39;
 			ComboxCompany.DrawMode = DrawMode.OwnerDrawFixed;
 			ComboxCompany.DropDownStyle = ComboBoxStyle.DropDownList;
 			ComboxCompany.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -877,18 +827,83 @@ namespace CodeneteersProject.HR
 			ComboxCompany.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			ComboxCompany.ForeColor = Color.FromArgb(68, 88, 112);
 			ComboxCompany.ItemHeight = 30;
-			ComboxCompany.Location = new Point(716, 163);
+			ComboxCompany.Location = new Point(928, 193);
 			ComboxCompany.Name = "ComboxCompany";
-			ComboxCompany.ShadowDecoration.CustomizableEdges = customizableEdges46;
+			ComboxCompany.ShadowDecoration.CustomizableEdges = customizableEdges40;
 			ComboxCompany.Size = new Size(200, 36);
 			ComboxCompany.TabIndex = 72;
+			// 
+			// columnHeaderPhone
+			// 
+			columnHeaderPhone.Text = "Telefon";
+			columnHeaderPhone.Width = 120;
+			// 
+			// sendButton
+			// 
+			sendButton.BorderRadius = 20;
+			sendButton.CustomizableEdges = customizableEdges41;
+			sendButton.DisabledState.BorderColor = Color.DarkGray;
+			sendButton.DisabledState.CustomBorderColor = Color.DarkGray;
+			sendButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+			sendButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+			sendButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+			sendButton.FillColor2 = Color.Indigo;
+			sendButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+			sendButton.ForeColor = Color.White;
+			sendButton.Location = new Point(1214, 121);
+			sendButton.Name = "sendButton";
+			sendButton.ShadowDecoration.CustomizableEdges = customizableEdges42;
+			sendButton.Size = new Size(189, 80);
+			sendButton.TabIndex = 73;
+			sendButton.Text = "Gönder";
+			// 
+			// guna2GradientButton1
+			// 
+			guna2GradientButton1.BorderRadius = 20;
+			guna2GradientButton1.CustomizableEdges = customizableEdges43;
+			guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray;
+			guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+			guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+			guna2GradientButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+			guna2GradientButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+			guna2GradientButton1.FillColor2 = Color.Indigo;
+			guna2GradientButton1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+			guna2GradientButton1.ForeColor = Color.White;
+			guna2GradientButton1.Location = new Point(1214, 248);
+			guna2GradientButton1.Name = "guna2GradientButton1";
+			guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges44;
+			guna2GradientButton1.Size = new Size(189, 80);
+			guna2GradientButton1.TabIndex = 74;
+			guna2GradientButton1.Text = "Gönder";
+			// 
+			// guna2GradientButton2
+			// 
+			guna2GradientButton2.BorderRadius = 20;
+			guna2GradientButton2.CustomizableEdges = customizableEdges45;
+			guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray;
+			guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray;
+			guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+			guna2GradientButton2.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+			guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+			guna2GradientButton2.FillColor2 = Color.Indigo;
+			guna2GradientButton2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+			guna2GradientButton2.ForeColor = Color.White;
+			guna2GradientButton2.Location = new Point(1214, 368);
+			guna2GradientButton2.Name = "guna2GradientButton2";
+			guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges46;
+			guna2GradientButton2.Size = new Size(189, 80);
+			guna2GradientButton2.TabIndex = 75;
+			guna2GradientButton2.Text = "Gönder";
 			// 
 			// PersonalCRUDForm
 			// 
 			AutoScaleDimensions = new SizeF(8F, 16F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.SlateBlue;
-			ClientSize = new Size(1165, 480);
+			ClientSize = new Size(1470, 480);
+			Controls.Add(guna2GradientButton2);
+			Controls.Add(guna2GradientButton1);
+			Controls.Add(sendButton);
 			Controls.Add(ComboxCompany);
 			Controls.Add(ComboxGetCompany);
 			Controls.Add(listViewPersonals);
@@ -898,9 +913,6 @@ namespace CodeneteersProject.HR
 			Controls.Add(pictureBox1);
 			Controls.Add(label11);
 			Controls.Add(maskedTxtPhone);
-			Controls.Add(btnDelete);
-			Controls.Add(btnUpdate);
-			Controls.Add(btnAdd);
 			Controls.Add(NumericBoxSalary);
 			Controls.Add(ComboxGender);
 			Controls.Add(label10);
@@ -965,9 +977,6 @@ namespace CodeneteersProject.HR
 		private Label label10;
 		private Guna2ComboBox ComboxGender;
 		private Guna2NumericUpDown NumericBoxSalary;
-		private Guna2Button btnAdd;
-		private Guna2Button btnUpdate;
-		private Guna2Button btnDelete;
 		private MaskedTextBox maskedTxtPhone;
 		private Label label11;
 		private PictureBox pictureBox1;
@@ -981,5 +990,9 @@ namespace CodeneteersProject.HR
 		private ImageList icons;
 		private Guna2ComboBox ComboxGetCompany;
 		private Guna2ComboBox ComboxCompany;
+		private ColumnHeader columnHeaderPhone;
+		private Guna2GradientButton sendButton;
+		private Guna2GradientButton guna2GradientButton1;
+		private Guna2GradientButton guna2GradientButton2;
 	}
 }

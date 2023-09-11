@@ -181,6 +181,53 @@ namespace DataAccesLayer.Repository
                 connection.Close();
             }
         }
-        #endregion
-    }
+		#endregion
+
+		#region
+
+		public List<User> GetCompanyPersonals(int id)
+		{
+			var connection = new DbConnectionHelper().Connection;
+			List<User> personals = new List<User>();
+
+			using (SqlCommand command = new SqlCommand())
+			{
+				command.CommandType = CommandType.Text;
+				command.Connection = connection;
+				command.CommandText = @"SELECT * FROM [dbo].[User] WHERE companyID = @CompanyID AND status = 1";
+				command.Parameters.AddWithValue("@CompanyID", id);
+
+				connection.Open();
+				var reader = command.ExecuteReader();
+                
+				while (reader.Read())
+				{
+					var personal = new User();
+					personal.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+					personal.name = reader.GetString(reader.GetOrdinal("name"));
+                    personal.genderID = reader.GetString(reader.GetOrdinal("genderID"));
+                    personal.civilised = reader.GetBoolean(reader.GetOrdinal("civilised"));
+					personal.imageUrl = reader.GetString(reader.GetOrdinal("imageUrl"));
+                    personal.companyID = reader.GetInt32(reader.GetOrdinal("companyID"));
+                    personal.birthDate= reader.GetDateTime(reader.GetOrdinal("birthDate"));
+					personal.enrolledDate = reader.GetDateTime(reader.GetOrdinal("enrolledDate"));
+					//personal.exitDate = reader.GetDateTime(reader.GetOrdinal("exitDate"));
+					personal.address = reader.GetString(reader.GetOrdinal("address"));
+					personal.eMail = reader.GetString(reader.GetOrdinal("eMail"));
+					personal.phoneNumber = reader.GetString(reader.GetOrdinal("phoneNumber"));
+                    personal.price = reader.GetDouble(reader.GetOrdinal("price"));
+					personal.status = reader.GetBoolean(reader.GetOrdinal("status"));
+
+                    personals.Add(personal);
+				}
+
+				reader.Close();
+				connection.Close();
+			}
+
+			return personals;
+		}
+
+		#endregion
+	}
 }

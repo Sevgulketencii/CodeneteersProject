@@ -19,7 +19,7 @@ namespace CodeneteersProject
     {
         private Guna2Button jobAddLoopButton;
         JobAdvertisementsManager jobAdvertisementsManager = new JobAdvertisementsManager(new JobAdvertisementsDAL());
-
+        User appUser;
 
         private int GetJobAdvertisementIdFromButtonName(string buttonName)
         {
@@ -44,13 +44,13 @@ namespace CodeneteersProject
         }
         private void GoToDetailPage(JobAdvertisements jobAdvertisement)
         {
-            JobAdvertisementDetailForm jobAdvertisementDetailForm = new JobAdvertisementDetailForm(jobAdvertisement);
+            JobAdvertisementDetailForm jobAdvertisementDetailForm = new JobAdvertisementDetailForm(jobAdvertisement, appUser);
             this.Hide();
             jobAdvertisementDetailForm.ShowDialog();
 
         }
 
-        public JobAdvertisementsForm()
+        public JobAdvertisementsForm(User appUser)
         {
             InitializeComponent();
             jobAddScrollBar.Value = jobAddsPanel.VerticalScroll.Value;
@@ -63,6 +63,7 @@ namespace CodeneteersProject
 
             jobAddsPanel.ControlAdded += JobAddsPanel_ControlAdded;
             jobAddsPanel.ControlRemoved += JobAddsPanel_ControlRemoved;
+            this.appUser = appUser;
         }
 
         private void JobAddsPanel_ControlRemoved(object? sender, ControlEventArgs e)
@@ -77,7 +78,7 @@ namespace CodeneteersProject
 
         private void JobAddScrollBar_Scroll(object? sender, ScrollEventArgs e)
         {
-           jobAddsPanel.VerticalScroll.Value = jobAddScrollBar.Value;
+            jobAddsPanel.VerticalScroll.Value = jobAddScrollBar.Value;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -130,6 +131,11 @@ namespace CodeneteersProject
             int postID = GetJobAdvertisementIdFromButtonName(jobAdvertisementButton.Name);
             JobAdvertisements jobAdvertisement = jobAdvertisementsManager.GetByID(postID);
             GoToDetailPage(jobAdvertisement);
+        }
+
+        private void closeButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

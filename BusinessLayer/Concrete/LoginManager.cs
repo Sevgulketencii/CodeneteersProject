@@ -44,5 +44,11 @@ namespace BusinessLayer.Concrete
         {
            _login.update(t);
         }
+        public Login GetByUserNameAndPasswordActiveCompany(string userName, string password)
+        {
+            var result = _login.GetByUserNameAndPasswordActiveCompany(userName, password);
+            return result;
+        }
+
     }
 }

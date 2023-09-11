@@ -20,13 +20,14 @@ namespace DataAccesLayer.Repository
             var command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into JobApplications values(@userID,@JobAdvertisementID,@createdDate,@situation,@status)";
+            command.CommandText = "insert into JobApplications values(@userID,@JobAdvertisementID,@createdDate,@situation,@status,@position)";
 
             command.Parameters.AddWithValue("@userID", t.userID);
             command.Parameters.AddWithValue("@JobAdvertisementID", t.JobAdvertisementID);
             command.Parameters.AddWithValue("@createdDate", t.createdDate);
             command.Parameters.AddWithValue("@situation", t.situation);
             command.Parameters.AddWithValue("@status", t.status);
+            command.Parameters.AddWithValue("@position", t.position);
 
 
 

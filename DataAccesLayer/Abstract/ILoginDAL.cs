@@ -14,5 +14,6 @@ namespace DataAccesLayer.Abstract
         void delete(Login t);
         void update(Login t);
         Login GetByID(int id);
+        Login GetByUserNameAndPasswordActiveCompany(string userName, string password);
     }
 }

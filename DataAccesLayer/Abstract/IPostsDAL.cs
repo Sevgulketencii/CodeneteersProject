@@ -15,5 +15,6 @@ namespace DataAccesLayer.Abstract
         void update(Posts t);
         Posts GetByID(int id);
         List<Posts> GetCompanyPostList(int id);
+        int CloseOutEventForApplication(int id);
     }
 }

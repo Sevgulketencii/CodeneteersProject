@@ -1,4 +1,7 @@
-﻿using EntityLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using CodeNETeersProject;
+using DataAccesLayer.Repository;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,18 +17,35 @@ namespace CodeneteersProject
     public partial class AdvertisementAndEventDetailForm : Form
     {
         Posts post;
-        public AdvertisementAndEventDetailForm(Posts post)
+        PostApplications postApplication;
+        EntityLayer.Concrete.User appUser;
+        PostsManager postsManager = new PostsManager(new PostsDAL());
+        PostApplicationsManager postApplicationsManager = new PostApplicationsManager(new PostApplicationsDAL());
+        public AdvertisementAndEventDetailForm(Posts post, User appUser)
         {
             InitializeComponent();
             this.post = post;
+            this.appUser = appUser;
+        }
+        public void GoToDashboardForm()
+        {
+            DashboardForm dashboardForm = new DashboardForm();
+            this.Hide();
+            dashboardForm.ShowDialog();
         }
 
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            //addApplication.add(post.id, person.id, appDate);
+            postApplication = new PostApplications();
+            postApplication.UserID = appUser.ID;
+            postApplication.PostID = post.ID;
+            postApplication.EnrolledDate = DateTime.Now;
+            postApplication.CompanyID = post.companyID;
+            postApplication.status = true;
+            postApplicationsManager.Add(postApplication);
             MessageBox.Show("Etkinlik kaydınız başarıyla alınmıştır.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //goToDashboard
+            GoToDashboardForm();
         }
 
         private void AdvertisementAndEventDetailForm_Load(object sender, EventArgs e)

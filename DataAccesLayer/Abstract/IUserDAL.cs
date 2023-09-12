@@ -14,7 +14,7 @@ namespace DataAccesLayer.Abstract
 		Payroll GetPersonelWithPayroll(int id);
 
 		void add(User t);
-        void delete(User t);
+        void delete(int id);
         void update(User t);
         User GetByID(int id);
     }

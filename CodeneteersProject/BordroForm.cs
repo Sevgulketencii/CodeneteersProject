@@ -22,7 +22,8 @@ namespace CodeneteersProject
 
 		private void closeButton_Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+
+			//Application.Exit();
 		}
 
 		private void Bordro_Load(object sender, EventArgs e)

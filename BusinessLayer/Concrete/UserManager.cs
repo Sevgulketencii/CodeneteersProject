@@ -23,9 +23,9 @@ namespace BusinessLayer.Concrete
             _user.add(t);
         }
 
-        public void delete(User t)
+        public void delete(int id)
         {
-            _user.delete(t);
+            _user.delete(id);
         }
 
         public User GetByID(int id)

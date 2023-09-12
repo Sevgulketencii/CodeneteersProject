@@ -122,7 +122,7 @@ namespace CodeneteersProject.HR
 
             eventsPanel.ControlAdded += EventsPanel_ControlAdded;
             eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
-            this.appUser= appUser;
+            this.appUser = appUser;
         }
 
 

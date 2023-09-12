@@ -83,7 +83,7 @@ namespace CodeneteersProject.HR
 
         private void participantListButton_Click(object sender, EventArgs e)
         {
-            ParticipantListForm participantListForm = new ParticipantListForm(participants);
+            EventParticipantListForm participantListForm = new EventParticipantListForm(participants);
             participantListForm.ShowDialog();
         }
 

@@ -20,11 +20,12 @@ namespace DataAccesLayer.Repository
             var command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into User values(@roleID,@name,@surname,@imageUrl,@genderID,@phoneNumber,@eMail,@civilised,@address,@companyID,@birthDate,@enrolledDate,@exitDate,@price,@status)";
+            command.CommandText = "insert into [dbo].[User] values(@roleID,@name,@surname,@imageUrl,@genderID,@phoneNumber,@eMail,@civilised,@address,@companyID,@birthDate,@enrolledDate,@exitDate,@price,@status)";
             command.Parameters.AddWithValue("@roleID", t.roleID);
             command.Parameters.AddWithValue("@name", t.name);
             command.Parameters.AddWithValue("@surname", t.surname);
-            command.Parameters.AddWithValue("@imageUrl", t.imageUrl);
+			command.Parameters.AddWithValue("@address", t.address);
+			command.Parameters.AddWithValue("@imageUrl", t.imageUrl);
             command.Parameters.AddWithValue("@genderID", t.genderID);
             command.Parameters.AddWithValue("@phoneNumber", t.phoneNumber);
             command.Parameters.AddWithValue("@eMail", t.eMail);
@@ -45,15 +46,20 @@ namespace DataAccesLayer.Repository
         #endregion
 
         #region SİLME
-        public void delete(User t)
+        public void delete(int id)
         {
             var connection = new DbConnectionHelper().Connection;
             var command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "DELETE FROM User WHERE ID = @UserID";
-            command.Parameters.AddWithValue("@UserID", t.ID);
-        }
+            command.CommandText = "UPDATE [User]  SET status = @Status , exitDate=@ExitDate WHERE ID = @UserID";
+            command.Parameters.AddWithValue("@UserID", id);
+            command.Parameters.AddWithValue("@Status", false);
+			command.Parameters.AddWithValue("@ExitDate", DateTime.Now);
+			connection.Open();
+			command.ExecuteNonQuery();
+			connection.Close();
+		}
         #endregion
 
         #region ID'YEGOREGETİR
@@ -108,9 +114,10 @@ namespace DataAccesLayer.Repository
         }
 
 
-        #endregion
+		#endregion
 
-        public List<User> GetCompaniesPersonel(int id)
+		#region ŞirketeGörePersonalGetirme
+		public List<User> GetCompaniesPersonel(int id)
         {
             var connection = new DbConnectionHelper().Connection;
 
@@ -153,9 +160,10 @@ namespace DataAccesLayer.Repository
 
             return User;
         }
+		#endregion
 
-        #region LİSTELE
-        public List<User> list() 
+		#region LİSTELE
+		public List<User> list() 
         {
             var connection = new DbConnectionHelper().Connection;
 

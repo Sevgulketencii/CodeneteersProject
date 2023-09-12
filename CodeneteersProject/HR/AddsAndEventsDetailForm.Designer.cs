@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddsAndEventsDetailForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -61,7 +61,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             closeOutButton = new Guna.UI2.WinForms.Guna2GradientButton();
             titleLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -77,22 +76,20 @@
             participantListButton = new Guna.UI2.WinForms.Guna2GradientButton();
             sideBar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             logOutButton = new Guna.UI2.WinForms.Guna2Button();
-            logOutIcon = new Guna.UI2.WinForms.Guna2CircleButton();
-            suggestionsButton = new Guna.UI2.WinForms.Guna2Button();
-            suggestionsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
-            jobAdvertisementsButton = new Guna.UI2.WinForms.Guna2Button();
-            jobAdvertisementsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
-            addsAndEventsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
-            addsAndEventsButton = new Guna.UI2.WinForms.Guna2Button();
+            wishIcon = new Guna.UI2.WinForms.Guna2CircleButton();
             profileIcon = new Guna.UI2.WinForms.Guna2CircleButton();
-            profileButton = new Guna.UI2.WinForms.Guna2Button();
+            jobAdsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
             dashboardIcon = new Guna.UI2.WinForms.Guna2CircleButton();
+            addsAndEventsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
+            suggestionsButton = new Guna.UI2.WinForms.Guna2Button();
+            jobAdvertisementsButton = new Guna.UI2.WinForms.Guna2Button();
+            suggestionsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
+            addsAndEventsButton = new Guna.UI2.WinForms.Guna2Button();
+            jobAdvertisementsIcon = new Guna.UI2.WinForms.Guna2CircleButton();
+            employeeIcon = new Guna.UI2.WinForms.Guna2CircleButton();
+            employeeButton = new Guna.UI2.WinForms.Guna2Button();
+            profileButton = new Guna.UI2.WinForms.Guna2Button();
             dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2.SuspendLayout();
             sideBar.SuspendLayout();
@@ -105,7 +102,7 @@
             // closeOutButton
             // 
             closeOutButton.BorderRadius = 20;
-            closeOutButton.CustomizableEdges = customizableEdges29;
+            closeOutButton.CustomizableEdges = customizableEdges28;
             closeOutButton.DisabledState.BorderColor = Color.DarkGray;
             closeOutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             closeOutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,10 +111,10 @@
             closeOutButton.FillColor2 = Color.Indigo;
             closeOutButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             closeOutButton.ForeColor = Color.White;
-            closeOutButton.Location = new Point(220, 398);
+            closeOutButton.Location = new Point(228, 396);
             closeOutButton.Margin = new Padding(3, 4, 3, 4);
             closeOutButton.Name = "closeOutButton";
-            closeOutButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            closeOutButton.ShadowDecoration.CustomizableEdges = customizableEdges29;
             closeOutButton.Size = new Size(216, 55);
             closeOutButton.TabIndex = 53;
             closeOutButton.Text = "Başvuru Alımına Kapat";
@@ -142,7 +139,7 @@
             // closeButton
             // 
             closeButton.BorderRadius = 12;
-            closeButton.CustomizableEdges = customizableEdges31;
+            closeButton.CustomizableEdges = customizableEdges30;
             closeButton.DisabledState.BorderColor = Color.DarkGray;
             closeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             closeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -154,7 +151,7 @@
             closeButton.Location = new Point(775, 15);
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
-            closeButton.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            closeButton.ShadowDecoration.CustomizableEdges = customizableEdges31;
             closeButton.Size = new Size(32, 35);
             closeButton.TabIndex = 31;
             closeButton.Text = "X";
@@ -165,7 +162,7 @@
             wishAndSuggestionTitleLabel.AutoSize = true;
             wishAndSuggestionTitleLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
             wishAndSuggestionTitleLabel.ForeColor = SystemColors.ButtonFace;
-            wishAndSuggestionTitleLabel.Location = new Point(405, 31);
+            wishAndSuggestionTitleLabel.Location = new Point(432, 29);
             wishAndSuggestionTitleLabel.Name = "wishAndSuggestionTitleLabel";
             wishAndSuggestionTitleLabel.Size = new Size(0, 24);
             wishAndSuggestionTitleLabel.TabIndex = 32;
@@ -181,7 +178,7 @@
             guna2ShadowPanel2.Controls.Add(titleLabel);
             guna2ShadowPanel2.FillColor = Color.SlateBlue;
             guna2ShadowPanel2.ForeColor = SystemColors.AppWorkspace;
-            guna2ShadowPanel2.Location = new Point(220, 72);
+            guna2ShadowPanel2.Location = new Point(228, 70);
             guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 10;
@@ -229,7 +226,7 @@
             // 
             messageTextBox.Animated = true;
             messageTextBox.BorderRadius = 10;
-            messageTextBox.CustomizableEdges = customizableEdges27;
+            messageTextBox.CustomizableEdges = customizableEdges26;
             messageTextBox.DefaultText = "";
             messageTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             messageTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -246,7 +243,7 @@
             messageTextBox.PlaceholderText = "";
             messageTextBox.ReadOnly = true;
             messageTextBox.SelectedText = "";
-            messageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            messageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges27;
             messageTextBox.Size = new Size(472, 148);
             messageTextBox.TabIndex = 53;
             // 
@@ -265,7 +262,7 @@
             // participantListButton
             // 
             participantListButton.BorderRadius = 20;
-            participantListButton.CustomizableEdges = customizableEdges25;
+            participantListButton.CustomizableEdges = customizableEdges24;
             participantListButton.DisabledState.BorderColor = Color.DarkGray;
             participantListButton.DisabledState.CustomBorderColor = Color.DarkGray;
             participantListButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -274,10 +271,10 @@
             participantListButton.FillColor2 = Color.Indigo;
             participantListButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             participantListButton.ForeColor = Color.White;
-            participantListButton.Location = new Point(529, 398);
+            participantListButton.Location = new Point(537, 396);
             participantListButton.Margin = new Padding(3, 4, 3, 4);
             participantListButton.Name = "participantListButton";
-            participantListButton.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            participantListButton.ShadowDecoration.CustomizableEdges = customizableEdges25;
             participantListButton.Size = new Size(216, 55);
             participantListButton.TabIndex = 55;
             participantListButton.Text = "Katılımcı Listesi";
@@ -287,30 +284,28 @@
             // 
             sideBar.BackColor = Color.Transparent;
             sideBar.Controls.Add(guna2CircleButton3);
-            sideBar.Controls.Add(guna2CircleButton4);
-            sideBar.Controls.Add(guna2CircleButton5);
-            sideBar.Controls.Add(guna2CircleButton6);
-            sideBar.Controls.Add(guna2CircleButton1);
-            sideBar.Controls.Add(guna2CircleButton2);
             sideBar.Controls.Add(logOutButton);
-            sideBar.Controls.Add(logOutIcon);
-            sideBar.Controls.Add(suggestionsButton);
-            sideBar.Controls.Add(suggestionsIcon);
-            sideBar.Controls.Add(jobAdvertisementsButton);
-            sideBar.Controls.Add(jobAdvertisementsIcon);
-            sideBar.Controls.Add(addsAndEventsIcon);
-            sideBar.Controls.Add(addsAndEventsButton);
+            sideBar.Controls.Add(wishIcon);
             sideBar.Controls.Add(profileIcon);
-            sideBar.Controls.Add(profileButton);
+            sideBar.Controls.Add(jobAdsIcon);
             sideBar.Controls.Add(dashboardIcon);
+            sideBar.Controls.Add(addsAndEventsIcon);
+            sideBar.Controls.Add(suggestionsButton);
+            sideBar.Controls.Add(jobAdvertisementsButton);
+            sideBar.Controls.Add(suggestionsIcon);
+            sideBar.Controls.Add(addsAndEventsButton);
+            sideBar.Controls.Add(jobAdvertisementsIcon);
+            sideBar.Controls.Add(employeeIcon);
+            sideBar.Controls.Add(employeeButton);
+            sideBar.Controls.Add(profileButton);
             sideBar.Controls.Add(dashboardButton);
             sideBar.FillColor = Color.SlateBlue;
             sideBar.ForeColor = SystemColors.AppWorkspace;
-            sideBar.Location = new Point(12, 35);
+            sideBar.Location = new Point(12, 15);
             sideBar.Name = "sideBar";
             sideBar.Radius = 10;
             sideBar.ShadowColor = Color.WhiteSmoke;
-            sideBar.Size = new Size(182, 394);
+            sideBar.Size = new Size(182, 490);
             sideBar.TabIndex = 80;
             // 
             // guna2CircleButton3
@@ -325,113 +320,18 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.ImageSize = new Size(30, 30);
-            guna2CircleButton3.Location = new Point(20, 300);
+            guna2CircleButton3.Location = new Point(20, 350);
             guna2CircleButton3.Name = "guna2CircleButton3";
             guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton3.Size = new Size(42, 42);
-            guna2CircleButton3.TabIndex = 18;
-            // 
-            // guna2CircleButton4
-            // 
-            guna2CircleButton4.BackColor = Color.Transparent;
-            guna2CircleButton4.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton4.FillColor = Color.Transparent;
-            guna2CircleButton4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton4.ForeColor = Color.White;
-            guna2CircleButton4.Image = (Image)resources.GetObject("guna2CircleButton4.Image");
-            guna2CircleButton4.ImageSize = new Size(30, 30);
-            guna2CircleButton4.Location = new Point(19, 250);
-            guna2CircleButton4.Name = "guna2CircleButton4";
-            guna2CircleButton4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton4.Size = new Size(42, 42);
-            guna2CircleButton4.TabIndex = 17;
-            // 
-            // guna2CircleButton5
-            // 
-            guna2CircleButton5.BackColor = Color.Transparent;
-            guna2CircleButton5.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton5.FillColor = Color.Transparent;
-            guna2CircleButton5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton5.ForeColor = Color.White;
-            guna2CircleButton5.Image = (Image)resources.GetObject("guna2CircleButton5.Image");
-            guna2CircleButton5.ImageSize = new Size(30, 30);
-            guna2CircleButton5.Location = new Point(22, 200);
-            guna2CircleButton5.Name = "guna2CircleButton5";
-            guna2CircleButton5.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton5.Size = new Size(42, 42);
-            guna2CircleButton5.TabIndex = 15;
-            // 
-            // guna2CircleButton6
-            // 
-            guna2CircleButton6.BackColor = Color.Transparent;
-            guna2CircleButton6.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton6.FillColor = Color.Transparent;
-            guna2CircleButton6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton6.ForeColor = Color.White;
-            guna2CircleButton6.Image = (Image)resources.GetObject("guna2CircleButton6.Image");
-            guna2CircleButton6.ImageSize = new Size(30, 30);
-            guna2CircleButton6.Location = new Point(22, 150);
-            guna2CircleButton6.Name = "guna2CircleButton6";
-            guna2CircleButton6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton6.Size = new Size(42, 42);
-            guna2CircleButton6.TabIndex = 16;
-            // 
-            // guna2CircleButton1
-            // 
-            guna2CircleButton1.BackColor = Color.Transparent;
-            guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton1.FillColor = Color.Transparent;
-            guna2CircleButton1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton1.ForeColor = Color.White;
-            guna2CircleButton1.Image = (Image)resources.GetObject("guna2CircleButton1.Image");
-            guna2CircleButton1.ImageSize = new Size(25, 25);
-            guna2CircleButton1.Location = new Point(22, 101);
-            guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton1.Size = new Size(42, 36);
-            guna2CircleButton1.TabIndex = 14;
-            // 
-            // guna2CircleButton2
-            // 
-            guna2CircleButton2.BackColor = Color.Transparent;
-            guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton2.FillColor = Color.Transparent;
-            guna2CircleButton2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton2.ForeColor = Color.White;
-            guna2CircleButton2.Image = (Image)resources.GetObject("guna2CircleButton2.Image");
-            guna2CircleButton2.ImageSize = new Size(25, 25);
-            guna2CircleButton2.Location = new Point(22, 50);
-            guna2CircleButton2.Name = "guna2CircleButton2";
-            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton2.Size = new Size(42, 42);
-            guna2CircleButton2.TabIndex = 13;
+            guna2CircleButton3.TabIndex = 84;
             // 
             // logOutButton
             // 
             logOutButton.BackColor = Color.Transparent;
             logOutButton.BorderColor = SystemColors.ControlDark;
-            logOutButton.CustomizableEdges = customizableEdges7;
+            logOutButton.CustomizableEdges = customizableEdges2;
             logOutButton.DisabledState.BorderColor = Color.DarkGray;
             logOutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -440,37 +340,114 @@
             logOutButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             logOutButton.ForeColor = Color.White;
             logOutButton.ImageAlign = HorizontalAlignment.Left;
-            logOutButton.Location = new Point(62, 298);
+            logOutButton.Location = new Point(62, 348);
             logOutButton.Name = "logOutButton";
-            logOutButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            logOutButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
             logOutButton.Size = new Size(107, 46);
-            logOutButton.TabIndex = 12;
+            logOutButton.TabIndex = 19;
             logOutButton.Text = "Çıkış Yap";
             logOutButton.TextAlign = HorizontalAlignment.Left;
             // 
-            // logOutIcon
+            // wishIcon
             // 
-            logOutIcon.BackColor = Color.Transparent;
-            logOutIcon.DisabledState.BorderColor = Color.DarkGray;
-            logOutIcon.DisabledState.CustomBorderColor = Color.DarkGray;
-            logOutIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            logOutIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            logOutIcon.FillColor = Color.Transparent;
-            logOutIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            logOutIcon.ForeColor = Color.White;
-            logOutIcon.ImageSize = new Size(30, 30);
-            logOutIcon.Location = new Point(23, 298);
-            logOutIcon.Name = "logOutIcon";
-            logOutIcon.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            logOutIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            logOutIcon.Size = new Size(42, 42);
-            logOutIcon.TabIndex = 11;
+            wishIcon.BackColor = Color.Transparent;
+            wishIcon.DisabledState.BorderColor = Color.DarkGray;
+            wishIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            wishIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            wishIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            wishIcon.FillColor = Color.Transparent;
+            wishIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            wishIcon.ForeColor = Color.White;
+            wishIcon.Image = (Image)resources.GetObject("wishIcon.Image");
+            wishIcon.ImageSize = new Size(30, 30);
+            wishIcon.Location = new Point(19, 300);
+            wishIcon.Name = "wishIcon";
+            wishIcon.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            wishIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            wishIcon.Size = new Size(42, 42);
+            wishIcon.TabIndex = 83;
+            // 
+            // profileIcon
+            // 
+            profileIcon.BackColor = Color.Transparent;
+            profileIcon.DisabledState.BorderColor = Color.DarkGray;
+            profileIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            profileIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            profileIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            profileIcon.FillColor = Color.Transparent;
+            profileIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            profileIcon.ForeColor = Color.White;
+            profileIcon.Image = (Image)resources.GetObject("profileIcon.Image");
+            profileIcon.ImageSize = new Size(25, 25);
+            profileIcon.Location = new Point(22, 101);
+            profileIcon.Name = "profileIcon";
+            profileIcon.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            profileIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            profileIcon.Size = new Size(42, 36);
+            profileIcon.TabIndex = 14;
+            // 
+            // jobAdsIcon
+            // 
+            jobAdsIcon.BackColor = Color.Transparent;
+            jobAdsIcon.DisabledState.BorderColor = Color.DarkGray;
+            jobAdsIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            jobAdsIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            jobAdsIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            jobAdsIcon.FillColor = Color.Transparent;
+            jobAdsIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            jobAdsIcon.ForeColor = Color.White;
+            jobAdsIcon.Image = (Image)resources.GetObject("jobAdsIcon.Image");
+            jobAdsIcon.ImageSize = new Size(30, 30);
+            jobAdsIcon.Location = new Point(22, 250);
+            jobAdsIcon.Name = "jobAdsIcon";
+            jobAdsIcon.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            jobAdsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            jobAdsIcon.Size = new Size(42, 42);
+            jobAdsIcon.TabIndex = 81;
+            // 
+            // dashboardIcon
+            // 
+            dashboardIcon.BackColor = Color.Transparent;
+            dashboardIcon.DisabledState.BorderColor = Color.DarkGray;
+            dashboardIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            dashboardIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            dashboardIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            dashboardIcon.FillColor = Color.Transparent;
+            dashboardIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dashboardIcon.ForeColor = Color.White;
+            dashboardIcon.Image = (Image)resources.GetObject("dashboardIcon.Image");
+            dashboardIcon.ImageSize = new Size(25, 25);
+            dashboardIcon.Location = new Point(22, 50);
+            dashboardIcon.Name = "dashboardIcon";
+            dashboardIcon.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            dashboardIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            dashboardIcon.Size = new Size(42, 42);
+            dashboardIcon.TabIndex = 13;
+            // 
+            // addsAndEventsIcon
+            // 
+            addsAndEventsIcon.BackColor = Color.Transparent;
+            addsAndEventsIcon.DisabledState.BorderColor = Color.DarkGray;
+            addsAndEventsIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            addsAndEventsIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            addsAndEventsIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            addsAndEventsIcon.FillColor = Color.Transparent;
+            addsAndEventsIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            addsAndEventsIcon.ForeColor = Color.White;
+            addsAndEventsIcon.Image = (Image)resources.GetObject("addsAndEventsIcon.Image");
+            addsAndEventsIcon.ImageSize = new Size(30, 30);
+            addsAndEventsIcon.Location = new Point(22, 200);
+            addsAndEventsIcon.Name = "addsAndEventsIcon";
+            addsAndEventsIcon.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            addsAndEventsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            addsAndEventsIcon.Size = new Size(42, 42);
+            addsAndEventsIcon.TabIndex = 82;
             // 
             // suggestionsButton
             // 
             suggestionsButton.BackColor = Color.Transparent;
             suggestionsButton.BorderColor = SystemColors.ControlDark;
-            suggestionsButton.CustomizableEdges = customizableEdges10;
+            suggestionsButton.CustomizableEdges = customizableEdges9;
             suggestionsButton.DisabledState.BorderColor = Color.DarkGray;
             suggestionsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             suggestionsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -479,13 +456,34 @@
             suggestionsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             suggestionsButton.ForeColor = Color.White;
             suggestionsButton.ImageAlign = HorizontalAlignment.Left;
-            suggestionsButton.Location = new Point(62, 248);
+            suggestionsButton.Location = new Point(62, 298);
             suggestionsButton.Name = "suggestionsButton";
-            suggestionsButton.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            suggestionsButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             suggestionsButton.Size = new Size(107, 46);
-            suggestionsButton.TabIndex = 10;
+            suggestionsButton.TabIndex = 12;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
+            // 
+            // jobAdvertisementsButton
+            // 
+            jobAdvertisementsButton.BackColor = Color.Transparent;
+            jobAdvertisementsButton.BorderColor = SystemColors.ControlDark;
+            jobAdvertisementsButton.CustomizableEdges = customizableEdges11;
+            jobAdvertisementsButton.DisabledState.BorderColor = Color.DarkGray;
+            jobAdvertisementsButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            jobAdvertisementsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            jobAdvertisementsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            jobAdvertisementsButton.FillColor = Color.Transparent;
+            jobAdvertisementsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            jobAdvertisementsButton.ForeColor = Color.White;
+            jobAdvertisementsButton.ImageAlign = HorizontalAlignment.Left;
+            jobAdvertisementsButton.Location = new Point(62, 248);
+            jobAdvertisementsButton.Name = "jobAdvertisementsButton";
+            jobAdvertisementsButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            jobAdvertisementsButton.Size = new Size(107, 46);
+            jobAdvertisementsButton.TabIndex = 10;
+            jobAdvertisementsButton.Text = "İlanlar";
+            jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
             // 
             // suggestionsIcon
             // 
@@ -500,31 +498,31 @@
             suggestionsIcon.ImageSize = new Size(30, 30);
             suggestionsIcon.Location = new Point(22, 248);
             suggestionsIcon.Name = "suggestionsIcon";
-            suggestionsIcon.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            suggestionsIcon.ShadowDecoration.CustomizableEdges = customizableEdges13;
             suggestionsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             suggestionsIcon.Size = new Size(42, 42);
             suggestionsIcon.TabIndex = 9;
             // 
-            // jobAdvertisementsButton
+            // addsAndEventsButton
             // 
-            jobAdvertisementsButton.BackColor = Color.Transparent;
-            jobAdvertisementsButton.BorderColor = SystemColors.ControlDark;
-            jobAdvertisementsButton.CustomizableEdges = customizableEdges13;
-            jobAdvertisementsButton.DisabledState.BorderColor = Color.DarkGray;
-            jobAdvertisementsButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            jobAdvertisementsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            jobAdvertisementsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            jobAdvertisementsButton.FillColor = Color.Transparent;
-            jobAdvertisementsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            jobAdvertisementsButton.ForeColor = Color.White;
-            jobAdvertisementsButton.ImageAlign = HorizontalAlignment.Left;
-            jobAdvertisementsButton.Location = new Point(63, 198);
-            jobAdvertisementsButton.Name = "jobAdvertisementsButton";
-            jobAdvertisementsButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            jobAdvertisementsButton.Size = new Size(94, 46);
-            jobAdvertisementsButton.TabIndex = 8;
-            jobAdvertisementsButton.Text = "İlanlar";
-            jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.BackColor = Color.Transparent;
+            addsAndEventsButton.BorderColor = SystemColors.ControlDark;
+            addsAndEventsButton.CustomizableEdges = customizableEdges14;
+            addsAndEventsButton.DisabledState.BorderColor = Color.DarkGray;
+            addsAndEventsButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            addsAndEventsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            addsAndEventsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            addsAndEventsButton.FillColor = Color.Transparent;
+            addsAndEventsButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            addsAndEventsButton.ForeColor = Color.White;
+            addsAndEventsButton.ImageAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.Location = new Point(63, 198);
+            addsAndEventsButton.Name = "addsAndEventsButton";
+            addsAndEventsButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            addsAndEventsButton.Size = new Size(102, 46);
+            addsAndEventsButton.TabIndex = 8;
+            addsAndEventsButton.Text = "Duyurular";
+            addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
             // 
             // jobAdvertisementsIcon
             // 
@@ -539,67 +537,50 @@
             jobAdvertisementsIcon.ImageSize = new Size(30, 30);
             jobAdvertisementsIcon.Location = new Point(25, 198);
             jobAdvertisementsIcon.Name = "jobAdvertisementsIcon";
-            jobAdvertisementsIcon.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            jobAdvertisementsIcon.ShadowDecoration.CustomizableEdges = customizableEdges16;
             jobAdvertisementsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             jobAdvertisementsIcon.Size = new Size(42, 42);
             jobAdvertisementsIcon.TabIndex = 7;
             // 
-            // addsAndEventsIcon
+            // employeeIcon
             // 
-            addsAndEventsIcon.BackColor = Color.Transparent;
-            addsAndEventsIcon.DisabledState.BorderColor = Color.DarkGray;
-            addsAndEventsIcon.DisabledState.CustomBorderColor = Color.DarkGray;
-            addsAndEventsIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            addsAndEventsIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            addsAndEventsIcon.FillColor = Color.Transparent;
-            addsAndEventsIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            addsAndEventsIcon.ForeColor = Color.White;
-            addsAndEventsIcon.ImageSize = new Size(30, 30);
-            addsAndEventsIcon.Location = new Point(25, 148);
-            addsAndEventsIcon.Name = "addsAndEventsIcon";
-            addsAndEventsIcon.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            addsAndEventsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            addsAndEventsIcon.Size = new Size(42, 42);
-            addsAndEventsIcon.TabIndex = 7;
+            employeeIcon.BackColor = Color.Transparent;
+            employeeIcon.DisabledState.BorderColor = Color.DarkGray;
+            employeeIcon.DisabledState.CustomBorderColor = Color.DarkGray;
+            employeeIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            employeeIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            employeeIcon.FillColor = Color.Transparent;
+            employeeIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            employeeIcon.ForeColor = Color.White;
+            employeeIcon.Image = (Image)resources.GetObject("employeeIcon.Image");
+            employeeIcon.ImageSize = new Size(30, 30);
+            employeeIcon.Location = new Point(25, 148);
+            employeeIcon.Name = "employeeIcon";
+            employeeIcon.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            employeeIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            employeeIcon.Size = new Size(42, 42);
+            employeeIcon.TabIndex = 7;
             // 
-            // addsAndEventsButton
+            // employeeButton
             // 
-            addsAndEventsButton.BackColor = Color.Transparent;
-            addsAndEventsButton.BorderColor = SystemColors.ControlDark;
-            addsAndEventsButton.CustomizableEdges = customizableEdges17;
-            addsAndEventsButton.DisabledState.BorderColor = Color.DarkGray;
-            addsAndEventsButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            addsAndEventsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            addsAndEventsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            addsAndEventsButton.FillColor = Color.Transparent;
-            addsAndEventsButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            addsAndEventsButton.ForeColor = Color.White;
-            addsAndEventsButton.ImageAlign = HorizontalAlignment.Left;
-            addsAndEventsButton.Location = new Point(63, 148);
-            addsAndEventsButton.Name = "addsAndEventsButton";
-            addsAndEventsButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            addsAndEventsButton.Size = new Size(102, 46);
-            addsAndEventsButton.TabIndex = 6;
-            addsAndEventsButton.Text = "Duyurular";
-            addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
-            // 
-            // profileIcon
-            // 
-            profileIcon.BackColor = Color.Transparent;
-            profileIcon.DisabledState.BorderColor = Color.DarkGray;
-            profileIcon.DisabledState.CustomBorderColor = Color.DarkGray;
-            profileIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            profileIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            profileIcon.FillColor = Color.Transparent;
-            profileIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            profileIcon.ForeColor = Color.White;
-            profileIcon.ImageSize = new Size(25, 25);
-            profileIcon.Location = new Point(25, 100);
-            profileIcon.Name = "profileIcon";
-            profileIcon.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            profileIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            profileIcon.Size = new Size(42, 36);
-            profileIcon.TabIndex = 3;
+            employeeButton.BackColor = Color.Transparent;
+            employeeButton.BorderColor = SystemColors.ControlDark;
+            employeeButton.CustomizableEdges = customizableEdges18;
+            employeeButton.DisabledState.BorderColor = Color.DarkGray;
+            employeeButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            employeeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            employeeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            employeeButton.FillColor = Color.Transparent;
+            employeeButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            employeeButton.ForeColor = Color.White;
+            employeeButton.ImageAlign = HorizontalAlignment.Left;
+            employeeButton.Location = new Point(63, 148);
+            employeeButton.Name = "employeeButton";
+            employeeButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            employeeButton.Size = new Size(102, 46);
+            employeeButton.TabIndex = 6;
+            employeeButton.Text = "Personel";
+            employeeButton.TextAlign = HorizontalAlignment.Left;
             // 
             // profileButton
             // 
@@ -622,29 +603,11 @@
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
             // 
-            // dashboardIcon
-            // 
-            dashboardIcon.BackColor = Color.Transparent;
-            dashboardIcon.DisabledState.BorderColor = Color.DarkGray;
-            dashboardIcon.DisabledState.CustomBorderColor = Color.DarkGray;
-            dashboardIcon.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            dashboardIcon.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            dashboardIcon.FillColor = Color.Transparent;
-            dashboardIcon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dashboardIcon.ForeColor = Color.White;
-            dashboardIcon.ImageSize = new Size(25, 25);
-            dashboardIcon.Location = new Point(25, 50);
-            dashboardIcon.Name = "dashboardIcon";
-            dashboardIcon.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            dashboardIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            dashboardIcon.Size = new Size(42, 42);
-            dashboardIcon.TabIndex = 1;
-            // 
             // dashboardButton
             // 
             dashboardButton.BackColor = Color.Transparent;
             dashboardButton.BorderColor = SystemColors.ControlDark;
-            dashboardButton.CustomizableEdges = customizableEdges23;
+            dashboardButton.CustomizableEdges = customizableEdges22;
             dashboardButton.DisabledState.BorderColor = Color.DarkGray;
             dashboardButton.DisabledState.CustomBorderColor = Color.DarkGray;
             dashboardButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -655,7 +618,7 @@
             dashboardButton.ImageAlign = HorizontalAlignment.Left;
             dashboardButton.Location = new Point(63, 50);
             dashboardButton.Name = "dashboardButton";
-            dashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            dashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges23;
             dashboardButton.Size = new Size(102, 46);
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
@@ -666,7 +629,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
-            ClientSize = new Size(821, 499);
+            ClientSize = new Size(821, 543);
             Controls.Add(sideBar);
             Controls.Add(participantListButton);
             Controls.Add(guna2ShadowPanel2);
@@ -702,23 +665,21 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel participantCountLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel participantsLabel;
         private Guna.UI2.WinForms.Guna2ShadowPanel sideBar;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton5;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton6;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        private Guna.UI2.WinForms.Guna2Button logOutButton;
-        private Guna.UI2.WinForms.Guna2CircleButton logOutIcon;
-        private Guna.UI2.WinForms.Guna2Button suggestionsButton;
-        private Guna.UI2.WinForms.Guna2CircleButton suggestionsIcon;
-        private Guna.UI2.WinForms.Guna2Button jobAdvertisementsButton;
-        private Guna.UI2.WinForms.Guna2CircleButton jobAdvertisementsIcon;
-        private Guna.UI2.WinForms.Guna2CircleButton addsAndEventsIcon;
-        private Guna.UI2.WinForms.Guna2Button addsAndEventsButton;
         private Guna.UI2.WinForms.Guna2CircleButton profileIcon;
-        private Guna.UI2.WinForms.Guna2Button profileButton;
         private Guna.UI2.WinForms.Guna2CircleButton dashboardIcon;
+        private Guna.UI2.WinForms.Guna2Button suggestionsButton;
+        private Guna.UI2.WinForms.Guna2Button jobAdvertisementsButton;
+        private Guna.UI2.WinForms.Guna2CircleButton suggestionsIcon;
+        private Guna.UI2.WinForms.Guna2Button addsAndEventsButton;
+        private Guna.UI2.WinForms.Guna2CircleButton jobAdvertisementsIcon;
+        private Guna.UI2.WinForms.Guna2Button employeeButton;
+        private Guna.UI2.WinForms.Guna2Button profileButton;
         private Guna.UI2.WinForms.Guna2Button dashboardButton;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        private Guna.UI2.WinForms.Guna2Button logOutButton;
+        private Guna.UI2.WinForms.Guna2CircleButton wishIcon;
+        private Guna.UI2.WinForms.Guna2CircleButton jobAdsIcon;
+        private Guna.UI2.WinForms.Guna2CircleButton addsAndEventsIcon;
+        private Guna.UI2.WinForms.Guna2CircleButton employeeIcon;
     }
 }

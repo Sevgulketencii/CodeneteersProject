@@ -91,6 +91,7 @@ namespace CodeneteersProject.HR
 				this.DatePickerEnrolledDate.Text = selectedUser.enrolledDate.ToString();
 				this.NumericBoxSalary.Value = Convert.ToDecimal(selectedUser.price);
 				this.ComboxCompany.SelectedValue = selectedUser.companyID;
+				this.ComboxGender.SelectedIndex = selectedUser.genderID == "1" ? 0 : 1;
 
 			}
 		}
@@ -101,7 +102,7 @@ namespace CodeneteersProject.HR
 			newUser.surname = txtPersonalSurname.Text;
 			newUser.phoneNumber = maskedTxtPhone.Text;
 			newUser.eMail = txtEmail.Text;
-			newUser.genderID = "1";
+			newUser.genderID = ComboxGender.SelectedIndex == 0 ? "1" : "0";
 			newUser.birthDate = DateTime.Parse(DatepickerBirthdate.Text);
 			newUser.companyID = (int)ComboxCompany.SelectedValue;
 			newUser.enrolledDate = DateTime.Parse(DatePickerEnrolledDate.Text);
@@ -152,7 +153,7 @@ namespace CodeneteersProject.HR
 				updatedUser.surname = txtPersonalSurname.Text;
 				updatedUser.phoneNumber = maskedTxtPhone.Text;
 				updatedUser.eMail = txtEmail.Text;
-				updatedUser.genderID = "1";
+				updatedUser.genderID = ComboxGender.SelectedIndex == 0 ? "1" : "0";
 				updatedUser.birthDate = DateTime.Parse(DatepickerBirthdate.Text);
 				updatedUser.companyID = (int)ComboxCompany.SelectedValue;
 				updatedUser.enrolledDate = DateTime.Parse(DatePickerEnrolledDate.Text);
@@ -188,7 +189,7 @@ namespace CodeneteersProject.HR
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
 
-			if(this.listViewPersonals.SelectedItems.Count > 0)
+			if (this.listViewPersonals.SelectedItems.Count > 0)
 			{
 				userManager.delete(Convert.ToInt32(this.listViewPersonals.SelectedItems[0].Text));
 				var personals = companiesManager.GetCompanyPersonals((int)this.ComboxGetCompany.SelectedValue);
@@ -203,6 +204,11 @@ namespace CodeneteersProject.HR
 				}
 				MessageBox.Show("İşlem Başarıyla Tamamlandı.");
 			}
+		}
+
+		private void logOutButton_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

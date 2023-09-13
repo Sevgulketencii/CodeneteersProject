@@ -93,9 +93,9 @@ namespace CodeneteersProject.HR
 			label9 = new Label();
 			ComboxGender = new Guna2ComboBox();
 			NumericBoxSalary = new Guna2NumericUpDown();
-			btnAdd = new Guna2Button();
-			btnUpdate = new Guna2Button();
-			btnDelete = new Guna2Button();
+			btnAdd = new Guna2GradientButton();
+			btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
+			btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
 			maskedTxtPhone = new MaskedTextBox();
 			label11 = new Label();
 			pictureBox1 = new PictureBox();
@@ -353,8 +353,10 @@ namespace CodeneteersProject.HR
 			btnAdd.DisabledState.BorderColor = Color.DarkGray;
 			btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
 			btnAdd.DisabledState.FillColor = Color.FromArgb(128, 255, 128);
+			btnAdd.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
 			btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
 			btnAdd.FillColor = Color.Green;
+			btnAdd.FillColor2 = Color.Indigo;
 			btnAdd.FocusedColor = Color.SlateBlue;
 			btnAdd.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
 			btnAdd.ForeColor = Color.White;
@@ -373,8 +375,10 @@ namespace CodeneteersProject.HR
 			btnUpdate.DisabledState.BorderColor = Color.DarkGray;
 			btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
 			btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+			btnUpdate.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
 			btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
 			btnUpdate.FillColor = Color.DodgerBlue;
+			btnUpdate.FillColor2 = Color.Indigo;
 			btnUpdate.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
 			btnUpdate.ForeColor = Color.White;
 			btnUpdate.Location = new Point(1236, 218);
@@ -392,8 +396,10 @@ namespace CodeneteersProject.HR
 			btnDelete.DisabledState.BorderColor = Color.DarkGray;
 			btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
 			btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+			btnDelete.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
 			btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
 			btnDelete.FillColor = Color.FromArgb(192, 64, 0);
+			btnDelete.FillColor2 = Color.Indigo;
 			btnDelete.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
 			btnDelete.ForeColor = Color.White;
 			btnDelete.Location = new Point(1236, 339);
@@ -420,17 +426,17 @@ namespace CodeneteersProject.HR
 			label11.ForeColor = SystemColors.ControlLight;
 			label11.Location = new Point(645, 20);
 			label11.Name = "label11";
-			label11.Size = new Size(377, 33);
+			label11.Size = new Size(376, 33);
 			label11.TabIndex = 65;
-			label11.Text = "PERSONAL DÜZENLEME";
+			label11.Text = "PERSONEL DÜZENLEME";
 			label11.TextAlign = ContentAlignment.TopCenter;
 			// 
 			// pictureBox1
 			// 
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(594, 3);
+			pictureBox1.Location = new Point(564, 3);
 			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(58, 55);
+			pictureBox1.Size = new Size(75, 69);
 			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureBox1.TabIndex = 66;
 			pictureBox1.TabStop = false;
@@ -952,9 +958,9 @@ namespace CodeneteersProject.HR
 		private Label label9;
 		private Guna2ComboBox ComboxGender;
 		private Guna2NumericUpDown NumericBoxSalary;
-		private Guna2Button btnAdd;
-		private Guna2Button btnUpdate;
-		private Guna2Button btnDelete;
+		private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
+		private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
+		private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
 		private MaskedTextBox maskedTxtPhone;
 		private Label label11;
 		private PictureBox pictureBox1;

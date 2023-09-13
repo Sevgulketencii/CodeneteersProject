@@ -24,6 +24,19 @@ namespace CodeneteersProject.HR
 			InitializeComponent();
 		}
 
+		private void ClearInputs()
+		{
+			txtPersonalName.Text = string.Empty;
+			txtPersonalSurname.Text = string.Empty;
+			txtEmail.Text = string.Empty;
+			maskedTxtPhone.Text = string.Empty;
+			DatepickerBirthdate.CustomFormat = " ";
+			DatepickerBirthdate.Format = DateTimePickerFormat.Custom;
+			DatePickerEnrolledDate.CustomFormat = " ";
+			DatePickerEnrolledDate.Format = DateTimePickerFormat.Custom;
+			NumericBoxSalary.Text = string.Empty;
+		}
+
 		private void PersonalCRUDForm_Load(object sender, EventArgs e)
 		{
 
@@ -127,6 +140,7 @@ namespace CodeneteersProject.HR
 				this.listViewPersonals.Items.Add(lvi);
 			}
 			MessageBox.Show("Yeni Personal Eklendi.");
+			ClearInputs();
 		}
 		private void closeButton_Click(object sender, EventArgs e)
 		{
@@ -178,6 +192,7 @@ namespace CodeneteersProject.HR
 					this.listViewPersonals.Items.Add(lvi);
 				}
 				MessageBox.Show("Personal Bilgileri Güncellendi.");
+				ClearInputs();
 			}
 			else
 			{
@@ -203,6 +218,7 @@ namespace CodeneteersProject.HR
 					this.listViewPersonals.Items.Add(lvi);
 				}
 				MessageBox.Show("İşlem Başarıyla Tamamlandı.");
+				ClearInputs();
 			}
 		}
 

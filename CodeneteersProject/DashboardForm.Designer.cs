@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -51,19 +53,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -100,7 +98,6 @@
             label5 = new Label();
             izinCount = new Label();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             label7 = new Label();
             ilanlarCount = new Label();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -183,7 +180,7 @@
             restIcon.ImageSize = new Size(25, 25);
             restIcon.Location = new Point(25, 134);
             restIcon.Name = "restIcon";
-            restIcon.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            restIcon.ShadowDecoration.CustomizableEdges = customizableEdges15;
             restIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             restIcon.Size = new Size(42, 46);
             restIcon.TabIndex = 14;
@@ -192,7 +189,7 @@
             // 
             restButton.BackColor = Color.Transparent;
             restButton.BorderColor = SystemColors.ControlDark;
-            restButton.CustomizableEdges = customizableEdges18;
+            restButton.CustomizableEdges = customizableEdges16;
             restButton.DisabledState.BorderColor = Color.DarkGray;
             restButton.DisabledState.CustomBorderColor = Color.DarkGray;
             restButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -203,17 +200,18 @@
             restButton.ImageAlign = HorizontalAlignment.Left;
             restButton.Location = new Point(63, 134);
             restButton.Name = "restButton";
-            restButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            restButton.ShadowDecoration.CustomizableEdges = customizableEdges17;
             restButton.Size = new Size(89, 46);
             restButton.TabIndex = 13;
             restButton.Text = "İzin Al";
             restButton.TextAlign = HorizontalAlignment.Left;
+            restButton.Click += restButton_Click;
             // 
             // logOutButton
             // 
             logOutButton.BackColor = Color.Transparent;
             logOutButton.BorderColor = SystemColors.ControlDark;
-            logOutButton.CustomizableEdges = customizableEdges20;
+            logOutButton.CustomizableEdges = customizableEdges18;
             logOutButton.DisabledState.BorderColor = Color.DarkGray;
             logOutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -224,11 +222,12 @@
             logOutButton.ImageAlign = HorizontalAlignment.Left;
             logOutButton.Location = new Point(62, 384);
             logOutButton.Name = "logOutButton";
-            logOutButton.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            logOutButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
             logOutButton.Size = new Size(107, 46);
             logOutButton.TabIndex = 12;
             logOutButton.Text = "Çıkış Yap";
             logOutButton.TextAlign = HorizontalAlignment.Left;
+            logOutButton.Click += logOutButton_Click;
             // 
             // logOutIcon
             // 
@@ -244,7 +243,7 @@
             logOutIcon.ImageSize = new Size(30, 30);
             logOutIcon.Location = new Point(23, 384);
             logOutIcon.Name = "logOutIcon";
-            logOutIcon.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            logOutIcon.ShadowDecoration.CustomizableEdges = customizableEdges20;
             logOutIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             logOutIcon.Size = new Size(42, 42);
             logOutIcon.TabIndex = 11;
@@ -253,7 +252,7 @@
             // 
             suggestionsButton.BackColor = Color.Transparent;
             suggestionsButton.BorderColor = SystemColors.ControlDark;
-            suggestionsButton.CustomizableEdges = customizableEdges23;
+            suggestionsButton.CustomizableEdges = customizableEdges21;
             suggestionsButton.DisabledState.BorderColor = Color.DarkGray;
             suggestionsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             suggestionsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -264,11 +263,12 @@
             suggestionsButton.ImageAlign = HorizontalAlignment.Left;
             suggestionsButton.Location = new Point(62, 334);
             suggestionsButton.Name = "suggestionsButton";
-            suggestionsButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            suggestionsButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
             suggestionsButton.Size = new Size(107, 46);
             suggestionsButton.TabIndex = 10;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
+            suggestionsButton.Click += suggestionsButton_Click;
             // 
             // suggestionsIcon
             // 
@@ -284,7 +284,7 @@
             suggestionsIcon.ImageSize = new Size(30, 30);
             suggestionsIcon.Location = new Point(22, 334);
             suggestionsIcon.Name = "suggestionsIcon";
-            suggestionsIcon.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            suggestionsIcon.ShadowDecoration.CustomizableEdges = customizableEdges23;
             suggestionsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             suggestionsIcon.Size = new Size(42, 42);
             suggestionsIcon.TabIndex = 9;
@@ -293,7 +293,7 @@
             // 
             jobAdvertisementsButton.BackColor = Color.Transparent;
             jobAdvertisementsButton.BorderColor = SystemColors.ControlDark;
-            jobAdvertisementsButton.CustomizableEdges = customizableEdges26;
+            jobAdvertisementsButton.CustomizableEdges = customizableEdges24;
             jobAdvertisementsButton.DisabledState.BorderColor = Color.DarkGray;
             jobAdvertisementsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             jobAdvertisementsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -304,7 +304,7 @@
             jobAdvertisementsButton.ImageAlign = HorizontalAlignment.Left;
             jobAdvertisementsButton.Location = new Point(63, 284);
             jobAdvertisementsButton.Name = "jobAdvertisementsButton";
-            jobAdvertisementsButton.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            jobAdvertisementsButton.ShadowDecoration.CustomizableEdges = customizableEdges25;
             jobAdvertisementsButton.Size = new Size(94, 46);
             jobAdvertisementsButton.TabIndex = 8;
             jobAdvertisementsButton.Text = "İlanlar";
@@ -325,7 +325,7 @@
             jobAdvertisementsIcon.ImageSize = new Size(30, 30);
             jobAdvertisementsIcon.Location = new Point(25, 284);
             jobAdvertisementsIcon.Name = "jobAdvertisementsIcon";
-            jobAdvertisementsIcon.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            jobAdvertisementsIcon.ShadowDecoration.CustomizableEdges = customizableEdges26;
             jobAdvertisementsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             jobAdvertisementsIcon.Size = new Size(42, 42);
             jobAdvertisementsIcon.TabIndex = 7;
@@ -344,7 +344,7 @@
             addsAndEventsIcon.ImageSize = new Size(30, 30);
             addsAndEventsIcon.Location = new Point(25, 234);
             addsAndEventsIcon.Name = "addsAndEventsIcon";
-            addsAndEventsIcon.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            addsAndEventsIcon.ShadowDecoration.CustomizableEdges = customizableEdges27;
             addsAndEventsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             addsAndEventsIcon.Size = new Size(42, 42);
             addsAndEventsIcon.TabIndex = 7;
@@ -354,7 +354,7 @@
             // 
             addsAndEventsButton.BackColor = Color.Transparent;
             addsAndEventsButton.BorderColor = SystemColors.ControlDark;
-            addsAndEventsButton.CustomizableEdges = customizableEdges30;
+            addsAndEventsButton.CustomizableEdges = customizableEdges28;
             addsAndEventsButton.DisabledState.BorderColor = Color.DarkGray;
             addsAndEventsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             addsAndEventsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -365,7 +365,7 @@
             addsAndEventsButton.ImageAlign = HorizontalAlignment.Left;
             addsAndEventsButton.Location = new Point(63, 234);
             addsAndEventsButton.Name = "addsAndEventsButton";
-            addsAndEventsButton.ShadowDecoration.CustomizableEdges = customizableEdges31;
+            addsAndEventsButton.ShadowDecoration.CustomizableEdges = customizableEdges29;
             addsAndEventsButton.Size = new Size(102, 46);
             addsAndEventsButton.TabIndex = 6;
             addsAndEventsButton.Text = "Duyurular";
@@ -386,7 +386,7 @@
             companyIcon.ImageSize = new Size(25, 25);
             companyIcon.Location = new Point(25, 184);
             companyIcon.Name = "companyIcon";
-            companyIcon.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            companyIcon.ShadowDecoration.CustomizableEdges = customizableEdges30;
             companyIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             companyIcon.Size = new Size(42, 46);
             companyIcon.TabIndex = 5;
@@ -396,7 +396,7 @@
             // 
             companyButton.BackColor = Color.Transparent;
             companyButton.BorderColor = SystemColors.ControlDark;
-            companyButton.CustomizableEdges = customizableEdges33;
+            companyButton.CustomizableEdges = customizableEdges31;
             companyButton.DisabledState.BorderColor = Color.DarkGray;
             companyButton.DisabledState.CustomBorderColor = Color.DarkGray;
             companyButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -407,7 +407,7 @@
             companyButton.ImageAlign = HorizontalAlignment.Left;
             companyButton.Location = new Point(63, 184);
             companyButton.Name = "companyButton";
-            companyButton.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            companyButton.ShadowDecoration.CustomizableEdges = customizableEdges32;
             companyButton.Size = new Size(89, 46);
             companyButton.TabIndex = 4;
             companyButton.Text = "Şirketim";
@@ -428,7 +428,7 @@
             profileIcon.ImageSize = new Size(25, 25);
             profileIcon.Location = new Point(25, 84);
             profileIcon.Name = "profileIcon";
-            profileIcon.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            profileIcon.ShadowDecoration.CustomizableEdges = customizableEdges33;
             profileIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             profileIcon.Size = new Size(42, 36);
             profileIcon.TabIndex = 3;
@@ -437,7 +437,7 @@
             // 
             profileButton.BackColor = Color.Transparent;
             profileButton.BorderColor = SystemColors.ControlDark;
-            profileButton.CustomizableEdges = customizableEdges36;
+            profileButton.CustomizableEdges = customizableEdges34;
             profileButton.DisabledState.BorderColor = Color.DarkGray;
             profileButton.DisabledState.CustomBorderColor = Color.DarkGray;
             profileButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -448,11 +448,12 @@
             profileButton.ImageAlign = HorizontalAlignment.Left;
             profileButton.Location = new Point(63, 84);
             profileButton.Name = "profileButton";
-            profileButton.ShadowDecoration.CustomizableEdges = customizableEdges37;
+            profileButton.ShadowDecoration.CustomizableEdges = customizableEdges35;
             profileButton.Size = new Size(94, 46);
             profileButton.TabIndex = 2;
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
+            profileButton.Click += profileButton_Click;
             // 
             // dashboardIcon
             // 
@@ -468,7 +469,7 @@
             dashboardIcon.ImageSize = new Size(25, 25);
             dashboardIcon.Location = new Point(25, 34);
             dashboardIcon.Name = "dashboardIcon";
-            dashboardIcon.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            dashboardIcon.ShadowDecoration.CustomizableEdges = customizableEdges36;
             dashboardIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             dashboardIcon.Size = new Size(42, 42);
             dashboardIcon.TabIndex = 1;
@@ -477,7 +478,7 @@
             // 
             dashboardButton.BackColor = Color.Transparent;
             dashboardButton.BorderColor = SystemColors.ControlDark;
-            dashboardButton.CustomizableEdges = customizableEdges39;
+            dashboardButton.CustomizableEdges = customizableEdges37;
             dashboardButton.DisabledState.BorderColor = Color.DarkGray;
             dashboardButton.DisabledState.CustomBorderColor = Color.DarkGray;
             dashboardButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -488,7 +489,7 @@
             dashboardButton.ImageAlign = HorizontalAlignment.Left;
             dashboardButton.Location = new Point(63, 34);
             dashboardButton.Name = "dashboardButton";
-            dashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            dashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges38;
             dashboardButton.Size = new Size(102, 46);
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
@@ -500,7 +501,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(25, 47);
             label8.Name = "label8";
-            label8.Size = new Size(61, 16);
+            label8.Size = new Size(73, 20);
             label8.TabIndex = 3;
             label8.Text = "Personel";
             label8.TextAlign = ContentAlignment.TopCenter;
@@ -511,7 +512,7 @@
             personelCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             personelCount.Location = new Point(49, 14);
             personelCount.Name = "personelCount";
-            personelCount.Size = new Size(21, 27);
+            personelCount.Size = new Size(26, 32);
             personelCount.TabIndex = 4;
             personelCount.Text = "1";
             personelCount.TextAlign = ContentAlignment.TopCenter;
@@ -541,7 +542,7 @@
             guna2CircleButton1.Image = (Image)resources.GetObject("guna2CircleButton1.Image");
             guna2CircleButton1.Location = new Point(16, 16);
             guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(34, 33);
             guna2CircleButton1.TabIndex = 1;
@@ -552,7 +553,7 @@
             label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(47, 25);
             label2.Name = "label2";
-            label2.Size = new Size(86, 16);
+            label2.Size = new Size(109, 20);
             label2.TabIndex = 0;
             label2.Text = "Hoş geldiniz!\r\n";
             // 
@@ -562,7 +563,7 @@
             userNameLabel.ForeColor = SystemColors.ButtonFace;
             userNameLabel.Location = new Point(47, 52);
             userNameLabel.Name = "userNameLabel";
-            userNameLabel.Size = new Size(87, 16);
+            userNameLabel.Size = new Size(108, 20);
             userNameLabel.TabIndex = 0;
             userNameLabel.Text = "Kullanıcı Adı";
             // 
@@ -572,7 +573,7 @@
             companyLabel.ForeColor = SystemColors.ButtonFace;
             companyLabel.Location = new Point(374, 52);
             companyLabel.Name = "companyLabel";
-            companyLabel.Size = new Size(78, 16);
+            companyLabel.Size = new Size(97, 20);
             companyLabel.TabIndex = 2;
             companyLabel.Text = "Firma İsmi \r\n";
             // 
@@ -597,7 +598,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(32, 52);
             label5.Name = "label5";
-            label5.Size = new Size(48, 16);
+            label5.Size = new Size(59, 20);
             label5.TabIndex = 0;
             label5.Text = "İzinler";
             // 
@@ -607,7 +608,7 @@
             izinCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             izinCount.Location = new Point(48, 19);
             izinCount.Name = "izinCount";
-            izinCount.Size = new Size(21, 27);
+            izinCount.Size = new Size(26, 32);
             izinCount.TabIndex = 1;
             izinCount.Text = "1";
             // 
@@ -616,29 +617,19 @@
             guna2GradientPanel1.BackColor = Color.LightBlue;
             guna2GradientPanel1.Controls.Add(izinCount);
             guna2GradientPanel1.Controls.Add(label5);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges12;
-            guna2GradientPanel1.Location = new Point(686, 172);
+            guna2GradientPanel1.CustomizableEdges = customizableEdges10;
+            guna2GradientPanel1.Location = new Point(759, 170);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna2GradientPanel1.Size = new Size(123, 103);
             guna2GradientPanel1.TabIndex = 6;
-            // 
-            // guna2GradientPanel2
-            // 
-            guna2GradientPanel2.BackColor = Color.HotPink;
-            guna2GradientPanel2.CustomizableEdges = customizableEdges10;
-            guna2GradientPanel2.Location = new Point(827, 172);
-            guna2GradientPanel2.Name = "guna2GradientPanel2";
-            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2GradientPanel2.Size = new Size(123, 103);
-            guna2GradientPanel2.TabIndex = 7;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(30, 46);
             label7.Name = "label7";
-            label7.Size = new Size(49, 16);
+            label7.Size = new Size(61, 20);
             label7.TabIndex = 2;
             label7.Text = "İlanlar";
             // 
@@ -648,7 +639,7 @@
             ilanlarCount.Font = new Font("Georgia", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             ilanlarCount.Location = new Point(48, 14);
             ilanlarCount.Name = "ilanlarCount";
-            ilanlarCount.Size = new Size(21, 27);
+            ilanlarCount.Size = new Size(26, 32);
             ilanlarCount.TabIndex = 3;
             ilanlarCount.Text = "1";
             // 
@@ -676,7 +667,7 @@
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.Location = new Point(787, 36);
             guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton3.Size = new Size(34, 39);
             guna2CircleButton3.TabIndex = 1;
@@ -693,7 +684,7 @@
             guna2CircleButton2.Image = (Image)resources.GetObject("guna2CircleButton2.Image");
             guna2CircleButton2.Location = new Point(739, 36);
             guna2CircleButton2.Name = "guna2CircleButton2";
-            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton2.Size = new Size(41, 39);
             guna2CircleButton2.TabIndex = 2;
@@ -703,7 +694,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(827, 49);
             label1.Name = "label1";
-            label1.Size = new Size(66, 16);
+            label1.Size = new Size(80, 20);
             label1.TabIndex = 4;
             label1.Text = "Ad Soyad";
             // 
@@ -750,7 +741,7 @@
             sonIlanText.ForeColor = SystemColors.ButtonFace;
             sonIlanText.Location = new Point(116, 26);
             sonIlanText.Name = "sonIlanText";
-            sonIlanText.Size = new Size(11, 13);
+            sonIlanText.Size = new Size(11, 15);
             sonIlanText.TabIndex = 16;
             sonIlanText.Text = "-";
             // 
@@ -761,7 +752,7 @@
             label112.ForeColor = SystemColors.ButtonFace;
             label112.Location = new Point(55, 26);
             label112.Name = "label112";
-            label112.Size = new Size(55, 13);
+            label112.Size = new Size(64, 15);
             label112.TabIndex = 3;
             label112.Text = "Son İlan : ";
             // 
@@ -806,7 +797,7 @@
             sonIzınTalep.ForeColor = SystemColors.ButtonFace;
             sonIzınTalep.Location = new Point(186, 24);
             sonIzınTalep.Name = "sonIzınTalep";
-            sonIzınTalep.Size = new Size(11, 13);
+            sonIzınTalep.Size = new Size(11, 15);
             sonIzınTalep.TabIndex = 17;
             sonIzınTalep.Text = "-";
             sonIzınTalep.Click += sonIzınTalep_Click;
@@ -818,7 +809,7 @@
             label9.ForeColor = SystemColors.ButtonFace;
             label9.Location = new Point(51, 25);
             label9.Name = "label9";
-            label9.Size = new Size(116, 13);
+            label9.Size = new Size(134, 15);
             label9.TabIndex = 16;
             label9.Text = "Son Talep Edilen İzin :";
             // 
@@ -863,7 +854,7 @@
             sonDilekOneri.ForeColor = SystemColors.ButtonFace;
             sonDilekOneri.Location = new Point(177, 22);
             sonDilekOneri.Name = "sonDilekOneri";
-            sonDilekOneri.Size = new Size(11, 13);
+            sonDilekOneri.Size = new Size(11, 15);
             sonDilekOneri.TabIndex = 18;
             sonDilekOneri.Text = "-";
             // 
@@ -874,7 +865,7 @@
             label10.ForeColor = SystemColors.ButtonFace;
             label10.Location = new Point(53, 22);
             label10.Name = "label10";
-            label10.Size = new Size(101, 13);
+            label10.Size = new Size(121, 15);
             label10.TabIndex = 17;
             label10.Text = "Son Dilek ve Öneri :";
             // 
@@ -899,7 +890,7 @@
             // 
             // DashboardForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
             ClientSize = new Size(1012, 499);
@@ -909,7 +900,6 @@
             Controls.Add(closeButton);
             Controls.Add(guna2GradientPanel4);
             Controls.Add(guna2GradientPanel3);
-            Controls.Add(guna2GradientPanel2);
             Controls.Add(guna2GradientPanel1);
             Controls.Add(label1);
             Controls.Add(guna2ShadowPanel2);
@@ -970,7 +960,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Label ilanlarCount;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Label izinCount;
         private Label label5;

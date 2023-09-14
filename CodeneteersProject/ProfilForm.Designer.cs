@@ -107,9 +107,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(261, 43);
+            label1.Location = new Point(298, 57);
             label1.Name = "label1";
-            label1.Size = new Size(82, 16);
+            label1.Size = new Size(102, 20);
             label1.TabIndex = 19;
             label1.Text = "Profil Resmi";
             // 
@@ -117,9 +117,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(467, 139);
+            label3.Location = new Point(534, 185);
             label3.Name = "label3";
-            label3.Size = new Size(49, 16);
+            label3.Size = new Size(61, 19);
             label3.TabIndex = 20;
             label3.Text = "Parola";
             // 
@@ -127,9 +127,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(465, 82);
+            label2.Location = new Point(531, 109);
             label2.Name = "label2";
-            label2.Size = new Size(88, 16);
+            label2.Size = new Size(111, 19);
             label2.TabIndex = 21;
             label2.Text = "Kullanıcı Adı";
             // 
@@ -145,10 +145,11 @@
             updateButton.FillColor2 = Color.Indigo;
             updateButton.Font = new Font("Georgia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             updateButton.ForeColor = Color.White;
-            updateButton.Location = new Point(479, 295);
+            updateButton.Location = new Point(547, 393);
+            updateButton.Margin = new Padding(3, 4, 3, 4);
             updateButton.Name = "updateButton";
             updateButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            updateButton.Size = new Size(189, 41);
+            updateButton.Size = new Size(216, 55);
             updateButton.TabIndex = 26;
             updateButton.Text = "Güncelle";
             updateButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
@@ -166,10 +167,11 @@
             closeButton.FillColor2 = Color.Indigo;
             closeButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             closeButton.ForeColor = Color.White;
-            closeButton.Location = new Point(744, 12);
+            closeButton.Location = new Point(850, 16);
+            closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            closeButton.Size = new Size(28, 26);
+            closeButton.Size = new Size(32, 35);
             closeButton.TabIndex = 17;
             closeButton.Text = "X";
             closeButton.Click += closeButton_Click;
@@ -178,20 +180,21 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(467, 204);
+            label4.Location = new Point(534, 272);
             label4.Name = "label4";
-            label4.Size = new Size(94, 16);
+            label4.Size = new Size(115, 19);
             label4.TabIndex = 24;
             label4.Text = "Parola Tekrar";
             // 
             // guna2CirclePictureBox1
             // 
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(228, 74);
+            guna2CirclePictureBox1.Location = new Point(261, 99);
+            guna2CirclePictureBox1.Margin = new Padding(3, 4, 3, 4);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(155, 144);
+            guna2CirclePictureBox1.Size = new Size(177, 192);
             guna2CirclePictureBox1.TabIndex = 18;
             guna2CirclePictureBox1.TabStop = false;
             // 
@@ -212,10 +215,11 @@
             payrollButton.FillColor2 = Color.Indigo;
             payrollButton.Font = new Font("Georgia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             payrollButton.ForeColor = Color.White;
-            payrollButton.Location = new Point(219, 317);
+            payrollButton.Location = new Point(250, 423);
+            payrollButton.Margin = new Padding(3, 4, 3, 4);
             payrollButton.Name = "payrollButton";
             payrollButton.ShadowDecoration.CustomizableEdges = customizableEdges39;
-            payrollButton.Size = new Size(189, 41);
+            payrollButton.Size = new Size(216, 55);
             payrollButton.TabIndex = 26;
             payrollButton.Text = "Bordro Bilgileri";
             payrollButton.Click += payrollButton_Click;
@@ -232,10 +236,11 @@
             restsButton.FillColor2 = Color.Indigo;
             restsButton.Font = new Font("Georgia", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             restsButton.ForeColor = Color.White;
-            restsButton.Location = new Point(219, 252);
+            restsButton.Location = new Point(250, 336);
+            restsButton.Margin = new Padding(3, 4, 3, 4);
             restsButton.Name = "restsButton";
             restsButton.ShadowDecoration.CustomizableEdges = customizableEdges37;
-            restsButton.Size = new Size(189, 41);
+            restsButton.Size = new Size(216, 55);
             restsButton.TabIndex = 27;
             restsButton.Text = "İzinler";
             restsButton.Click += restsButton_Click;
@@ -253,13 +258,14 @@
             txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsername.Location = new Point(467, 106);
+            txtUsername.Location = new Point(534, 141);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
             txtUsername.PasswordChar = '\0';
             txtUsername.PlaceholderText = "";
             txtUsername.SelectedText = "";
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges35;
-            txtUsername.Size = new Size(181, 27);
+            txtUsername.Size = new Size(207, 36);
             txtUsername.TabIndex = 43;
             // 
             // txtPassword
@@ -275,13 +281,14 @@
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(467, 164);
+            txtPassword.Location = new Point(534, 219);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '●';
             txtPassword.PlaceholderText = "";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges33;
-            txtPassword.Size = new Size(181, 27);
+            txtPassword.Size = new Size(207, 36);
             txtPassword.TabIndex = 44;
             txtPassword.UseSystemPasswordChar = true;
             // 
@@ -298,13 +305,14 @@
             txtConfirmPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtConfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmPassword.Location = new Point(465, 229);
+            txtConfirmPassword.Location = new Point(531, 305);
+            txtConfirmPassword.Margin = new Padding(3, 4, 3, 4);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PasswordChar = '●';
             txtConfirmPassword.PlaceholderText = "";
             txtConfirmPassword.SelectedText = "";
             txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges31;
-            txtConfirmPassword.Size = new Size(181, 27);
+            txtConfirmPassword.Size = new Size(207, 36);
             txtConfirmPassword.TabIndex = 45;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -329,12 +337,12 @@
             sideBar.Controls.Add(dashboardButton);
             sideBar.FillColor = Color.SlateBlue;
             sideBar.ForeColor = SystemColors.AppWorkspace;
-            sideBar.Location = new Point(12, 15);
+            sideBar.Location = new Point(12, 24);
             sideBar.Name = "sideBar";
             sideBar.Radius = 10;
             sideBar.ShadowColor = Color.WhiteSmoke;
             sideBar.Size = new Size(182, 463);
-            sideBar.TabIndex = 46;
+            sideBar.TabIndex = 56;
             // 
             // restIcon
             // 
@@ -375,6 +383,7 @@
             restButton.TabIndex = 13;
             restButton.Text = "İzin Al";
             restButton.TextAlign = HorizontalAlignment.Left;
+            restButton.Click += restButton_Click_1;
             // 
             // logOutButton
             // 
@@ -396,6 +405,7 @@
             logOutButton.TabIndex = 12;
             logOutButton.Text = "Çıkış Yap";
             logOutButton.TextAlign = HorizontalAlignment.Left;
+            logOutButton.Click += logOutButton_Click_1;
             // 
             // logOutIcon
             // 
@@ -436,6 +446,7 @@
             suggestionsButton.TabIndex = 10;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
+            suggestionsButton.Click += suggestionsButton_Click_1;
             // 
             // suggestionsIcon
             // 
@@ -476,6 +487,7 @@
             jobAdvertisementsButton.TabIndex = 8;
             jobAdvertisementsButton.Text = "İlanlar";
             jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
+            jobAdvertisementsButton.Click += jobAdvertisementsButton_Click_1;
             // 
             // jobAdvertisementsIcon
             // 
@@ -535,6 +547,7 @@
             addsAndEventsButton.TabIndex = 6;
             addsAndEventsButton.Text = "Duyurular";
             addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.Click += addsAndEventsButton_Click_1;
             // 
             // companyIcon
             // 
@@ -575,6 +588,7 @@
             companyButton.TabIndex = 4;
             companyButton.Text = "Şirketim";
             companyButton.TextAlign = HorizontalAlignment.Left;
+            companyButton.Click += companyButton_Click_1;
             // 
             // profileIcon
             // 
@@ -615,6 +629,7 @@
             profileButton.TabIndex = 2;
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
+            profileButton.Click += profileButton_Click_1;
             // 
             // dashboardIcon
             // 
@@ -655,13 +670,14 @@
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
             dashboardButton.TextAlign = HorizontalAlignment.Left;
+            dashboardButton.Click += dashboardButton_Click_1;
             // 
             // ProfilForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
-            ClientSize = new Size(783, 504);
+            ClientSize = new Size(821, 499);
             Controls.Add(sideBar);
             Controls.Add(txtConfirmPassword);
             Controls.Add(txtPassword);
@@ -676,6 +692,7 @@
             Controls.Add(label4);
             Controls.Add(guna2CirclePictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ProfilForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProfilForm";

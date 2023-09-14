@@ -55,7 +55,7 @@ namespace DataAccesLayer.Repository
             {
                 command.CommandType = CommandType.Text;
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM Login WHERE ID = @LoginID";
+                command.CommandText = @"SELECT * FROM Login WHERE userID = @LoginID";
                 command.Parameters.AddWithValue("@LoginID", id);
 
                 connection.Open();

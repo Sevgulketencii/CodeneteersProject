@@ -296,6 +296,7 @@
             restButton.TabIndex = 13;
             restButton.Text = "İzin Al";
             restButton.TextAlign = HorizontalAlignment.Left;
+            restButton.Click += restButton_Click;
             // 
             // logOutButton
             // 
@@ -357,6 +358,7 @@
             suggestionsButton.TabIndex = 10;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
+            suggestionsButton.Click += suggestionsButton_Click;
             // 
             // suggestionsIcon
             // 
@@ -397,6 +399,7 @@
             jobAdvertisementsButton.TabIndex = 8;
             jobAdvertisementsButton.Text = "İlanlar";
             jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
+            jobAdvertisementsButton.Click += jobAdvertisementsButton_Click;
             // 
             // jobAdvertisementsIcon
             // 
@@ -456,6 +459,7 @@
             addsAndEventsButton.TabIndex = 6;
             addsAndEventsButton.Text = "Duyurular";
             addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.Click += addsAndEventsButton_Click;
             // 
             // companyIcon
             // 
@@ -496,6 +500,7 @@
             companyButton.TabIndex = 4;
             companyButton.Text = "Şirketim";
             companyButton.TextAlign = HorizontalAlignment.Left;
+            companyButton.Click += companyButton_Click;
             // 
             // profileIcon
             // 
@@ -536,6 +541,7 @@
             profileButton.TabIndex = 2;
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
+            profileButton.Click += profileButton_Click;
             // 
             // dashboardIcon
             // 
@@ -576,6 +582,7 @@
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
             dashboardButton.TextAlign = HorizontalAlignment.Left;
+            dashboardButton.Click += dashboardButton_Click;
             // 
             // AdvertisementAndEventDetailForm
             // 

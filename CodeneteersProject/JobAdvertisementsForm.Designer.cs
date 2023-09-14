@@ -97,9 +97,9 @@
             jobAdvertisementsLabel.AutoSize = true;
             jobAdvertisementsLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
             jobAdvertisementsLabel.ForeColor = SystemColors.ButtonFace;
-            jobAdvertisementsLabel.Location = new Point(429, 24);
+            jobAdvertisementsLabel.Location = new Point(490, 32);
             jobAdvertisementsLabel.Name = "jobAdvertisementsLabel";
-            jobAdvertisementsLabel.Size = new Size(93, 18);
+            jobAdvertisementsLabel.Size = new Size(112, 24);
             jobAdvertisementsLabel.TabIndex = 32;
             jobAdvertisementsLabel.Text = "İş İlanları";
             // 
@@ -115,10 +115,11 @@
             closeButton.FillColor2 = Color.Indigo;
             closeButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             closeButton.ForeColor = Color.White;
-            closeButton.Location = new Point(839, 11);
+            closeButton.Location = new Point(959, 15);
+            closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            closeButton.Size = new Size(28, 26);
+            closeButton.Size = new Size(32, 35);
             closeButton.TabIndex = 68;
             closeButton.Text = "X";
             closeButton.Click += closeButton_Click_1;
@@ -144,12 +145,11 @@
             sideBar.Controls.Add(dashboardButton);
             sideBar.FillColor = Color.SlateBlue;
             sideBar.ForeColor = SystemColors.AppWorkspace;
-            sideBar.Location = new Point(10, 11);
-            sideBar.Margin = new Padding(3, 2, 3, 2);
+            sideBar.Location = new Point(11, 15);
             sideBar.Name = "sideBar";
             sideBar.Radius = 10;
             sideBar.ShadowColor = Color.WhiteSmoke;
-            sideBar.Size = new Size(159, 347);
+            sideBar.Size = new Size(182, 463);
             sideBar.TabIndex = 69;
             // 
             // restIcon
@@ -164,12 +164,11 @@
             restIcon.ForeColor = Color.White;
             restIcon.Image = (Image)resources.GetObject("restIcon.Image");
             restIcon.ImageSize = new Size(25, 25);
-            restIcon.Location = new Point(22, 100);
-            restIcon.Margin = new Padding(3, 2, 3, 2);
+            restIcon.Location = new Point(25, 133);
             restIcon.Name = "restIcon";
             restIcon.ShadowDecoration.CustomizableEdges = customizableEdges1;
             restIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            restIcon.Size = new Size(37, 34);
+            restIcon.Size = new Size(42, 45);
             restIcon.TabIndex = 14;
             // 
             // restButton
@@ -185,14 +184,14 @@
             restButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             restButton.ForeColor = Color.White;
             restButton.ImageAlign = HorizontalAlignment.Left;
-            restButton.Location = new Point(55, 100);
-            restButton.Margin = new Padding(3, 2, 3, 2);
+            restButton.Location = new Point(63, 133);
             restButton.Name = "restButton";
             restButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            restButton.Size = new Size(78, 34);
+            restButton.Size = new Size(89, 45);
             restButton.TabIndex = 13;
             restButton.Text = "İzin Al";
             restButton.TextAlign = HorizontalAlignment.Left;
+            restButton.Click += restButton_Click;
             // 
             // logOutButton
             // 
@@ -207,14 +206,14 @@
             logOutButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             logOutButton.ForeColor = Color.White;
             logOutButton.ImageAlign = HorizontalAlignment.Left;
-            logOutButton.Location = new Point(54, 288);
-            logOutButton.Margin = new Padding(3, 2, 3, 2);
+            logOutButton.Location = new Point(62, 384);
             logOutButton.Name = "logOutButton";
             logOutButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            logOutButton.Size = new Size(94, 34);
+            logOutButton.Size = new Size(107, 45);
             logOutButton.TabIndex = 12;
             logOutButton.Text = "Çıkış Yap";
             logOutButton.TextAlign = HorizontalAlignment.Left;
+            logOutButton.Click += logOutButton_Click;
             // 
             // logOutIcon
             // 
@@ -228,12 +227,11 @@
             logOutIcon.ForeColor = Color.White;
             logOutIcon.Image = (Image)resources.GetObject("logOutIcon.Image");
             logOutIcon.ImageSize = new Size(30, 30);
-            logOutIcon.Location = new Point(20, 288);
-            logOutIcon.Margin = new Padding(3, 2, 3, 2);
+            logOutIcon.Location = new Point(23, 384);
             logOutIcon.Name = "logOutIcon";
             logOutIcon.ShadowDecoration.CustomizableEdges = customizableEdges6;
             logOutIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            logOutIcon.Size = new Size(37, 32);
+            logOutIcon.Size = new Size(42, 43);
             logOutIcon.TabIndex = 11;
             // 
             // suggestionsButton
@@ -249,14 +247,14 @@
             suggestionsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             suggestionsButton.ForeColor = Color.White;
             suggestionsButton.ImageAlign = HorizontalAlignment.Left;
-            suggestionsButton.Location = new Point(54, 250);
-            suggestionsButton.Margin = new Padding(3, 2, 3, 2);
+            suggestionsButton.Location = new Point(62, 333);
             suggestionsButton.Name = "suggestionsButton";
             suggestionsButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            suggestionsButton.Size = new Size(94, 34);
+            suggestionsButton.Size = new Size(107, 45);
             suggestionsButton.TabIndex = 10;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
+            suggestionsButton.Click += suggestionsButton_Click;
             // 
             // suggestionsIcon
             // 
@@ -270,12 +268,11 @@
             suggestionsIcon.ForeColor = Color.White;
             suggestionsIcon.Image = (Image)resources.GetObject("suggestionsIcon.Image");
             suggestionsIcon.ImageSize = new Size(30, 30);
-            suggestionsIcon.Location = new Point(19, 250);
-            suggestionsIcon.Margin = new Padding(3, 2, 3, 2);
+            suggestionsIcon.Location = new Point(22, 333);
             suggestionsIcon.Name = "suggestionsIcon";
             suggestionsIcon.ShadowDecoration.CustomizableEdges = customizableEdges9;
             suggestionsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            suggestionsIcon.Size = new Size(37, 32);
+            suggestionsIcon.Size = new Size(42, 43);
             suggestionsIcon.TabIndex = 9;
             // 
             // jobAdvertisementsButton
@@ -291,14 +288,14 @@
             jobAdvertisementsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             jobAdvertisementsButton.ForeColor = Color.White;
             jobAdvertisementsButton.ImageAlign = HorizontalAlignment.Left;
-            jobAdvertisementsButton.Location = new Point(55, 213);
-            jobAdvertisementsButton.Margin = new Padding(3, 2, 3, 2);
+            jobAdvertisementsButton.Location = new Point(63, 284);
             jobAdvertisementsButton.Name = "jobAdvertisementsButton";
             jobAdvertisementsButton.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            jobAdvertisementsButton.Size = new Size(82, 34);
+            jobAdvertisementsButton.Size = new Size(94, 45);
             jobAdvertisementsButton.TabIndex = 8;
             jobAdvertisementsButton.Text = "İlanlar";
             jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
+            jobAdvertisementsButton.Click += jobAdvertisementsButton_Click;
             // 
             // jobAdvertisementsIcon
             // 
@@ -312,12 +309,11 @@
             jobAdvertisementsIcon.ForeColor = Color.White;
             jobAdvertisementsIcon.Image = (Image)resources.GetObject("jobAdvertisementsIcon.Image");
             jobAdvertisementsIcon.ImageSize = new Size(30, 30);
-            jobAdvertisementsIcon.Location = new Point(22, 213);
-            jobAdvertisementsIcon.Margin = new Padding(3, 2, 3, 2);
+            jobAdvertisementsIcon.Location = new Point(25, 284);
             jobAdvertisementsIcon.Name = "jobAdvertisementsIcon";
             jobAdvertisementsIcon.ShadowDecoration.CustomizableEdges = customizableEdges12;
             jobAdvertisementsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            jobAdvertisementsIcon.Size = new Size(37, 32);
+            jobAdvertisementsIcon.Size = new Size(42, 43);
             jobAdvertisementsIcon.TabIndex = 7;
             // 
             // addsAndEventsIcon
@@ -332,12 +328,11 @@
             addsAndEventsIcon.ForeColor = Color.White;
             addsAndEventsIcon.Image = (Image)resources.GetObject("addsAndEventsIcon.Image");
             addsAndEventsIcon.ImageSize = new Size(30, 30);
-            addsAndEventsIcon.Location = new Point(22, 176);
-            addsAndEventsIcon.Margin = new Padding(3, 2, 3, 2);
+            addsAndEventsIcon.Location = new Point(25, 235);
             addsAndEventsIcon.Name = "addsAndEventsIcon";
             addsAndEventsIcon.ShadowDecoration.CustomizableEdges = customizableEdges13;
             addsAndEventsIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            addsAndEventsIcon.Size = new Size(37, 32);
+            addsAndEventsIcon.Size = new Size(42, 43);
             addsAndEventsIcon.TabIndex = 7;
             // 
             // addsAndEventsButton
@@ -353,14 +348,14 @@
             addsAndEventsButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             addsAndEventsButton.ForeColor = Color.White;
             addsAndEventsButton.ImageAlign = HorizontalAlignment.Left;
-            addsAndEventsButton.Location = new Point(55, 176);
-            addsAndEventsButton.Margin = new Padding(3, 2, 3, 2);
+            addsAndEventsButton.Location = new Point(63, 235);
             addsAndEventsButton.Name = "addsAndEventsButton";
             addsAndEventsButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            addsAndEventsButton.Size = new Size(89, 34);
+            addsAndEventsButton.Size = new Size(102, 45);
             addsAndEventsButton.TabIndex = 6;
             addsAndEventsButton.Text = "Duyurular";
             addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
+            addsAndEventsButton.Click += addsAndEventsButton_Click;
             // 
             // companyIcon
             // 
@@ -374,12 +369,11 @@
             companyIcon.ForeColor = Color.White;
             companyIcon.Image = (Image)resources.GetObject("companyIcon.Image");
             companyIcon.ImageSize = new Size(25, 25);
-            companyIcon.Location = new Point(22, 138);
-            companyIcon.Margin = new Padding(3, 2, 3, 2);
+            companyIcon.Location = new Point(25, 184);
             companyIcon.Name = "companyIcon";
             companyIcon.ShadowDecoration.CustomizableEdges = customizableEdges16;
             companyIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            companyIcon.Size = new Size(37, 34);
+            companyIcon.Size = new Size(42, 45);
             companyIcon.TabIndex = 5;
             // 
             // companyButton
@@ -395,14 +389,14 @@
             companyButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             companyButton.ForeColor = Color.White;
             companyButton.ImageAlign = HorizontalAlignment.Left;
-            companyButton.Location = new Point(55, 138);
-            companyButton.Margin = new Padding(3, 2, 3, 2);
+            companyButton.Location = new Point(63, 184);
             companyButton.Name = "companyButton";
             companyButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            companyButton.Size = new Size(78, 34);
+            companyButton.Size = new Size(89, 45);
             companyButton.TabIndex = 4;
             companyButton.Text = "Şirketim";
             companyButton.TextAlign = HorizontalAlignment.Left;
+            companyButton.Click += companyButton_Click;
             // 
             // profileIcon
             // 
@@ -416,12 +410,11 @@
             profileIcon.ForeColor = Color.White;
             profileIcon.Image = (Image)resources.GetObject("profileIcon.Image");
             profileIcon.ImageSize = new Size(25, 25);
-            profileIcon.Location = new Point(22, 63);
-            profileIcon.Margin = new Padding(3, 2, 3, 2);
+            profileIcon.Location = new Point(25, 84);
             profileIcon.Name = "profileIcon";
             profileIcon.ShadowDecoration.CustomizableEdges = customizableEdges19;
             profileIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            profileIcon.Size = new Size(37, 27);
+            profileIcon.Size = new Size(42, 36);
             profileIcon.TabIndex = 3;
             // 
             // profileButton
@@ -437,14 +430,14 @@
             profileButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profileButton.ForeColor = Color.White;
             profileButton.ImageAlign = HorizontalAlignment.Left;
-            profileButton.Location = new Point(55, 63);
-            profileButton.Margin = new Padding(3, 2, 3, 2);
+            profileButton.Location = new Point(63, 84);
             profileButton.Name = "profileButton";
             profileButton.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            profileButton.Size = new Size(82, 34);
+            profileButton.Size = new Size(94, 45);
             profileButton.TabIndex = 2;
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
+            profileButton.Click += profileButton_Click;
             // 
             // dashboardIcon
             // 
@@ -458,12 +451,11 @@
             dashboardIcon.ForeColor = Color.White;
             dashboardIcon.Image = (Image)resources.GetObject("dashboardIcon.Image");
             dashboardIcon.ImageSize = new Size(25, 25);
-            dashboardIcon.Location = new Point(22, 26);
-            dashboardIcon.Margin = new Padding(3, 2, 3, 2);
+            dashboardIcon.Location = new Point(25, 35);
             dashboardIcon.Name = "dashboardIcon";
             dashboardIcon.ShadowDecoration.CustomizableEdges = customizableEdges22;
             dashboardIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            dashboardIcon.Size = new Size(37, 32);
+            dashboardIcon.Size = new Size(42, 43);
             dashboardIcon.TabIndex = 1;
             // 
             // dashboardButton
@@ -479,14 +471,14 @@
             dashboardButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardButton.ForeColor = Color.White;
             dashboardButton.ImageAlign = HorizontalAlignment.Left;
-            dashboardButton.Location = new Point(55, 26);
-            dashboardButton.Margin = new Padding(3, 2, 3, 2);
+            dashboardButton.Location = new Point(63, 35);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            dashboardButton.Size = new Size(89, 34);
+            dashboardButton.Size = new Size(102, 45);
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
             dashboardButton.TextAlign = HorizontalAlignment.Left;
+            dashboardButton.Click += dashboardButton_Click;
             // 
             // jobAddsPanel
             // 
@@ -495,11 +487,12 @@
             jobAddsPanel.Controls.Add(guna2vScrollBar2);
             jobAddsPanel.FillColor = Color.SlateBlue;
             jobAddsPanel.ForeColor = SystemColors.AppWorkspace;
-            jobAddsPanel.Location = new Point(246, 68);
+            jobAddsPanel.Location = new Point(281, 91);
+            jobAddsPanel.Margin = new Padding(3, 4, 3, 4);
             jobAddsPanel.Name = "jobAddsPanel";
             jobAddsPanel.Radius = 10;
             jobAddsPanel.ShadowColor = Color.WhiteSmoke;
-            jobAddsPanel.Size = new Size(557, 290);
+            jobAddsPanel.Size = new Size(637, 387);
             jobAddsPanel.TabIndex = 70;
             // 
             // jobAddScrollBar
@@ -508,11 +501,10 @@
             jobAddScrollBar.HighlightOnWheel = true;
             jobAddScrollBar.InUpdate = false;
             jobAddScrollBar.LargeChange = 10;
-            jobAddScrollBar.Location = new Point(525, 15);
-            jobAddScrollBar.Margin = new Padding(3, 2, 3, 2);
+            jobAddScrollBar.Location = new Point(600, 20);
             jobAddScrollBar.Name = "jobAddScrollBar";
-            jobAddScrollBar.ScrollbarSize = 19;
-            jobAddScrollBar.Size = new Size(19, 265);
+            jobAddScrollBar.ScrollbarSize = 22;
+            jobAddScrollBar.Size = new Size(22, 353);
             jobAddScrollBar.TabIndex = 75;
             jobAddScrollBar.ThumbColor = Color.Lavender;
             // 
@@ -520,23 +512,25 @@
             // 
             guna2vScrollBar2.InUpdate = false;
             guna2vScrollBar2.LargeChange = 10;
-            guna2vScrollBar2.Location = new Point(562, 38);
+            guna2vScrollBar2.Location = new Point(642, 51);
+            guna2vScrollBar2.Margin = new Padding(3, 4, 3, 4);
             guna2vScrollBar2.Name = "guna2vScrollBar2";
-            guna2vScrollBar2.ScrollbarSize = 18;
-            guna2vScrollBar2.Size = new Size(18, 300);
+            guna2vScrollBar2.ScrollbarSize = 21;
+            guna2vScrollBar2.Size = new Size(21, 400);
             guna2vScrollBar2.TabIndex = 74;
             // 
             // JobAdvertisementsForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateBlue;
-            ClientSize = new Size(886, 374);
+            ClientSize = new Size(1013, 499);
             Controls.Add(jobAddsPanel);
             Controls.Add(sideBar);
             Controls.Add(closeButton);
             Controls.Add(jobAdvertisementsLabel);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "JobAdvertisementsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "İş İlanları";

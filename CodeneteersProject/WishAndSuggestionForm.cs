@@ -1,5 +1,6 @@
 ﻿
 using BusinessLayer.Concrete;
+using CodeneteersProject.General;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
 using System;
@@ -73,6 +74,51 @@ namespace CodeneteersProject
             Application.Exit();
         }
 
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.DashboardFormNavigation(appUser);
+            this.Hide();
+        }
 
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.ProfileFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void restButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.RestFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void companyButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.CompaniesFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void addsAndEventsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.AdvertisementsAndEventsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void jobAdvertisementsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.JobAdvertisementsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void suggestionsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.WishAndSuggestionFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

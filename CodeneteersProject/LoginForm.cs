@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EntityLayer.Concrete;
 using CodeNETeersProject;
+using CodeneteersProject.HR;
 
 namespace CodeneteersProject
 {
@@ -47,16 +48,16 @@ namespace CodeneteersProject
         private void GoToDashboard(EntityLayer.Concrete.User appUser)
         {
             DashboardForm dashboardForm = new DashboardForm(appUser);
-            //HRDashboardForm hrDashboardForm = new HRDashboardForm(appUser);
+            hrDashBoardForm hrDashBoardForm = new hrDashBoardForm(appUser);
 
             this.Hide();
             if (appUser.roleID == 1)
             {
                 dashboardForm.Show();
             }
-            else
+            else if(appUser.roleID == 2 ) 
             {
-                //hrDashboardForm.Show();
+                hrDashBoardForm.Show();
             }
         }
 

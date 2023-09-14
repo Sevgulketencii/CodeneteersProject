@@ -1,7 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using CodeneteersProject.General;
 using DataAccesLayer.Repository;
-using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,78 +13,48 @@ using System.Windows.Forms;
 
 namespace CodeneteersProject
 {
-    public partial class RestForm : Form
+    public partial class RestHomeForm : Form
     {
-        UserManager user = new UserManager(new UserDAL());
-        RestManager rest = new RestManager(new RestDAL());
 
+        RestManager restManager = new RestManager(new RestDAL());
         EntityLayer.Concrete.User appUser;
-
-        public RestForm()
+        public RestHomeForm()
         {
             InitializeComponent();
         }
 
-        public RestForm(EntityLayer.Concrete.User appUser)
+        public RestHomeForm(EntityLayer.Concrete.User appUser)
         {
             InitializeComponent();
             this.appUser = appUser;
 
-        }
-        private void sendButton_Click(object sender, EventArgs e)
-        {
-            DateTime baslangic = baslangicTarih.Value.Date;
-            DateTime bitis = bitisTarih.Value.Date;
-            TimeSpan fark = bitis - baslangic;
-            var günSayisi = fark.Days;
-            var result = IzınAL(baslangic, bitis, günSayisi);
-            if (result == 0)
+            var rests = restManager.GetUserRestList(appUser.ID);
+            dataGridView1.Columns.Add("BaslangicTarihi", "Başlangıç Tarihi");
+            dataGridView1.Columns.Add("BitisTarihi", "Bitiş Tarihi");
+            dataGridView1.Columns.Add("Statu", "Statü");
+
+            foreach (var rest in rests)
             {
-                MessageBox.Show("İzin talebiniz iletilemedi.", "Uyarı!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                dataGridView1.Rows.Add(rest.startDate, rest.endDate, rest.day);
             }
-            if (result == -1)
-            {
-                MessageBox.Show("İzin talebiniz iletilemedi. Başlangıç tarihi bitiş tarihinden büyük olamaz", "Uyarı!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show("İzin talebiniz başarıyla iletilmiştir.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
-        public int IzınAL(DateTime bas, DateTime bit, int gun)
+        private void jobAddsPanel_Paint(object sender, PaintEventArgs e)
         {
-            var User = user.GetByID(appUser.ID);
-
-            if (bas != null && bit != null & gun != 0)
-            {
-                if (bas > bit)
-                {
-                    return -1;
-                }
-
-                Rest izin = new Rest()
-                {
-                    userID = User.ID,
-                    isAccepted = false,
-                    startDate = bas,
-                    endDate = bit,
-                    day = gun,
-                    status = true,
-                };
-                rest.add(izin);
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
 
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void restsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.RestFormNavigation(appUser);
+            this.Hide();
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)

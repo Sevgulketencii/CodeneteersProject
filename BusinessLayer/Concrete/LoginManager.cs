@@ -43,6 +43,7 @@ namespace BusinessLayer.Concrete
         public void update(Login t)
         {
            _login.update(t);
+        
         }
         public Login GetByUserNameAndPasswordActiveCompany(string userName, string password)
         {

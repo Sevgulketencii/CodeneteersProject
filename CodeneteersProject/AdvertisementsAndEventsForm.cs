@@ -2,6 +2,7 @@
 using Guna.UI2.WinForms;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
+using CodeneteersProject.General;
 
 namespace CodeneteersProject
 {
@@ -40,7 +41,7 @@ namespace CodeneteersProject
 
         private void GoToDetailPage(Posts post)
         {
-            AdvertisementAndEventDetailForm advertisementAndEventDetailForm = new AdvertisementAndEventDetailForm(post,appUser);
+            AdvertisementAndEventDetailForm advertisementAndEventDetailForm = new AdvertisementAndEventDetailForm(post, appUser);
             this.Hide();
             advertisementAndEventDetailForm.ShowDialog();
 
@@ -109,6 +110,7 @@ namespace CodeneteersProject
             eventsPanel.ControlRemoved += EventsPanel_ControlRemoved;
             this.appUser = appUser;
         }
+
 
 
         private void EventsPanel_ControlRemoved(object? sender, ControlEventArgs e)
@@ -232,6 +234,53 @@ namespace CodeneteersProject
         private void jobAdvertisementsLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void jobAdvertisementsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.JobAdvertisementsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.DashboardFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.ProfileFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void restButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.RestFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void companyButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.CompaniesFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void addsAndEventsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.AdvertisementsAndEventsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void suggestionsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.WishAndSuggestionFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

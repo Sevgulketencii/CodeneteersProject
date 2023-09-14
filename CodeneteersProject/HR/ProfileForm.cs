@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using CodeneteersProject.General;
 using CodeNETeersProject;
 using DataAccesLayer.Repository;
 using System;
@@ -81,6 +82,17 @@ namespace CodeneteersProject.HR
         {
             login = loginManager.GetByID(appUser.ID);
             txtUsername.Text = login.userName;
+            var image = Image.FromFile(@"C:\Users\keten\source\repos\CodeneteersProject\CodeneteersProject\CodeneteersProject\General\Image\user2.png");
+            int newWidth = 150;
+            int newHeight = 150;
+
+            // Resmi yeniden boyutlandır
+            Image resizedImage = new Bitmap(newWidth, newHeight);
+            using (Graphics graphics = Graphics.FromImage(resizedImage))
+            {
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+            }
+            guna2CirclePictureBox1.Image = resizedImage;
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -92,6 +104,47 @@ namespace CodeneteersProject.HR
                 MessageBox.Show("Parolanız başarı ile güncellenmiştir.", "İşlem Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrDashBoarNavigation(appUser);
+            this.Hide();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrProfileFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void employeeButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrPersonalManagmentFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void addsAndEventsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.AdvertisementsAndEventsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void jobAdvertisementsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrJobAddsManagementFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void suggestionsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrReadWishFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

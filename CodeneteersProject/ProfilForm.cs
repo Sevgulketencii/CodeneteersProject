@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using CodeneteersProject.General;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
 using System;
@@ -18,35 +19,50 @@ namespace CodeneteersProject
         LoginManager loginManager = new LoginManager(new LoginDAL());
 
         private readonly int userId;
-        private readonly Login loginedUser;
+
+        EntityLayer.Concrete.User appUser;
         public ProfilForm()
         {
             InitializeComponent();
-            loginedUser = loginManager.GetByID(userId);
-            //giriş yapmış olan kullanıcının varlığından emin olmak için
-            if (loginedUser?.userID != 0)
-            {
-                txtUsername.Text = loginedUser.userName;
-                txtPassword.Text = loginedUser.password;
-            }
+
 
         }
+        public ProfilForm(EntityLayer.Concrete.User appUser)
+        {
+            InitializeComponent();
+            this.appUser = appUser;
+            var loginUser = loginManager.GetByID(appUser.ID);
+            txtUsername.Text = loginUser.userName;
+            txtPassword.Text = loginUser.password;
 
+            //guna2CirclePictureBox1.Image = Image.FromFile(@"C:\Users\keten\source\repos\CodeneteersProject\CodeneteersProject\CodeneteersProject\General\Image\user2.png");
+            var image = Image.FromFile(@"C:\Users\keten\source\repos\CodeneteersProject\CodeneteersProject\CodeneteersProject\General\Image\user2.png");
+            int newWidth = 150;
+            int newHeight = 150;
 
+            // Resmi yeniden boyutlandır
+            Image resizedImage = new Bitmap(newWidth, newHeight);
+            using (Graphics graphics = Graphics.FromImage(resizedImage))
+            {
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+            }
+            guna2CirclePictureBox1.Image = resizedImage;
+            // Yeni boyutlu resmi kullan
+        }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtUsername.Text))
             {
 
-                if (txtPassword.Text == txtUsername.Text)
+                if (txtPassword.Text == txtConfirmPassword.Text)
                 {
 
                     loginManager.update(new EntityLayer.Concrete.Login
                     {
                         password = txtPassword.Text,
                         status = true,
-                        userID = userId,
+                        userID = appUser.ID,
                         userName = txtUsername.Text,
                     });
 
@@ -71,12 +87,62 @@ namespace CodeneteersProject
 
         private void restsButton_Click(object sender, EventArgs e)
         {
-
+            NavigationHelper.RestHomeNavigation(appUser);
+            this.Hide();
         }
 
         private void payrollButton_Click(object sender, EventArgs e)
         {
+            NavigationHelper.BordroFormNavigation(appUser);
+            this.Hide();
+        }
 
+
+        private void dashboardButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.DashboardFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void profileButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.ProfileFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void restButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.RestFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void companyButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.CompaniesFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void addsAndEventsButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.AdvertisementsAndEventsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void jobAdvertisementsButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.JobAdvertisementsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void suggestionsButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationHelper.WishAndSuggestionFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void logOutButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

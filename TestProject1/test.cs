@@ -10,15 +10,15 @@ namespace TestProject1
 {
   
 
-    public class test
-    {
-        [Theory]
+    //public class test
+    //{
+    //    [Theory]
 
-        public void addUsertest()
-        {
-            EntityLayer.Concrete.User user = new EntityLayer.Concrete.User();
-            Assert.True(true); 
-        }
+    //    //public void addUsertest()
+    //    //{
+    //    //    EntityLayer.Concrete.User user = new EntityLayer.Concrete.User();
+    //    //    Assert.True(true); 
+    //    //}
 
-    }
+    //}
 }

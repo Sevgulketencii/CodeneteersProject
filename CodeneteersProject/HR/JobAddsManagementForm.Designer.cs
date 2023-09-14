@@ -129,6 +129,7 @@ namespace CodeneteersProject.HR
             closeButton.Size = new Size(32, 35);
             closeButton.TabIndex = 68;
             closeButton.Text = "X";
+            closeButton.Click += closeButton_Click_1;
             // 
             // jobAddsPanel
             // 
@@ -556,6 +557,7 @@ namespace CodeneteersProject.HR
             Name = "JobAddsManagementForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "İş İlanları";
+            Load += JobAddsManagementForm_Load;
             jobAddsPanel.ResumeLayout(false);
             sideBar.ResumeLayout(false);
             ResumeLayout(false);

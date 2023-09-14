@@ -154,5 +154,40 @@ namespace DataAccesLayer.Repository
             }
         }
         #endregion
+
+
+        #region JOBID'YE GÖRE BAŞVURU SAYISI GETİRME
+
+        public List<JobApplications> GetCandidateEmployeeListByJobAddID(JobAdvertisements t)
+        {
+            var connection = new DbConnectionHelper().Connection;
+            List<JobApplications> candidateEmployees = new List<JobApplications>();
+
+            var command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"Select jA.UserID, jA.CreatedDate From JobApplications jA
+                                    left join JobAdvertisements j
+                                    on j.ID = jA.JobAdvertisementID
+                                    where JobAdvertisementID=@JobAdvertisementID";
+            command.Parameters.AddWithValue("@JobAdvertisementID", t.ID);
+
+            connection.Open();
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var candidateEmployee = new JobApplications();
+                candidateEmployee.userID = reader.GetInt32(reader.GetOrdinal("userID"));
+                candidateEmployee.createdDate = reader.GetDateTime(reader.GetOrdinal("createdDate"));
+                candidateEmployees.Add(candidateEmployee);
+            }
+
+            reader.Close();
+            connection.Close();
+            return candidateEmployees;
+        }
+        #endregion
+
     }
 }

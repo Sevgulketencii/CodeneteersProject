@@ -96,5 +96,10 @@ namespace CodeneteersProject.HR
             Application.Exit();
 
         }
+
+        private void hrDashBoardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

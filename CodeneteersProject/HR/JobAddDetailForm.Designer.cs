@@ -384,7 +384,6 @@ namespace CodeneteersProject.HR
             logOutButton.TabIndex = 19;
             logOutButton.Text = "Çıkış Yap";
             logOutButton.TextAlign = HorizontalAlignment.Left;
-            logOutButton.Click += logOutButton_Click;
             // 
             // wishIcon
             // 
@@ -501,7 +500,6 @@ namespace CodeneteersProject.HR
             suggestionsButton.TabIndex = 12;
             suggestionsButton.Text = "Dilek Öneri";
             suggestionsButton.TextAlign = HorizontalAlignment.Left;
-            suggestionsButton.Click += suggestionsButton_Click;
             // 
             // jobAdvertisementsButton
             // 
@@ -523,7 +521,6 @@ namespace CodeneteersProject.HR
             jobAdvertisementsButton.TabIndex = 10;
             jobAdvertisementsButton.Text = "İlanlar";
             jobAdvertisementsButton.TextAlign = HorizontalAlignment.Left;
-            jobAdvertisementsButton.Click += jobAdvertisementsButton_Click;
             // 
             // suggestionsIcon
             // 
@@ -563,7 +560,6 @@ namespace CodeneteersProject.HR
             addsAndEventsButton.TabIndex = 8;
             addsAndEventsButton.Text = "Duyurular";
             addsAndEventsButton.TextAlign = HorizontalAlignment.Left;
-            addsAndEventsButton.Click += addsAndEventsButton_Click;
             // 
             // jobAdvertisementsIcon
             // 
@@ -622,7 +618,6 @@ namespace CodeneteersProject.HR
             employeeButton.TabIndex = 6;
             employeeButton.Text = "Personel";
             employeeButton.TextAlign = HorizontalAlignment.Left;
-            employeeButton.Click += employeeButton_Click;
             // 
             // profileButton
             // 
@@ -644,7 +639,6 @@ namespace CodeneteersProject.HR
             profileButton.TabIndex = 2;
             profileButton.Text = "Profil";
             profileButton.TextAlign = HorizontalAlignment.Left;
-            profileButton.Click += profileButton_Click;
             // 
             // dashboardButton
             // 
@@ -666,7 +660,6 @@ namespace CodeneteersProject.HR
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Ana Sayfa";
             dashboardButton.TextAlign = HorizontalAlignment.Left;
-            dashboardButton.Click += dashboardButton_Click;
             // 
             // JobAddDetailForm
             // 
@@ -689,6 +682,7 @@ namespace CodeneteersProject.HR
             Name = "JobAddDetailForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Detaylar";
+            Load += JobAddDetailForm_Load;
             guna2ShadowPanel2.ResumeLayout(false);
             guna2ShadowPanel2.PerformLayout();
             sideBar.ResumeLayout(false);

@@ -201,7 +201,7 @@ namespace DataAccesLayer.Repository
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.Connection = connection;
-            command.CommandText = @"select * from [dbo].[JobAdvertisements] where companyID=@ID";
+            command.CommandText = @"select * from [dbo].[JobAdvertisements] where companyID=@ID and status=1";
             command.Parameters.AddWithValue("@ID", id);
             connection.Open();
             var reader = command.ExecuteReader();

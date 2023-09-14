@@ -836,6 +836,7 @@
             Name = "hrDashBoardForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "hrDashBoardForm";
+            Load += hrDashBoardForm_Load;
             sideBar.ResumeLayout(false);
             guna2ShadowPanel4.ResumeLayout(false);
             guna2ShadowPanel4.PerformLayout();

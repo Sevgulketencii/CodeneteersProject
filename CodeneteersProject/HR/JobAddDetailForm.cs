@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using CodeneteersProject.General;
 using CodeNETeersProject;
 using DataAccesLayer.Repository;
 using EntityLayer.Concrete;
@@ -75,5 +76,48 @@ namespace CodeneteersProject.HR
             dateLabel.Text = date.Substring(0, date.Length - 9);
             categoryNameLabel.Text = jobAdvertisements.category.ToString();
         }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrDashBoarNavigation(appUser);
+            this.Hide();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrProfileFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void employeeButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrPersonalManagmentFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void addsAndEventsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrAddsAndEventsFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void jobAdvertisementsButton_Click(object sender, EventArgs e)
+        {
+
+            NavigationHelper.hrJobAddsManagementFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void suggestionsButton_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.hrReadWishFormNavigation(appUser);
+            this.Hide();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

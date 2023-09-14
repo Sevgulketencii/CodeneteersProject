@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
         void delete(JobApplications t);
         void update(JobApplications t);
         JobApplications GetByID(int id);
+        public List<JobApplications> GetCandidateEmployeeListByJobAddID(JobAdvertisements t);
     }
 }

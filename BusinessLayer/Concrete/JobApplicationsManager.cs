@@ -44,5 +44,9 @@ namespace BusinessLayer.Concrete
         {
             _jobApplications.update(t);
         }
+        public List<JobApplications> GetCandidateEmployeeListByJobAddID(JobAdvertisements t)
+        {
+            return _jobApplications.GetCandidateEmployeeListByJobAddID(t);
+        }
     }
 }
